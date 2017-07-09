@@ -1,0 +1,1058 @@
+;; Object netkit/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "netkit/"
+  :tables
+  (list
+    (semanticdb-table "Box.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("BOX_H_20140814144610" variable (:constant-flag t) nil [134 154])
+            ("IBox.h" include nil nil [156 173])
+            ("netkit" type
+               (:members 
+                  ( ("Box" type
+                       (:superclasses 
+                          ( ("IBox" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [220 227])
+                            ("MAGIC" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "2037952207"
+                                :type "int")
+                                (reparse-symbol classsubparts) [244 280])
+                            ("magic" variable (:type "int") (reparse-symbol classsubparts) [301 311])
+                            ("version" variable (:type "short") (reparse-symbol classsubparts) [316 330])
+                            ("flag" variable (:type "short") (reparse-symbol classsubparts) [335 346])
+                            ("_transfer_packet_len" variable (:type "int") (reparse-symbol classsubparts) [380 405])
+                            ("cmd" variable (:type "int") (reparse-symbol classsubparts) [410 418])
+                            ("ret" variable (:type "int") (reparse-symbol classsubparts) [423 431])
+                            ("sn" variable (:type "int") (reparse-symbol classsubparts) [436 443])
+                            ("private" label nil (reparse-symbol classsubparts) [445 453])
+                            ("_body" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [468 486])
+                            ("_unpack_done" variable (:type "bool") (reparse-symbol classsubparts) [515 533])
+                            ("public" label nil (reparse-symbol classsubparts) [535 542])
+                            ("Box" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Box" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [547 553])
+                            ("Box" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [558 573])
+                            ("pack" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [596 613]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [579 614])
+                            ("unpack" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [639 655])
+                                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [656 667]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [620 668])
+                            ("check" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [692 708])
+                                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [709 720]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [674 721])
+                            ("getBody" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [727 749])
+                            ("getStringBody" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [754 789])
+                            ("setBody" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("p_body" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [807 826])
+                                    ("body_len" variable (:type "int") (reparse-symbol arg-sub-list) [827 840]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [794 841])
+                            ("setBody" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [859 882]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [846 883])
+                            ("headerLen" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [889 905])
+                            ("bodyLen" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [910 924])
+                            ("packetLen" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [929 945])
+                            ("unpackDone" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [951 969])
+                            ("toString" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [975 998])
+                            ("private" label nil (reparse-symbol classsubparts) [1000 1008])
+                            ("_unpack" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1092 1108])
+                                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [1109 1120])
+                                    ("save" variable (:type "bool") (reparse-symbol arg-sub-list) [1121 1131]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1080 1132]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [195 1137]))                  
+                :type "namespace")
+                nil [175 1140]))          
+      :file "Box.h"
+      :pointmax 1160
+      :fsize 1307
+      :lastmodtime '(22241 28503 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BOX_H_20140814144610")
+          )
+)
+    (semanticdb-table "Box.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("sstream" include (:system-flag t) nil [96 114])
+            ("string.h" include (:system-flag t) nil [115 134])
+            ("netinet/in.h" include (:system-flag t) nil [257 280])
+            ("Box.h" include nil nil [288 304])
+            ("box_mcp" variable (:constant-flag t) nil [314 321])
+            ("netkit" type
+               (:members 
+                  ( ("Box" function
+                       (:constructor-flag t
+                        :parent "Box"
+                        :type ("Box" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [427 633])
+                    ("Box" function
+                       (:destructor-flag t
+                        :parent "Box"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [635 649])
+                    ("pack" function
+                       (:parent "Box"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [665 682]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [651 1324])
+                    ("unpack" function
+                       (:parent "Box"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1342 1358])
+                            ("length" variable (:type "int") (reparse-symbol arg-sub-list) [1359 1370]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1326 1419])
+                    ("check" function
+                       (:parent "Box"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1437 1453])
+                            ("length" variable (:type "int") (reparse-symbol arg-sub-list) [1454 1465]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1422 1515])
+                    ("_unpack" function
+                       (:parent "Box"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1534 1550])
+                            ("length" variable (:type "int") (reparse-symbol arg-sub-list) [1551 1562])
+                            ("save" variable (:type "bool") (reparse-symbol arg-sub-list) [1563 1573]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1517 2593])
+                    ("getBody" function
+                       (:pointer 1
+                        :parent "Box"
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [2595 2657])
+                    ("getStringBody" function
+                       (:parent "Box"
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2659 2726])
+                    ("setBody" function
+                       (:parent "Box"
+                        :arguments 
+                          ( ("p_body" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2746 2765])
+                            ("body_len" variable (:type "int") (reparse-symbol arg-sub-list) [2766 2779]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2728 2898])
+                    ("setBody" function
+                       (:parent "Box"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2918 2941]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2900 2983])
+                    ("headerLen" function
+                       (:parent "Box"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2985 3190])
+                    ("bodyLen" function
+                       (:parent "Box"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3192 3245])
+                    ("packetLen" function
+                       (:parent "Box"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3247 3319])
+                    ("unpackDone" function
+                       (:parent "Box"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3321 3378])
+                    ("toString" function
+                       (:parent "Box"
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3380 3717]))                  
+                :type "namespace")
+                nil [407 3720]))          
+      :file "Box.cpp"
+      :pointmax 3721
+      :fsize 3754
+      :lastmodtime '(22241 28503 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("box_mcp" (spp-arg-list ("dst" "value") 321 . 333) . 
+              ((symbol "memcpy" 340 . 346) (semantic-list "(dst, &(value), sizeof(value))" 346 . 376) (punctuation ";" 376 . 377) (symbol "dst" 384 . 387) (punctuation "+" 388 . 389) (punctuation "=" 389 . 390) (SIZEOF "sizeof" 391 . 397) (semantic-list "(value)" 397 . 404) (punctuation ";" 404 . 405)))
+          )
+)
+    (semanticdb-table "IBox.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("IBOX_H_20140814144626" variable (:constant-flag t) nil [135 156])
+            ("iostream" include (:system-flag t) nil [159 178])
+            ("netkit" type
+               (:members 
+                  ( ("IBox" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [213 220])
+                            ("IBox" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [225 242])
+                            ("pack" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [298 315]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [281 318])
+                            ("unpack" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [343 359])
+                                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [360 371]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [324 374])
+                            ("check" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [398 414])
+                                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [415 426]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [380 429])
+                            ("toString" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :typemodifiers ("virtual")
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [435 468]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [200 471]))                  
+                :type "namespace")
+                nil [180 474]))          
+      :file "IBox.h"
+      :pointmax 495
+      :fsize 504
+      :lastmodtime '(22241 28503 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("IBOX_H_20140814144626")
+          )
+)
+    (semanticdb-table "LineBox.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("LINEBOX_H_20140814144636" variable (:constant-flag t) nil [137 161])
+            ("IBox.h" include nil nil [164 181])
+            ("iostream" include (:system-flag t) nil [182 201])
+            ("netkit" type
+               (:members 
+                  ( ("LineBox" type
+                       (:superclasses 
+                          ( ("IBox" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [254 261])
+                            ("LINE_END" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "10"
+                                :type "int")
+                                (reparse-symbol classsubparts) [266 297])
+                            ("private" label nil (reparse-symbol classsubparts) [299 307])
+                            ("_body" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [322 340])
+                            ("_unpack_done" variable (:type "bool") (reparse-symbol classsubparts) [369 387])
+                            ("public" label nil (reparse-symbol classsubparts) [389 396])
+                            ("LineBox" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("LineBox" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [401 411])
+                            ("LineBox" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [416 435])
+                            ("pack" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [458 475]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [441 476])
+                            ("unpack" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [501 517])
+                                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [518 529]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [482 530])
+                            ("check" function
+                               (:prototype-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [554 570])
+                                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [571 582]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [536 583])
+                            ("getBody" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [589 611])
+                            ("getStringBody" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [616 651])
+                            ("setBody" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("p_body" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [669 688])
+                                    ("body_len" variable (:type "int") (reparse-symbol arg-sub-list) [689 702]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [656 703])
+                            ("setBody" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [721 744]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [708 745])
+                            ("headerLen" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [751 767])
+                            ("bodyLen" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [772 786])
+                            ("packetLen" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [791 807])
+                            ("unpackDone" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [813 831])
+                            ("toString" function
+                               (:prototype-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [836 859])
+                            ("private" label nil (reparse-symbol classsubparts) [861 869])
+                            ("_unpack" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [953 969])
+                                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [970 981])
+                                    ("save" variable (:type "bool") (reparse-symbol arg-sub-list) [982 992]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [941 993]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [224 996]))                  
+                :type "namespace")
+                nil [203 999]))          
+      :file "LineBox.h"
+      :pointmax 1023
+      :fsize 1106
+      :lastmodtime '(22241 28503 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("LINEBOX_H_20140814144636")
+          )
+)
+    (semanticdb-table "LineBox.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("sstream" include (:system-flag t) nil [96 114])
+            ("string.h" include (:system-flag t) nil [115 134])
+            ("LineBox.h" include nil nil [135 155])
+            ("netkit" type
+               (:members 
+                  ( ("LineBox" function
+                       (:constructor-flag t
+                        :parent "LineBox"
+                        :type ("LineBox" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [177 231])
+                    ("LineBox" function
+                       (:destructor-flag t
+                        :parent "LineBox"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [233 255])
+                    ("pack" function
+                       (:parent "LineBox"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [275 292]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [257 451])
+                    ("unpack" function
+                       (:parent "LineBox"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [473 489])
+                            ("length" variable (:type "int") (reparse-symbol arg-sub-list) [490 501]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [453 550])
+                    ("check" function
+                       (:parent "LineBox"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [571 587])
+                            ("length" variable (:type "int") (reparse-symbol arg-sub-list) [588 599]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [552 649])
+                    ("getBody" function
+                       (:pointer 1
+                        :parent "LineBox"
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol namespacesubparts) [651 717])
+                    ("getStringBody" function
+                       (:parent "LineBox"
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [719 790])
+                    ("setBody" function
+                       (:parent "LineBox"
+                        :arguments 
+                          ( ("p_body" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [814 833])
+                            ("body_len" variable (:type "int") (reparse-symbol arg-sub-list) [834 847]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [792 1337])
+                    ("setBody" function
+                       (:parent "LineBox"
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1361 1384]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1339 1426])
+                    ("headerLen" function
+                       (:parent "LineBox"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1428 1470])
+                    ("bodyLen" function
+                       (:parent "LineBox"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1471 1528])
+                    ("packetLen" function
+                       (:parent "LineBox"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1529 1605])
+                    ("unpackDone" function
+                       (:parent "LineBox"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1607 1668])
+                    ("_unpack" function
+                       (:parent "LineBox"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1691 1707])
+                            ("length" variable (:type "int") (reparse-symbol arg-sub-list) [1708 1719])
+                            ("save" variable (:type "bool") (reparse-symbol arg-sub-list) [1720 1730]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1670 2119])
+                    ("toString" function
+                       (:parent "LineBox"
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2121 2246]))                  
+                :type "namespace")
+                nil [157 2249]))          
+      :file "LineBox.cpp"
+      :pointmax 2250
+      :fsize 2303
+      :lastmodtime '(22241 28503 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "Stream.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("unistd.h" include (:system-flag t) nil [221 240])
+            ("errno.h" include (:system-flag t) nil [241 259])
+            ("string.h" include (:system-flag t) nil [260 279])
+            ("sys/socket.h" include (:system-flag t) nil [280 303])
+            ("Stream.h" include nil nil [313 332])
+            ("netkit" type
+               (:members 
+                  ( ("_init" function
+                       (:parent "Stream"
+                        :arguments 
+                          ( ("sockFd" variable (:type ("SocketType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [373 391])
+                            ("readBufferInitSize" variable (:type "int") (reparse-symbol arg-sub-list) [392 415])
+                            ("readBufferMaxSize" variable (:type "int") (reparse-symbol arg-sub-list) [416 438]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [354 583])
+                    ("Stream" function
+                       (:constructor-flag t
+                        :parent "Stream"
+                        :arguments 
+                          ( ("sockFd" variable (:type ("SocketType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [600 618]))                          
+                        :type ("Stream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [585 686])
+                    ("Stream" function
+                       (:constructor-flag t
+                        :parent "Stream"
+                        :arguments 
+                          ( ("sockFd" variable (:type ("SocketType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [703 721])
+                            ("readBufferInitSize" variable (:type "int") (reparse-symbol arg-sub-list) [722 745]))                          
+                        :type ("Stream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [688 810])
+                    ("Stream" function
+                       (:constructor-flag t
+                        :parent "Stream"
+                        :arguments 
+                          ( ("sockFd" variable (:type ("SocketType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [827 845])
+                            ("readBufferInitSize" variable (:type "int") (reparse-symbol arg-sub-list) [846 869])
+                            ("readBufferMaxSize" variable (:type "int") (reparse-symbol arg-sub-list) [870 892]))                          
+                        :type ("Stream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [812 954])
+                    ("Stream" function
+                       (:destructor-flag t
+                        :parent "Stream"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [956 976])
+                    ("setSockFd" function
+                       (:parent "Stream"
+                        :arguments 
+                          ( ("sockFd" variable (:type ("SocketType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1001 1019]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [978 1046])
+                    ("read" function
+                       (:parent "Stream"
+                        :arguments 
+                          ( ("box" variable
+                               (:pointer 1
+                                :type ("IBox" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1065 1075]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1048 2782])
+                    ("write" function
+                       (:parent "Stream"
+                        :arguments 
+                          ( ("box" variable
+                               (:pointer 1
+                                :type ("IBox" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2802 2812]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [2784 2998])
+                    ("write" function
+                       (:parent "Stream"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3018 3034])
+                            ("bufLen" variable (:type "int") (reparse-symbol arg-sub-list) [3035 3046]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [3000 3278])
+                    ("shutdown" function
+                       (:parent "Stream"
+                        :arguments 
+                          ( ("how" variable (:type "int") (reparse-symbol arg-sub-list) [3302 3310]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3280 3345])
+                    ("close" function
+                       (:parent "Stream"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3347 3457])
+                    ("isClosed" function
+                       (:parent "Stream"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3459 3511]))                  
+                :type "namespace")
+                nil [334 3514]))          
+      :file "Stream.cpp"
+      :pointmax 3515
+      :fsize 3730
+      :lastmodtime '(22241 28503 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "Stream.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("STREAM_H_20140814144646" variable (:constant-flag t) nil [137 160])
+            ("iostream" include (:system-flag t) nil [163 182])
+            ("IBox.h" include nil nil [183 200])
+            ("netkit" type
+               (:members 
+                  ( ("SocketType" type
+                       (:typedef ("int")
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [409 432])
+                    ("CLOSE_SOCKET" variable (:constant-flag t) (reparse-symbol namespacesubparts) [442 454])
+                    ("Stream" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [489 496])
+                            ("READ_BUFFER_INIT_SIZE" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "4 * 1024"
+                                :type "int")
+                                (reparse-symbol classsubparts) [521 571])
+                            ("READ_BUFFER_MAX_SIZE" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "-1"
+                                :type "int")
+                                (reparse-symbol classsubparts) [576 619])
+                            ("RET_RECV_TIMEOUT" variable
+                               (:typemodifiers ("static")
+                                :constant-flag t
+                                :default-value "-100"
+                                :type "int")
+                                (reparse-symbol classsubparts) [624 665])
+                            ("private" label nil (reparse-symbol classsubparts) [667 675])
+                            ("m_sockFd" variable (:type "int") (reparse-symbol classsubparts) [680 693])
+                            ("m_bufferedLength" variable (:type "int") (reparse-symbol classsubparts) [710 731])
+                            ("m_readBufferMaxSize" variable (:type "int") (reparse-symbol classsubparts) [736 760])
+                            ("m_readBuffer" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [765 790])
+                            ("private" label nil (reparse-symbol classsubparts) [792 800])
+                            ("_init" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sockFd" variable (:type ("SocketType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [816 834])
+                                    ("readBufferInitSize" variable (:type "int") (reparse-symbol arg-sub-list) [835 858])
+                                    ("readBufferMaxSize" variable (:type "int") (reparse-symbol arg-sub-list) [859 881]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [805 882])
+                            ("public" label nil (reparse-symbol classsubparts) [884 891])
+                            ("Stream" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("sockFd" variable (:type ("SocketType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [903 921]))                                  
+                                :type ("Stream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [896 922])
+                            ("Stream" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("sockFd" variable (:type ("SocketType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [934 952])
+                                    ("readBufferInitSize" variable (:type "int") (reparse-symbol arg-sub-list) [953 976]))                                  
+                                :type ("Stream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [927 977])
+                            ("Stream" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("sockFd" variable (:type ("SocketType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [989 1007])
+                                    ("readBufferInitSize" variable (:type "int") (reparse-symbol arg-sub-list) [1008 1031])
+                                    ("readBufferMaxSize" variable (:type "int") (reparse-symbol arg-sub-list) [1032 1054]))                                  
+                                :type ("Stream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [982 1055])
+                            ("Stream" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [1060 1078])
+                            ("setSockFd" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("sockFd" variable (:type ("SocketType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1099 1117]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1084 1118])
+                            ("read" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("box" variable
+                                       (:pointer 1
+                                        :type ("IBox" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1146 1156]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1137 1157])
+                            ("write" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("box" variable
+                                       (:pointer 1
+                                        :type ("IBox" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1186 1196]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1176 1197])
+                            ("write" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1212 1228])
+                                    ("bufLen" variable (:type "int") (reparse-symbol arg-sub-list) [1229 1240]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1202 1241])
+                            ("shutdown" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("how" variable (:type "int") (reparse-symbol arg-sub-list) [1293 1301]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1279 1302])
+                            ("close" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1308 1321])
+                            ("isClosed" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1327 1343]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [474 2215]))                  
+                :type "namespace")
+                nil [202 2218]))          
+      :file "Stream.h"
+      :pointmax 2242
+      :fsize 2449
+      :lastmodtime '(22241 28503 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CLOSE_SOCKET" . 
+              ((punctuation ":" 458 . 459) (punctuation ":" 459 . 460) (symbol "close" 460 . 465)))
+          ("STREAM_H_20140814144646")
+          )
+)
+    (semanticdb-table "TcpClient.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("TCPCLIENT_H_20140814144656" variable (:constant-flag t) nil [140 166])
+            ("iostream" include (:system-flag t) nil [169 188])
+            ("IBox.h" include nil nil [189 206])
+            ("Stream.h" include nil nil [207 226])
+            ("netkit" type
+               (:members 
+                  ( ("TcpClient" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [266 273])
+                            ("TcpClient" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("host" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [314 338])
+                                    ("port" variable (:type "int") (reparse-symbol arg-sub-list) [339 348])
+                                    ("timeout" variable (:type "double") (reparse-symbol arg-sub-list) [349 364]))                                  
+                                :type ("TcpClient" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [304 365])
+                            ("TcpClient" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [370 391])
+                            ("connect" function
+                               (:prototype-flag t
+                                :type "int")
+                                (reparse-symbol classsubparts) [397 411])
+                            ("read" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("box" variable
+                                       (:pointer 1
+                                        :type ("IBox" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [439 449]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [430 450])
+                            ("write" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("box" variable
+                                       (:pointer 1
+                                        :type ("IBox" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [479 489]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [469 490])
+                            ("write" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("buf" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [505 521])
+                                    ("bufLen" variable (:type "int") (reparse-symbol arg-sub-list) [522 533]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [495 534])
+                            ("shutdown" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("how" variable (:type "int") (reparse-symbol arg-sub-list) [554 562]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [540 563])
+                            ("close" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [569 582])
+                            ("isClosed" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [588 604])
+                            ("private" label nil (reparse-symbol classsubparts) [607 615])
+                            ("m_host" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [620 639])
+                            ("m_port" variable (:type "int") (reparse-symbol classsubparts) [644 655])
+                            ("m_timeout" variable (:type "double") (reparse-symbol classsubparts) [660 677])
+                            ("m_stream" variable
+                               (:pointer 1
+                                :type ("Stream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [683 700]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [248 703]))                  
+                :type "namespace")
+                nil [228 706]))          
+      :file "TcpClient.h"
+      :pointmax 732
+      :fsize 755
+      :lastmodtime '(22241 28503 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("TCPCLIENT_H_20140814144656")
+          )
+)
+    (semanticdb-table "TcpClient.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("string.h" include (:system-flag t) nil [96 115])
+            ("sys/socket.h" include (:system-flag t) nil [240 263])
+            ("arpa/inet.h" include (:system-flag t) nil [264 286])
+            ("netinet/in.h" include (:system-flag t) nil [287 310])
+            ("unistd.h" include (:system-flag t) nil [311 330])
+            ("TcpClient.h" include nil nil [340 362])
+            ("netkit" type
+               (:members 
+                  ( ("TcpClient" function
+                       (:constructor-flag t
+                        :parent "TcpClient"
+                        :arguments 
+                          ( ("host" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [405 429])
+                            ("port" variable (:type "int") (reparse-symbol arg-sub-list) [430 439])
+                            ("timeout" variable (:type "double") (reparse-symbol arg-sub-list) [440 455]))                          
+                        :type ("TcpClient" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [384 543])
+                    ("TcpClient" function
+                       (:destructor-flag t
+                        :parent "TcpClient"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [545 648])
+                    ("connect" function
+                       (:parent "TcpClient"
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [650 1552])
+                    ("read" function
+                       (:parent "TcpClient"
+                        :arguments 
+                          ( ("box" variable
+                               (:pointer 1
+                                :type ("IBox" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1583 1593]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1563 1676])
+                    ("write" function
+                       (:parent "TcpClient"
+                        :arguments 
+                          ( ("box" variable
+                               (:pointer 1
+                                :type ("IBox" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1708 1718]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1687 1802])
+                    ("write" function
+                       (:parent "TcpClient"
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1825 1841])
+                            ("bufLen" variable (:type "int") (reparse-symbol arg-sub-list) [1842 1853]))                          
+                        :type "int")
+                        (reparse-symbol namespacesubparts) [1804 1945])
+                    ("shutdown" function
+                       (:parent "TcpClient"
+                        :arguments 
+                          ( ("how" variable (:type "int") (reparse-symbol arg-sub-list) [1972 1980]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1947 2064])
+                    ("close" function
+                       (:parent "TcpClient"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2066 2167])
+                    ("isClosed" function
+                       (:parent "TcpClient"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [2169 2281]))                  
+                :type "namespace")
+                nil [364 2284]))          
+      :file "TcpClient.cpp"
+      :pointmax 2285
+      :fsize 2296
+      :lastmodtime '(22241 28503 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!local!pythonwork!maple!modules!netkit!cpp!netkit!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

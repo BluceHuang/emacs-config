@@ -1,0 +1,131 @@
+;; Object Utils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Utils/"
+  :tables
+  (list
+    (semanticdb-table "Md5.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Md5.h" include nil nil [1 17])
+            ("MD5" function
+               (:constructor-flag t
+                :parent "MD5"
+                :type ("MD5" type (:type "class") nil nil))
+                nil [19 34])
+            ("MD5" function
+               (:destructor-flag t
+                :parent "MD5"
+                :type "void")
+                nil [36 52])
+            ("MD5Init" function
+               (:parent "MD5"
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("MD5Context" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [180 203]))                  
+                :type "void")
+                nil [162 374])
+            ("MD5Update" function
+               (:parent "MD5"
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("MD5Context" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [486 509])
+                    ("_buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [510 527])
+                    ("len" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [528 541]))                  
+                :type "void")
+                nil [466 1396])
+            ("MD5Final" function
+               (:parent "MD5"
+                :arguments 
+                  ( ("digest" variable
+                       (:dereference 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [1540 1565])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type ("MD5Context" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1566 1589]))                  
+                :type "void")
+                nil [1521 2482])
+            ("F1" variable (:constant-flag t) nil [2593 2595])
+            ("F2" variable (:constant-flag t) nil [2633 2635])
+            ("F3" variable (:constant-flag t) nil [2665 2667])
+            ("F4" variable (:constant-flag t) nil [2697 2699])
+            ("MD5STEP" variable (:constant-flag t) nil [2786 2793])
+            ("MD5Transform" function
+               (:parent "MD5"
+                :arguments 
+                  ( ("buf" variable
+                       (:dereference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3114 3130])
+                    ("in" variable
+                       (:dereference 1
+                        :constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3131 3153]))                  
+                :type "void")
+                nil [3091 6725])
+            ("MD5Cal" function
+               (:parent "MD5"
+                :arguments 
+                  ( ("file_name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6743 6760])
+                    ("md5" variable
+                       (:reference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6761 6773]))                  
+                :type "int")
+                nil [6727 7499])
+            ("MD5Cal" function
+               (:parent "MD5"
+                :arguments 
+                  ( ("file_name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7517 7534])
+                    ("size" variable (:type "long long") (reparse-symbol arg-sub-list) [7535 7550])
+                    ("md5" variable
+                       (:reference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7551 7563]))                  
+                :type "int")
+                nil [7501 8413])
+            ("MD5CalString" function
+               (:parent "MD5"
+                :arguments 
+                  ( ("str" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8438 8449])
+                    ("md5" variable
+                       (:reference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8450 8462]))                  
+                :type "void")
+                nil [8415 8885]))          
+      :file "Md5.cpp"
+      :pointmax 8887
+      :fsize 8886
+      :lastmodtime '(21945 54693 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("F2" (spp-arg-list ("x" "y" "z") 2635 . 2644) . ((symbol "F1" 2645 . 2647) (semantic-list "(z, x, y)" 2647 . 2656)))
+          ("F3" (spp-arg-list ("x" "y" "z") 2667 . 2676) . ((semantic-list "(x ^ y ^ z)" 2677 . 2688)))
+          ("F4" (spp-arg-list ("x" "y" "z") 2699 . 2708) . ((semantic-list "(y ^ (x | ~z))" 2709 . 2723)))
+          ("MD5STEP" (spp-arg-list ("f" "w" "x" "y" "z" "in" "s") 2793 . 2815) . ((semantic-list "(w += f(x, y, z) + in, w = (w << s | w >> (32-s)) + x)" 2823 . 2877)))
+          ("F1" (spp-arg-list ("x" "y" "z") 2595 . 2604) . ((semantic-list "(z ^ (x & (y ^ z)))" 2605 . 2624)))
+          )
+))
+  :file "!Users!huangyong!cocos2d-x-2.2.6-1!projects!RRWSZ-BaiDu!Classes!Utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

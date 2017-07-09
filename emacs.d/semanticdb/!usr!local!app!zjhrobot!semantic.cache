@@ -1,0 +1,322 @@
+;; Object zjhrobot/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "zjhrobot/"
+  :tables
+  (list
+    (semanticdb-table "logic.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("stdarg.h" include (:system-flag t) nil [40 59])
+            ("string.h" include (:system-flag t) nil [60 79])
+            ("unistd.h" include (:system-flag t) nil [80 99])
+            ("fcntl.h" include (:system-flag t) nil [100 118])
+            ("sys/types.h" include (:system-flag t) nil [119 141])
+            ("sys/stat.h" include (:system-flag t) nil [142 163])
+            ("time.h" include (:system-flag t) nil [164 181])
+            ("errno.h" include (:system-flag t) nil [182 200])
+            ("robot.h" include nil nil [202 220])
+            ("log.h" include nil nil [221 237])
+            ("proto.h" include nil nil [238 256])
+            ("jpacket.h" include nil nil [257 277])
+            ("tcpClient.h" include nil nil [278 300])
+            ("logic.h" include nil nil [301 319])
+            ("hole_cards.h" include nil nil [320 343])
+            ("card.h" include nil nil [344 361])
+            ("robot" variable
+               (:typemodifiers ("extern")
+                :type ("Robot" type (:type "class") nil nil))
+                nil [363 382])
+            ("log" variable
+               (:typemodifiers ("extern")
+                :type ("Log" type (:type "class") nil nil))
+                nil [383 398])
+            ("chatDefaultContent" variable
+               (:pointer 1
+                :dereference 1
+                :constant-flag t
+                :default-value "{
+	(const char *)\"快点啊，都等到我花都谢了\",
+	(const char *)\"大家好，很高兴见到各位\",
+	(const char *)\"怎么又断线了，网络怎么那么差啊\",
+	(const char *)\"和你合作真是太愉快了啊\",
+	(const char *)\"交个朋友吧，能告诉我咋联系你吗\",
+	(const char *)\"你是MM还是GG啊\",
+	(const char *)\"不要吵，不要吵，吵啥啊，专心玩游戏把\",
+	(const char *)\"不要走，决战到天亮啊\",
+	(const char *)\"各位，真是不好意思啊，我要离开一会儿\",
+	(const char *)\"再见了，俺会想念大家的\",
+	(const char *)\"闷到底，看牌是小狗！\",
+	(const char *)\"你怎么那么爱看牌啊？\",
+	(const char *)\"什么烂牌啊！\",
+	(const char *)\"哟，你牌也太好了吧？\",
+	(const char *)\"快点出牌撒，真墨迹！\",
+	(const char *)\"老天爷赐我一副好牌吧！\",
+	(const char *)\"你敢加我就敢跟，别以为我怕你哦！\",
+	(const char *)\"做人不要太嚣张，小心钱袋输光光！\",
+	(const char *)\"我全压了，敢跟吗?怂货。\",
+	(const char *)\"牌小早点弃牌啊!\",
+	(const char *)\"你等着，我马上充钱虐你。\",
+	(const char *)\"素质房，不看牌不道具。\"
+}"
+                :type "char")
+                nil [400 1120])
+            ("LogicTask" function
+               (:constructor-flag t
+                :parent "LogicTask"
+                :arguments 
+                  ( ("id" variable (:type "int") (reparse-symbol arg-sub-list) [1143 1150])
+                    ("myvid" variable (:type "int") (reparse-symbol arg-sub-list) [1151 1161]))                  
+                :type ("LogicTask" type (:type "class") nil nil))
+                nil [1122 2505])
+            ("run" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2527 2532]))                  
+                :type "void")
+                nil [2507 3448])
+            ("random" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("start" variable (:type "int") (reparse-symbol arg-sub-list) [3472 3482])
+                    ("end" variable (:type "int") (reparse-symbol arg-sub-list) [3483 3491]))                  
+                :type "int")
+                nil [3450 3550])
+            ("join_table_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [3552 3830])
+            ("ready_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [3832 4047])
+            ("call_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [4049 4246])
+            ("raise_req" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("raise_bet" variable (:type "int") (reparse-symbol arg-sub-list) [4273 4287]))                  
+                :type "int")
+                nil [4248 4498])
+            ("see_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [4500 4809])
+            ("compare_req" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("targetSeatid" variable (:type "int") (reparse-symbol arg-sub-list) [4838 4855]))                  
+                :type "int")
+                nil [4811 5257])
+            ("fold_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [5259 5456])
+            ("allin_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [5458 5657])
+            ("allin_call_req" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("targetSeatid" variable (:type "int") (reparse-symbol arg-sub-list) [5689 5706]))                  
+                :type "int")
+                nil [5659 6055])
+            ("chat_req" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("tag" variable (:type "int") (reparse-symbol arg-sub-list) [6081 6089]))                  
+                :type "int")
+                nil [6057 6320])
+            ("face_req" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("faceid" variable (:type "int") (reparse-symbol arg-sub-list) [6346 6357]))                  
+                :type "int")
+                nil [6322 6543])
+            ("interface_req" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("who" variable (:type "int") (reparse-symbol arg-sub-list) [6574 6582])
+                    ("faceid" variable (:type "int") (reparse-symbol arg-sub-list) [6583 6594]))                  
+                :type "int")
+                nil [6545 6855])
+            ("chat_or_face_req" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [6857 7158])
+            ("quit_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [7160 7333])
+            ("recv_data" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [7335 10031])
+            ("handler_server_login_succ_uc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [10033 10166])
+            ("handler_server_login_succ_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [10168 10401])
+            ("handler_server_login_err_uc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [10403 10534])
+            ("handler_server_rebind_uc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [10536 10661])
+            ("handler_server_logout_succ_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [10663 10894])
+            ("handler_server_logout_err_uc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [10896 11029])
+            ("handler_server_table_info_uc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [11031 12527])
+            ("handler_server_ready_succ_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [12529 12662])
+            ("handler_server_ready_err_uc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [12664 12795])
+            ("handler_server_game_start_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [12797 13202])
+            ("two_players" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("seat" variable
+                       (:reference 1
+                        :type ("Seat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13232 13243]))                  
+                :type "void")
+                nil [13204 13838])
+            ("lg_two_players_limit" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("seat" variable
+                       (:reference 1
+                        :type ("Seat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13877 13888]))                  
+                :type "void")
+                nil [13840 14432])
+            ("lg_two_players_normal" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("seat" variable
+                       (:reference 1
+                        :type ("Seat" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14472 14483]))                  
+                :type "void")
+                nil [14434 17894])
+            ("handler_server_next_bet_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [17896 19479])
+            ("handler_server_bet_succ_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [19481 21787])
+            ("handler_server_bet_succ_uc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [21789 22296])
+            ("handler_server_bet_err_uc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [22298 22425])
+            ("handler_server_game_end_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [22427 22795])
+            ("handler_server_game_preready_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [22797 23047])
+            ("handler_server_chat_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [23049 23170])
+            ("handler_server_face_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [23172 23293])
+            ("handler_server_interface_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [23295 23426])
+            ("handler_server_player_info_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [23428 23563])
+            ("handler_server_prop_succ_bc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [23565 23884])
+            ("handler_server_prop_succ_uc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [23886 24017])
+            ("handler_server_prop_err_uc" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [24019 24148])
+            ("get_cur_players" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [24150 24382])
+            ("get_raise_value" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [24481 25006])
+            ("get_compare_player" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [25008 25750])
+            ("get_interface_player" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [25752 26422])
+            ("face_timeout" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("loop" variable
+                       (:pointer 1
+                        :type ("ev_loop" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26453 26474])
+                    ("w" variable
+                       (:pointer 1
+                        :type ("ev_timer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26475 26487])
+                    ("revents" variable (:type "int") (reparse-symbol arg-sub-list) [26488 26500]))                  
+                :type "void")
+                nil [26424 26567])
+            ("face_loop" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [26569 26707]))          
+      :file "logic.cc"
+      :pointmax 26708
+      :fsize 28440
+      :lastmodtime '(21972 17635 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!local!app!zjhrobot!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

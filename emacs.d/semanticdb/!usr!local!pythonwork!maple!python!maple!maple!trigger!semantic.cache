@@ -1,0 +1,172 @@
+;; Object trigger/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "trigger/"
+  :tables
+  (list
+    (semanticdb-table "client.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("socket" include nil nil [26 39])
+            ("time" include nil nil [40 51])
+            ("functools" include nil nil [52 68])
+            ("threading" include nil nil [69 95])
+            ("logger" include nil nil [107 120])
+            ("constants" include nil nil [129 145])
+            ("lock_write" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [163 167]))              ) nil [148 427])
+            ("Client" type
+               (:superclasses ("object")
+                :members 
+                  ( ("address" variable nil (reparse-symbol indented_block_body) [456 470])
+                    ("ensure" variable nil (reparse-symbol indented_block_body) [475 488])
+                    ("sock" variable nil (reparse-symbol indented_block_body) [493 504])
+                    ("write_lock" variable nil (reparse-symbol indented_block_body) [526 543])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [605 627])
+                            ("self" variable nil (reparse-symbol indented_block_body) [636 656])
+                            ("if" code nil (reparse-symbol indented_block_body) [666 712]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [562 566])
+                            ("address" variable nil (reparse-symbol function_parameters) [568 575])
+                            ("ensure" variable nil (reparse-symbol function_parameters) [577 583])
+                            ("lock" variable nil (reparse-symbol function_parameters) [585 589]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [549 712])
+                    ("write" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("lock_write" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [743 747])
+                            ("data" variable nil (reparse-symbol function_parameters) [749 753]))                          
+                        :documentation "
+        发送
+        :param data:
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [717 1488])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1503 1507]))                          
+                        :documentation "
+        关闭连接
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [1493 1708])
+                    ("closed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1724 1728]))                          
+                        :documentation "
+        检查连接
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [1713 1815])
+                    ("_write_to_fd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1837 1841])
+                            ("data" variable nil (reparse-symbol function_parameters) [1843 1847]))                          
+                        :documentation "
+        写入
+        ")
+                        (reparse-symbol indented_block_body) [1820 2290])
+                    ("_connect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2308 2312]))                          
+                        :documentation "
+        在写入之前调用，保证连接可用
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [2295 2665])
+                    ("acquire_write_lock" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2693 2697]))                          )
+                        (reparse-symbol indented_block_body) [2670 2766])
+                    ("release_write_lock" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2794 2798]))                          )
+                        (reparse-symbol indented_block_body) [2771 2867]))                  
+                :type "class")
+                nil [429 2867]))          
+      :file "client.py"
+      :pointmax 2868
+      :fsize 2977
+      :lastmodtime '(22241 28394 0 0)
+      :unmatched-syntax '((PERIOD 127 . 128) (FROM 121 . 125) (PERIOD 126 . 127) (PERIOD 102 . 103) (FROM 96 . 100) (PERIOD 101 . 102)))
+    (semanticdb-table "trigger.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Task" include nil nil [38 49])
+            ("CloseUsers" include nil nil [67 96])
+            ("RspToUsers" include nil nil [67 96])
+            ("Client" include nil nil [110 123])
+            ("constants" include nil nil [132 148])
+            ("Trigger" type
+               (:superclasses ("object")
+                :members 
+                  ( ("box_class" variable nil (reparse-symbol indented_block_body) [179 195])
+                    ("client" variable nil (reparse-symbol indented_block_body) [200 213])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [283 309])
+                            ("self" variable nil (reparse-symbol indented_block_body) [318 360]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [232 236])
+                            ("box_class" variable nil (reparse-symbol function_parameters) [238 247])
+                            ("host" variable nil (reparse-symbol function_parameters) [249 253])
+                            ("port" variable nil (reparse-symbol function_parameters) [255 259])
+                            ("ensure" variable nil (reparse-symbol function_parameters) [261 267]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [219 361])
+                    ("write_to_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [386 390])
+                            ("data" variable nil (reparse-symbol function_parameters) [392 396]))                          
+                        :documentation "
+        透传到worker进行处理
+        ")
+                        (reparse-symbol indented_block_body) [366 793])
+                    ("write_to_users" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [817 821])
+                            ("data_list" variable nil (reparse-symbol function_parameters) [823 832]))                          
+                        :documentation "
+        格式为
+        [(uids, box), (uids, box, userdata) ...]
+        :param data_list: userdata可不传，默认为0，conn.userdata & userdata == userdata
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [798 1748])
+                    ("close_users" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1769 1773])
+                            ("uids" variable nil (reparse-symbol function_parameters) [1775 1779])
+                            ("userdata" variable nil (reparse-symbol function_parameters) [1781 1789]))                          )
+                        (reparse-symbol indented_block_body) [1753 2063])
+                    ("_write" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2079 2083])
+                            ("msg" variable nil (reparse-symbol function_parameters) [2085 2088]))                          )
+                        (reparse-symbol indented_block_body) [2068 2129]))                  
+                :type "class")
+                nil [151 2129]))          
+      :file "trigger.py"
+      :pointmax 2129
+      :fsize 2168
+      :lastmodtime '(22241 28394 0 0)
+      :unmatched-syntax '((PERIOD 130 . 131) (FROM 124 . 128) (PERIOD 129 . 130) (FROM 97 . 101) (PERIOD 102 . 103) (PERIOD 56 . 57) (FROM 50 . 54) (PERIOD 55 . 56) (PERIOD 32 . 33) (PERIOD 31 . 32))))
+  :file "!usr!local!pythonwork!maple!python!maple!maple!trigger!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

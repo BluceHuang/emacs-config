@@ -1,0 +1,1363 @@
+;; Object Lex/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Lex/"
+  :tables
+  (list
+    (semanticdb-table "PPMacroExpansion.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("clang/Lex/Preprocessor.h" include nil nil [520 555])
+            ("clang/Lex/MacroArgs.h" include nil nil [556 588])
+            ("clang/Basic/FileManager.h" include nil nil [589 625])
+            ("clang/Basic/SourceManager.h" include nil nil [626 664])
+            ("clang/Basic/TargetInfo.h" include nil nil [665 700])
+            ("clang/Lex/CodeCompletionHandler.h" include nil nil [701 745])
+            ("clang/Lex/ExternalPreprocessorSource.h" include nil nil [746 795])
+            ("clang/Lex/LexDiagnostic.h" include nil nil [796 832])
+            ("clang/Lex/MacroInfo.h" include nil nil [833 865])
+            ("llvm/ADT/STLExtras.h" include nil nil [866 897])
+            ("llvm/ADT/SmallString.h" include nil nil [898 931])
+            ("llvm/ADT/StringSwitch.h" include nil nil [932 966])
+            ("llvm/Config/llvm-config.h" include nil nil [967 1003])
+            ("llvm/Support/ErrorHandling.h" include nil nil [1004 1043])
+            ("llvm/Support/Format.h" include nil nil [1044 1076])
+            ("llvm/Support/raw_ostream.h" include nil nil [1077 1114])
+            ("cstdio" include (:system-flag t) nil [1115 1132])
+            ("ctime" include (:system-flag t) nil [1133 1149])
+            ("clang" using (:type ("clang" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1150 1172])
+            ("getMacroDirectiveHistory" function
+               (:pointer 1
+                :parent "Preprocessor"
+                :arguments 
+                  ( ("II" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("IdentifierInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1230 1255]))                  
+                :type ("MacroDirective" type (:type "class") nil nil))
+                nil [1174 1476])
+            ("appendMacroDirective" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("II" variable
+                       (:pointer 1
+                        :type ("IdentifierInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1518 1537])
+                    ("MD" variable
+                       (:pointer 1
+                        :type ("MacroDirective" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1538 1557]))                  
+                :type "void")
+                nil [1478 2038])
+            ("setLoadedMacroDirective" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("II" variable
+                       (:pointer 1
+                        :type ("IdentifierInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2083 2102])
+                    ("MD" variable
+                       (:pointer 1
+                        :type ("MacroDirective" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2146 2165]))                  
+                :type "void")
+                nil [2040 2507])
+            ("RegisterBuiltinMacro" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("PP" variable
+                       (:reference 1
+                        :type ("Preprocessor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2689 2706])
+                    ("Name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2707 2724]))                  
+                :type ("IdentifierInfo" type (:type "class") nil nil))
+                nil [2645 2987])
+            ("RegisterBuiltinMacros" function
+               (:parent "Preprocessor"
+                :type "void")
+                nil [3091 4799])
+            ("isTrivialSingleTokenExpansion" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("MI" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("MacroInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4988 5008])
+                    ("MacroIdent" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("IdentifierInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5051 5084])
+                    ("PP" variable
+                       (:reference 1
+                        :type ("Preprocessor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5127 5144]))                  
+                :type "bool")
+                nil [4946 6265])
+            ("isNextPPTokenLParen" function
+               (:parent "Preprocessor"
+                :type "bool")
+                nil [6492 7712])
+            ("HandleMacroExpandedIdentifier" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("Identifier" variable
+                       (:reference 1
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7922 7940])
+                    ("MD" variable
+                       (:pointer 1
+                        :type ("MacroDirective" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7990 8009]))                  
+                :type "bool")
+                nil [7873 14090])
+            ("Bracket" type
+               (:members 
+                  ( ("Brace" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [14109 14115])
+                    ("Paren" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [14118 14125]))                  
+                :type "enum")
+                nil [14092 14126])
+            ("CheckMatchedBrackets" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Tokens" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SmallVectorImpl" type
+                             (:template-specifier 
+                                ( ("Token" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14276 14313]))                  
+                :type "bool")
+                nil [14243 14994])
+            ("GenerateNewArgTokens" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("PP" variable
+                       (:reference 1
+                        :type ("Preprocessor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15484 15501])
+                    ("OldTokens" variable
+                       (:reference 1
+                        :type ("SmallVectorImpl" type
+                             (:template-specifier 
+                                ( ("Token" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15535 15569])
+                    ("NewTokens" variable
+                       (:reference 1
+                        :type ("SmallVectorImpl" type
+                             (:template-specifier 
+                                ( ("Token" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15603 15637])
+                    ("NumArgs" variable
+                       (:reference 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [15671 15689])
+                    ("ParenHints" variable
+                       (:reference 1
+                        :type ("SmallVectorImpl" type
+                             (:template-specifier 
+                                ( ("SourceRange" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15723 15764])
+                    ("InitLists" variable
+                       (:reference 1
+                        :type ("SmallVectorImpl" type
+                             (:template-specifier 
+                                ( ("SourceRange" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15798 15838]))                  
+                :type "bool")
+                nil [15451 18873])
+            ("ReadFunctionLikeMacroArgs" function
+               (:pointer 1
+                :parent "Preprocessor"
+                :arguments 
+                  ( ("MacroName" variable
+                       (:reference 1
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19173 19190])
+                    ("MI" variable
+                       (:pointer 1
+                        :type ("MacroInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19242 19256])
+                    ("MacroEnd" variable
+                       (:reference 1
+                        :type ("SourceLocation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19308 19333]))                  
+                :type ("MacroArgs" type (:type "class") nil nil))
+                nil [19122 30089])
+            ("cacheMacroExpandedTokens" function
+               (:pointer 1
+                :parent "Preprocessor"
+                :arguments 
+                  ( ("tokLexer" variable
+                       (:pointer 1
+                        :type ("TokenLexer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30377 30398])
+                    ("tokens" variable (:type ("ArrayRef" type
+                         (:template-specifier 
+                            ( ("Token" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [30445 30468]))                  
+                :type ("Token" type (:type "class") nil nil))
+                nil [30331 31336])
+            ("removeCachedMacroExpandedTokensOfLastLexer" function
+               (:parent "Preprocessor"
+                :type "void")
+                nil [31338 31697])
+            ("ComputeDATE_TIME" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("DATELoc" variable
+                       (:reference 1
+                        :type ("SourceLocation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31920 31944])
+                    ("TIMELoc" variable
+                       (:reference 1
+                        :type ("SourceLocation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31945 31969])
+                    ("PP" variable
+                       (:reference 1
+                        :type ("Preprocessor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31999 32016]))                  
+                :type "void")
+                nil [31891 32886])
+            ("HasFeature" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("PP" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Preprocessor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33047 33070])
+                    ("II" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("IdentifierInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33071 33096]))                  
+                :type "bool")
+                nil [33024 41004])
+            ("HasExtension" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("PP" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Preprocessor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41196 41219])
+                    ("II" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("IdentifierInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41220 41245]))                  
+                :type "bool")
+                nil [41171 43272])
+            ("HasAttribute" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("II" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("IdentifierInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43414 43439]))                  
+                :type "bool")
+                nil [43389 43804])
+            ("EvaluateHasIncludeCommon" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Tok" variable
+                       (:reference 1
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [43988 43999])
+                    ("II" variable
+                       (:pointer 1
+                        :type ("IdentifierInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44037 44056])
+                    ("PP" variable
+                       (:reference 1
+                        :type ("Preprocessor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44057 44074])
+                    ("LookupFrom" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("DirectoryLookup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [44112 44146]))                  
+                :type "bool")
+                nil [43951 47321])
+            ("EvaluateHasInclude" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Tok" variable
+                       (:reference 1
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47457 47468])
+                    ("II" variable
+                       (:pointer 1
+                        :type ("IdentifierInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47469 47488])
+                    ("PP" variable
+                       (:reference 1
+                        :type ("Preprocessor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47520 47537]))                  
+                :type "bool")
+                nil [47426 47595])
+            ("EvaluateHasIncludeNext" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Tok" variable
+                       (:reference 1
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47742 47753])
+                    ("II" variable
+                       (:pointer 1
+                        :type ("IdentifierInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47789 47808])
+                    ("PP" variable
+                       (:reference 1
+                        :type ("Preprocessor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [47809 47826]))                  
+                :type "bool")
+                nil [47707 48365])
+            ("EvaluateBuildingModule" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Tok" variable
+                       (:reference 1
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48535 48546])
+                    ("II" variable
+                       (:pointer 1
+                        :type ("IdentifierInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48582 48601])
+                    ("PP" variable
+                       (:reference 1
+                        :type ("Preprocessor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [48602 48619]))                  
+                :type "bool")
+                nil [48500 49520])
+            ("ExpandBuiltinMacro" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("Tok" variable
+                       (:reference 1
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [49709 49720]))                  
+                :type "void")
+                nil [49671 59058])
+            ("markMacroAsUsed" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("MI" variable
+                       (:pointer 1
+                        :type ("MacroInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59095 59109]))                  
+                :type "void")
+                nil [59060 59385]))          
+      :file "PPMacroExpansion.cpp"
+      :pointmax 59386
+      :fsize 59385
+      :lastmodtime '(21921 53878 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "PPLexerChange.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("clang/Lex/Preprocessor.h" include nil nil [531 566])
+            ("clang/Basic/FileManager.h" include nil nil [567 603])
+            ("clang/Basic/SourceManager.h" include nil nil [604 642])
+            ("clang/Lex/HeaderSearch.h" include nil nil [643 678])
+            ("clang/Lex/LexDiagnostic.h" include nil nil [679 715])
+            ("clang/Lex/MacroInfo.h" include nil nil [716 748])
+            ("llvm/ADT/StringSwitch.h" include nil nil [749 783])
+            ("llvm/Support/FileSystem.h" include nil nil [784 820])
+            ("llvm/Support/MemoryBuffer.h" include nil nil [821 859])
+            ("llvm/Support/Path.h" include nil nil [860 890])
+            ("clang" using (:type ("clang" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [891 913])
+            ("PPCallbacks" function
+               (:destructor-flag t
+                :parent "PPCallbacks"
+                :type "void")
+                nil [915 945])
+            ("isInPrimaryFile" function
+               (:parent "Preprocessor"
+                :type "bool")
+                nil [1290 1707])
+            ("getCurrentFileLexer" function
+               (:pointer 1
+                :parent "Preprocessor"
+                :type ("PreprocessorLexer" type (:type "class") nil nil))
+                nil [1896 2226])
+            ("EnterSourceFile" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("FID" variable (:type ("FileID" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2633 2644])
+                    ("CurDir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("DirectoryLookup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2645 2675])
+                    ("Loc" variable (:type ("SourceLocation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2711 2730]))                  
+                :type "void")
+                nil [2598 3808])
+            ("EnterSourceFileWithLexer" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("TheLexer" variable
+                       (:pointer 1
+                        :type ("Lexer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4003 4019])
+                    ("CurDir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("DirectoryLookup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4064 4094]))                  
+                :type "void")
+                nil [3959 4714])
+            ("EnterSourceFileWithPTH" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("PL" variable
+                       (:pointer 1
+                        :type ("PTHLexer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4895 4908])
+                    ("CurDir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("DirectoryLookup" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4951 4981]))                  
+                :type "void")
+                nil [4853 5584])
+            ("EnterMacro" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("Tok" variable
+                       (:reference 1
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5744 5755])
+                    ("ILEnd" variable (:type ("SourceLocation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5756 5777])
+                    ("Macro" variable
+                       (:pointer 1
+                        :type ("MacroInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5808 5825])
+                    ("Args" variable
+                       (:pointer 1
+                        :type ("MacroArgs" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5826 5842]))                  
+                :type "void")
+                nil [5714 6248])
+            ("EnterTokenStream" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("Toks" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6910 6928])
+                    ("NumToks" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6929 6946])
+                    ("DisableMacroExpansion" variable (:type "bool") (reparse-symbol arg-sub-list) [6983 7010])
+                    ("OwnsTokens" variable (:type "bool") (reparse-symbol arg-sub-list) [7047 7063]))                  
+                :type "void")
+                nil [6874 7650])
+            ("computeRelativePath" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("FM" variable
+                       (:reference 1
+                        :type ("FileManager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7784 7800])
+                    ("Dir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("DirectoryEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7801 7827])
+                    ("File" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("FileEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7860 7882])
+                    ("Result" variable
+                       (:reference 1
+                        :type ("SmallString" type
+                             (:template-specifier (("128"))
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7915 7940]))                  
+                :type "void")
+                nil [7752 8441])
+            ("PropagateLineStartLeadingSpaceInfo" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("Result" variable
+                       (:reference 1
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8497 8511]))                  
+                :type "void")
+                nil [8443 8819])
+            ("HandleEndOfFile" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("Result" variable
+                       (:reference 1
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9050 9064])
+                    ("isEndOfMacro" variable (:type "bool") (reparse-symbol arg-sub-list) [9065 9083]))                  
+                :type "bool")
+                nil [9015 18838])
+            ("HandleEndOfTokenLexer" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("Result" variable
+                       (:reference 1
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19000 19014]))                  
+                :type "bool")
+                nil [18959 19597])
+            ("RemoveTopOfLexerStack" function
+               (:parent "Preprocessor"
+                :type "void")
+                nil [19801 20191])
+            ("HandleMicrosoftCommentPaste" function
+               (:parent "Preprocessor"
+                :arguments 
+                  ( ("Tok" variable
+                       (:reference 1
+                        :type ("Token" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20451 20462]))                  
+                :type "void")
+                nil [20404 23180]))          
+      :file "PPLexerChange.cpp"
+      :pointmax 23181
+      :fsize 23180
+      :lastmodtime '(21921 53878 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ModuleMap.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("clang/Lex/ModuleMap.h" include nil nil [548 580])
+            ("clang/Basic/CharInfo.h" include nil nil [581 614])
+            ("clang/Basic/Diagnostic.h" include nil nil [615 650])
+            ("clang/Basic/DiagnosticOptions.h" include nil nil [651 693])
+            ("clang/Basic/FileManager.h" include nil nil [694 730])
+            ("clang/Basic/TargetInfo.h" include nil nil [731 766])
+            ("clang/Basic/TargetOptions.h" include nil nil [767 805])
+            ("clang/Lex/HeaderSearch.h" include nil nil [806 841])
+            ("clang/Lex/LexDiagnostic.h" include nil nil [842 878])
+            ("clang/Lex/Lexer.h" include nil nil [879 907])
+            ("clang/Lex/LiteralSupport.h" include nil nil [908 945])
+            ("llvm/ADT/StringRef.h" include nil nil [946 977])
+            ("llvm/ADT/StringSwitch.h" include nil nil [978 1012])
+            ("llvm/Support/Allocator.h" include nil nil [1013 1048])
+            ("llvm/Support/FileSystem.h" include nil nil [1049 1085])
+            ("llvm/Support/Host.h" include nil nil [1086 1116])
+            ("llvm/Support/Path.h" include nil nil [1117 1147])
+            ("llvm/Support/raw_ostream.h" include nil nil [1148 1185])
+            ("stdlib.h" include (:system-flag t) nil [1186 1205])
+            ("clang" using (:type ("clang" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1259 1281])
+            ("resolveExport" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("Mod" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1328 1340])
+                    ("Unresolved" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Module::UnresolvedExportDecl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1367 1414])
+                    ("Complain" variable (:type "bool") (reparse-symbol arg-sub-list) [1440 1454]))                  
+                :type ("Module::ExportDecl" type (:type "class") nil nil))
+                nil [1283 1844])
+            ("resolveModuleId" function
+               (:pointer 1
+                :parent "ModuleMap"
+                :arguments 
+                  ( ("Id" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ModuleId" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1881 1900])
+                    ("Mod" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1901 1913])
+                    ("Complain" variable (:type "bool") (reparse-symbol arg-sub-list) [1949 1963]))                  
+                :type ("Module" type (:type "class") nil nil))
+                nil [1846 2685])
+            ("ModuleMap" function
+               (:constructor-flag t
+                :parent "ModuleMap"
+                :arguments 
+                  ( ("SourceMgr" variable
+                       (:reference 1
+                        :type ("SourceManager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2708 2733])
+                    ("DC" variable
+                       (:reference 1
+                        :type ("DiagnosticConsumer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2734 2757])
+                    ("LangOpts" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("LangOptions" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2779 2807])
+                    ("Target" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("TargetInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2808 2833])
+                    ("HeaderInfo" variable
+                       (:reference 1
+                        :type ("HeaderSearch" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2855 2880]))                  
+                :type ("ModuleMap" type (:type "class") nil nil))
+                nil [2687 3365])
+            ("ModuleMap" function
+               (:destructor-flag t
+                :parent "ModuleMap"
+                :type "void")
+                nil [3367 3576])
+            ("setTarget" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("Target" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TargetInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3604 3629]))                  
+                :type "void")
+                nil [3578 3753])
+            ("sanitizeFilenameAsIdentifier" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Name" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3875 3890])
+                    ("Buffer" variable
+                       (:reference 1
+                        :type ("SmallVectorImpl" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3937 3967]))                  
+                :type ("StringRef" type (:type "class") nil nil))
+                nil [3829 4939])
+            ("isBuiltinHeader" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("FileName" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5135 5154]))                  
+                :type "bool")
+                nil [5107 5582])
+            ("findModuleForHeader" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("File" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("FileEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5638 5660])
+                    ("RequestingModule" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5692 5717]))                  
+                :type ("ModuleMap::KnownHeader" type (:type "class") nil nil))
+                nil [5584 11396])
+            ("isHeaderInUnavailableModule" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("Header" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("FileEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11442 11466]))                  
+                :type "bool")
+                nil [11398 13871])
+            ("findModule" function
+               (:pointer 1
+                :parent "ModuleMap"
+                :arguments 
+                  ( ("Name" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13903 13918]))                  
+                :type ("Module" type (:type "class") nil nil))
+                nil [13873 14075])
+            ("lookupModuleUnqualified" function
+               (:pointer 1
+                :parent "ModuleMap"
+                :arguments 
+                  ( ("Name" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14120 14135])
+                    ("Context" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14179 14195]))                  
+                :type ("Module" type (:type "class") nil nil))
+                nil [14077 14363])
+            ("lookupModuleQualified" function
+               (:pointer 1
+                :parent "ModuleMap"
+                :arguments 
+                  ( ("Name" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14406 14421])
+                    ("Context" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14422 14438]))                  
+                :type ("Module" type (:type "class") nil nil))
+                nil [14365 14534])
+            ("findOrCreateModule" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("Name" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14593 14608])
+                    ("Parent" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14609 14624])
+                    ("IsFramework" variable (:type "bool") (reparse-symbol arg-sub-list) [14625 14642])
+                    ("IsExplicit" variable (:type "bool") (reparse-symbol arg-sub-list) [14673 14689]))                  
+                :type ("std::pair" type
+                     (:template-specifier 
+                        ( ("Module" type (:pointer 1) nil nil)
+                          ("bool" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [14536 15335])
+            ("canInferFrameworkModule" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("ParentDir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("DirectoryEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15377 15409])
+                    ("Name" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15450 15465])
+                    ("IsSystem" variable
+                       (:reference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [15466 15481]))                  
+                :type "bool")
+                nil [15337 16253])
+            ("inferFrameworkLink" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Mod" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16375 16387])
+                    ("FrameworkDir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("DirectoryEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16388 16423])
+                    ("FileMgr" variable
+                       (:reference 1
+                        :type ("FileManager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16455 16476]))                  
+                :type "void")
+                nil [16344 16947])
+            ("inferFrameworkModule" function
+               (:pointer 1
+                :parent "ModuleMap"
+                :arguments 
+                  ( ("ModuleName" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16990 17011])
+                    ("FrameworkDir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("DirectoryEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17044 17079])
+                    ("IsSystem" variable (:type "bool") (reparse-symbol arg-sub-list) [17112 17126])
+                    ("Parent" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17159 17174]))                  
+                :type ("Module" type (:type "class") nil nil))
+                nil [16949 22806])
+            ("setUmbrellaHeader" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("Mod" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22842 22854])
+                    ("UmbrellaHeader" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("FileEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22855 22887]))                  
+                :type "void")
+                nil [22808 23041])
+            ("setUmbrellaDir" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("Mod" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23074 23086])
+                    ("UmbrellaDir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("DirectoryEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23087 23121]))                  
+                :type "void")
+                nil [23043 23191])
+            ("addHeader" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("Mod" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23219 23231])
+                    ("Header" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("FileEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23232 23256])
+                    ("Role" variable (:type ("ModuleHeaderRole" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23283 23305]))                  
+                :type "void")
+                nil [23193 23738])
+            ("getContainingModuleMapFile" function
+               (:pointer 1
+                :parent "ModuleMap"
+                :constant-flag t
+                :arguments 
+                  ( ("Module" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23796 23811]))                  
+                :type ("FileEntry" type (:type "class") nil nil))
+                nil [23740 23971])
+            ("dump" function
+               (:parent "ModuleMap"
+                :type "void")
+                nil [23973 24749])
+            ("resolveExports" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("Mod" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24782 24794])
+                    ("Complain" variable (:type "bool") (reparse-symbol arg-sub-list) [24795 24809]))                  
+                :type "bool")
+                nil [24751 25222])
+            ("resolveUses" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("Mod" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25252 25264])
+                    ("Complain" variable (:type "bool") (reparse-symbol arg-sub-list) [25265 25279]))                  
+                :type "bool")
+                nil [25224 25633])
+            ("resolveConflicts" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("Mod" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25668 25680])
+                    ("Complain" variable (:type "bool") (reparse-symbol arg-sub-list) [25681 25695]))                  
+                :type "bool")
+                nil [25635 26213])
+            ("inferModuleFromLocation" function
+               (:pointer 1
+                :parent "ModuleMap"
+                :arguments 
+                  ( ("Loc" variable (:type ("FullSourceLoc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [26258 26276]))                  
+                :type ("Module" type (:type "class") nil nil))
+                nil [26215 27172])
+            ("clang" type
+               (:members 
+                  ( ("MMToken" type
+                       (:members 
+                          ( ("Kind" variable (:type ("TokenKind" type
+                                 (:prototype t
+                                  :type "enum")
+                                  nil nil)) (reparse-symbol classsubparts) [27447 27936])
+                            ("TokenKind" type
+                               (:members 
+                                  ( ("Comma" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27470 27476])
+                                    ("ConfigMacros" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27483 27496])
+                                    ("Conflict" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27503 27512])
+                                    ("EndOfFile" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27519 27529])
+                                    ("HeaderKeyword" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27536 27550])
+                                    ("Identifier" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27557 27568])
+                                    ("Exclaim" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27575 27583])
+                                    ("ExcludeKeyword" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27590 27605])
+                                    ("ExplicitKeyword" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27612 27628])
+                                    ("ExportKeyword" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27635 27649])
+                                    ("ExternKeyword" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27656 27670])
+                                    ("FrameworkKeyword" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27677 27694])
+                                    ("LinkKeyword" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27701 27713])
+                                    ("ModuleKeyword" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27720 27734])
+                                    ("Period" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27741 27748])
+                                    ("PrivateKeyword" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27755 27770])
+                                    ("UmbrellaKeyword" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27777 27793])
+                                    ("UseKeyword" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27800 27811])
+                                    ("RequiresKeyword" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27818 27834])
+                                    ("Star" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27841 27846])
+                                    ("StringLiteral" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27853 27867])
+                                    ("LBrace" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27874 27881])
+                                    ("RBrace" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27888 27895])
+                                    ("LSquare" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27902 27910])
+                                    ("RSquare" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [27917 27930]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [27447 27936])
+                            ("Location" variable (:type "unsigned int") (reparse-symbol classsubparts) [27946 27964])
+                            ("StringLength" variable (:type "unsigned int") (reparse-symbol classsubparts) [27969 27991])
+                            ("StringData" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [27996 28019])
+                            ("clear" function (:type "void") (reparse-symbol classsubparts) [28029 28139])
+                            ("is" function
+                               (:arguments 
+                                  ( ("K" variable (:type ("TokenKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28157 28169]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [28149 28197])
+                            ("getLocation" function (:type ("SourceLocation" type (:type "class") nil nil)) (reparse-symbol classsubparts) [28207 28308])
+                            ("getString" function (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol classsubparts) [28318 28403]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [27426 28408])
+                    ("Attributes" type
+                       (:members 
+                          ( ("Attributes" function
+                               (:constructor-flag t
+                                :type ("Attributes" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [28505 28550])
+                            ("IsSystem" variable
+                               (:suffix ":1"
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [28604 28626])
+                            ("IsExhaustive" variable
+                               (:suffix ":1"
+                                :type "unsigned int")
+                                (reparse-symbol classsubparts) [28706 28732]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [28481 28737])
+                    ("ModuleMapParser" type
+                       (:members 
+                          ( ("L" variable (:type ("Lexer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [28772 28781])
+                            ("SourceMgr" variable (:type ("SourceManager" type (:type "class") nil nil)) (reparse-symbol classsubparts) [28786 28811])
+                            ("Target" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("TargetInfo" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [28906 28931])
+                            ("Diags" variable (:type ("DiagnosticsEngine" type (:type "class") nil nil)) (reparse-symbol classsubparts) [28937 28962])
+                            ("Map" variable (:type ("ModuleMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [28967 28982])
+                            ("Directory" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("DirectoryEntry" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [29054 29086])
+                            ("BuiltinIncludeDir" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("DirectoryEntry" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [29156 29196])
+                            ("IsSystem" variable (:type "bool") (reparse-symbol classsubparts) [29274 29288])
+                            ("HadError" variable (:type "bool") (reparse-symbol classsubparts) [29340 29354])
+                            ("StringData" variable (:type ("llvm::BumpPtrAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [29469 29503])
+                            ("Tok" variable (:type ("MMToken" type (:type "class") nil nil)) (reparse-symbol classsubparts) [29547 29559])
+                            ("ActiveModule" variable
+                               (:pointer 1
+                                :type ("Module" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [29603 29624])
+                            ("consumeToken" function
+                               (:prototype-flag t
+                                :type ("SourceLocation" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [29700 29730])
+                            ("skipUntil" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("K" variable (:type ("MMToken::TokenKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29863 29884]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [29848 29885])
+                            ("ModuleId" type
+                               (:typedef ("SmallVector" type
+                                     (:template-specifier 
+                                        ( ("std::pair" type nil nil nil)
+                                          ("2"))                                        
+                                      :type "class")
+                                      nil nil)
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [29891 29963])
+                            ("parseModuleId" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Id" variable
+                                       (:reference 1
+                                        :type ("ModuleId" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [29987 30000]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [29968 30001])
+                            ("parseModuleDecl" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [30006 30029])
+                            ("parseExternModuleDecl" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [30034 30063])
+                            ("parseRequiresDecl" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [30068 30093])
+                            ("parseHeaderDecl" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("" variable (:type ("clang::MMToken::TokenKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30119 30145])
+                                    ("LeadingLoc" variable (:type ("SourceLocation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30171 30197]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [30098 30198])
+                            ("parseUmbrellaDirDecl" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("UmbrellaLoc" variable (:type ("SourceLocation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30229 30256]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [30203 30257])
+                            ("parseExportDecl" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [30262 30285])
+                            ("parseUseDecl" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [30290 30310])
+                            ("parseLinkDecl" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [30315 30336])
+                            ("parseConfigMacros" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [30341 30366])
+                            ("parseConflict" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [30371 30392])
+                            ("parseInferredModuleDecl" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Framework" variable (:type "bool") (reparse-symbol arg-sub-list) [30426 30441])
+                                    ("Explicit" variable (:type "bool") (reparse-symbol arg-sub-list) [30442 30456]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [30397 30457])
+                            ("parseOptionalAttributes" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("Attrs" variable
+                                       (:reference 1
+                                        :type ("Attributes" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30491 30509]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [30462 30510])
+                            ("getOverriddenHeaderSearchDir" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :type ("DirectoryEntry" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [30516 30569])
+                            ("public" label nil (reparse-symbol classsubparts) [30577 30584])
+                            ("ModuleMapParser" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("L" variable
+                                       (:reference 1
+                                        :type ("Lexer" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30614 30623])
+                                    ("SourceMgr" variable
+                                       (:reference 1
+                                        :type ("SourceManager" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30624 30649])
+                                    ("Target" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("TargetInfo" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30680 30705])
+                                    ("Diags" variable
+                                       (:reference 1
+                                        :type ("DiagnosticsEngine" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30735 30760])
+                                    ("Map" variable
+                                       (:reference 1
+                                        :type ("ModuleMap" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30790 30805])
+                                    ("Directory" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("DirectoryEntry" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30835 30867])
+                                    ("BuiltinIncludeDir" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type ("DirectoryEntry" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [30897 30937])
+                                    ("IsSystem" variable (:type "bool") (reparse-symbol arg-sub-list) [30967 30981]))                                  
+                                :type ("ModuleMapParser" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [30598 31240])
+                            ("parseModuleMapFile" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [31250 31276]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [28744 31281]))                  
+                :type "namespace")
+                nil [27363 31283])
+            ("consumeToken" function
+               (:parent "ModuleMapParser"
+                :type ("SourceLocation" type (:type "class") nil nil))
+                nil [31285 34195])
+            ("skipUntil" function
+               (:parent "ModuleMapParser"
+                :arguments 
+                  ( ("K" variable (:type ("MMToken::TokenKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34229 34250]))                  
+                :type "void")
+                nil [34197 35087])
+            ("parseModuleId" function
+               (:parent "ModuleMapParser"
+                :arguments 
+                  ( ("Id" variable
+                       (:reference 1
+                        :type ("ModuleId" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [35289 35302]))                  
+                :type "bool")
+                nil [35253 35688])
+            ("unnamed" type
+               (:members 
+                  ( ("AttributeKind" type
+                       (:members 
+                          ( ("AT_unknown" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [35812 35823])
+                            ("AT_system" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [35867 35877])
+                            ("AT_exhaustive" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [35925 35942]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [35750 35943]))                  
+                :type "namespace")
+                nil [35690 35945])
+            ("parseModuleDecl" function
+               (:parent "ModuleMapParser"
+                :type "void")
+                nil [36435 43068])
+            ("parseExternModuleDecl" function
+               (:parent "ModuleMapParser"
+                :type "void")
+                nil [43205 44359])
+            ("parseRequiresDecl" function
+               (:parent "ModuleMapParser"
+                :type "void")
+                nil [44586 45395])
+            ("appendSubframeworkPaths" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Mod" variable
+                       (:pointer 1
+                        :type ("Module" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45552 45564])
+                    ("Path" variable
+                       (:reference 1
+                        :type ("SmallVectorImpl" type
+                             (:template-specifier 
+                                ( ("char" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [45601 45629]))                  
+                :type "void")
+                nil [45516 46071])
+            ("parseHeaderDecl" function
+               (:parent "ModuleMapParser"
+                :arguments 
+                  ( ("LeadingToken" variable (:type ("MMToken::TokenKind" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46275 46307])
+                    ("LeadingLoc" variable (:type ("SourceLocation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46346 46372]))                  
+                :type "void")
+                nil [46237 50660])
+            ("parseUmbrellaDirDecl" function
+               (:parent "ModuleMapParser"
+                :arguments 
+                  ( ("UmbrellaLoc" variable (:type ("SourceLocation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50825 50852]))                  
+                :type "void")
+                nil [50782 52142])
+            ("parseExportDecl" function
+               (:parent "ModuleMapParser"
+                :type "void")
+                nil [52359 53300])
+            ("parseUseDecl" function
+               (:parent "ModuleMapParser"
+                :type "void")
+                nil [53408 54010])
+            ("parseLinkDecl" function
+               (:parent "ModuleMapParser"
+                :type "void")
+                nil [54126 54854])
+            ("parseConfigMacros" function
+               (:parent "ModuleMapParser"
+                :type "void")
+                nil [55063 56286])
+            ("formatModuleId" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Id" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ModuleId" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56367 56386]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [56333 56598])
+            ("parseConflict" function
+               (:parent "ModuleMapParser"
+                :type "void")
+                nil [56719 57510])
+            ("parseInferredModuleDecl" function
+               (:parent "ModuleMapParser"
+                :arguments 
+                  ( ("Framework" variable (:type "bool") (reparse-symbol arg-sub-list) [57846 57861])
+                    ("Explicit" variable (:type "bool") (reparse-symbol arg-sub-list) [57862 57876]))                  
+                :type "void")
+                nil [57800 61873])
+            ("parseOptionalAttributes" function
+               (:parent "ModuleMapParser"
+                :arguments 
+                  ( ("Attrs" variable
+                       (:reference 1
+                        :type ("Attributes" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62200 62218]))                  
+                :type "bool")
+                nil [62154 63549])
+            ("getOverriddenHeaderSearchDir" function
+               (:pointer 1
+                :parent "ModuleMapParser"
+                :constant-flag t
+                :type ("DirectoryEntry" type (:type "class") nil nil))
+                nil [63706 64079])
+            ("parseModuleMapFile" function
+               (:parent "ModuleMapParser"
+                :type "bool")
+                nil [64172 65233])
+            ("parseModuleMapFile" function
+               (:parent "ModuleMap"
+                :arguments 
+                  ( ("File" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("FileEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65270 65292])
+                    ("IsSystem" variable (:type "bool") (reparse-symbol arg-sub-list) [65293 65307]))                  
+                :type "bool")
+                nil [65235 66141]))          
+      :file "ModuleMap.cpp"
+      :pointmax 66142
+      :fsize 66141
+      :lastmodtime '(21921 53878 0 0)
+      :unmatched-syntax '((EXPLICIT 30589 . 30597))))
+  :file "!usr!local!include!clang-3.4!lib!Lex!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

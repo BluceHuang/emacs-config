@@ -1,0 +1,178 @@
+;; Object landlord/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "landlord/"
+  :tables
+  (list
+    (semanticdb-table "game.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("stdarg.h" include (:system-flag t) nil [40 59])
+            ("string.h" include (:system-flag t) nil [60 79])
+            ("unistd.h" include (:system-flag t) nil [80 99])
+            ("fcntl.h" include (:system-flag t) nil [100 118])
+            ("sys/types.h" include (:system-flag t) nil [119 141])
+            ("sys/stat.h" include (:system-flag t) nil [142 163])
+            ("time.h" include (:system-flag t) nil [164 181])
+            ("errno.h" include (:system-flag t) nil [182 200])
+            ("landlord.h" include nil nil [202 223])
+            ("log.h" include nil nil [224 240])
+            ("game.h" include nil nil [241 258])
+            ("proto.h" include nil nil [259 277])
+            ("client.h" include nil nil [278 297])
+            ("player.h" include nil nil [298 317])
+            ("table.h" include nil nil [318 336])
+            ("landlord" variable
+               (:typemodifiers ("extern")
+                :type ("Landlord" type (:type "class") nil nil))
+                nil [338 363])
+            ("log" variable
+               (:typemodifiers ("extern")
+                :type ("Log" type (:type "class") nil nil))
+                nil [364 379])
+            ("dump_game_info" function
+               (:arguments 
+                  ( ("tag" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [401 411]))                  
+                :type "void")
+                nil [381 3928])
+            ("Game" function
+               (:constructor-flag t
+                :parent "Game"
+                :type ("Game" type (:type "class") nil nil))
+                nil [3930 3946])
+            ("Game" function
+               (:destructor-flag t
+                :parent "Game"
+                :type "void")
+                nil [3948 3965])
+            ("start" function
+               (:parent "Game"
+                :type "int")
+                nil [3967 4068])
+            ("init_table" function
+               (:parent "Game"
+                :type "int")
+                nil [4137 5189])
+            ("init_accept" function
+               (:parent "Game"
+                :type "int")
+                nil [5191 6674])
+            ("accept_cb" function
+               (:parent "Game"
+                :arguments 
+                  ( ("loop" variable
+                       (:pointer 1
+                        :type ("ev_loop" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6697 6718])
+                    ("w" variable
+                       (:pointer 1
+                        :type ("ev_io" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6719 6735])
+                    ("revents" variable (:type "int") (reparse-symbol arg-sub-list) [6736 6748]))                  
+                :type "void")
+                nil [6676 7305])
+            ("del_client" function
+               (:parent "Game"
+                :arguments 
+                  ( ("client" variable
+                       (:pointer 1
+                        :type ("Client" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7329 7344]))                  
+                :type "void")
+                nil [7307 8606])
+            ("dispatch" function
+               (:parent "Game"
+                :arguments 
+                  ( ("client" variable
+                       (:pointer 1
+                        :type ("Client" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8627 8642]))                  
+                :type "int")
+                nil [8608 10696])
+            ("safe_check" function
+               (:parent "Game"
+                :arguments 
+                  ( ("client" variable
+                       (:pointer 1
+                        :type ("Client" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10719 10734])
+                    ("cmd" variable (:type "int") (reparse-symbol arg-sub-list) [10735 10743]))                  
+                :type "int")
+                nil [10698 11100])
+            ("handler_join_table" function
+               (:parent "Game"
+                :arguments 
+                  ( ("client" variable
+                       (:pointer 1
+                        :type ("Client" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11131 11146]))                  
+                :type "int")
+                nil [11102 13820])
+            ("update_table" function
+               (:parent "Game"
+                :arguments 
+                  ( ("tid" variable (:type "int") (reparse-symbol arg-sub-list) [13845 13853]))                  
+                :type "int")
+                nil [13822 14633])
+            ("send_error" function
+               (:parent "Game"
+                :arguments 
+                  ( ("client" variable
+                       (:pointer 1
+                        :type ("Client" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14656 14671])
+                    ("cmd" variable (:type "int") (reparse-symbol arg-sub-list) [14672 14680])
+                    ("error_code" variable (:type "int") (reparse-symbol arg-sub-list) [14681 14696]))                  
+                :type "int")
+                nil [14635 14842])
+            ("dump_msg" function
+               (:parent "Game"
+                :arguments 
+                  ( ("msg" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14864 14875]))                  
+                :type "void")
+                nil [14844 15135])
+            ("check_skey" function
+               (:parent "Game"
+                :arguments 
+                  ( ("client" variable
+                       (:pointer 1
+                        :type ("Client" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15158 15173]))                  
+                :type "int")
+                nil [15137 15765])
+            ("add_player" function
+               (:parent "Game"
+                :arguments 
+                  ( ("client" variable
+                       (:pointer 1
+                        :type ("Client" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15788 15803]))                  
+                :type "int")
+                nil [15767 17832])
+            ("del_player" function
+               (:parent "Game"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17855 17870]))                  
+                :type "int")
+                nil [17834 19110]))          
+      :file "game.cc"
+      :pointmax 19111
+      :fsize 19849
+      :lastmodtime '(21062 30150 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!huangyong!Downloads!landlord!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

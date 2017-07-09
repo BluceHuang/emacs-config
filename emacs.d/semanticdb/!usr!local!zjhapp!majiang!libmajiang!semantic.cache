@@ -1,0 +1,1183 @@
+;; Object libmajiang/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "libmajiang/"
+  :tables
+  (list
+    (semanticdb-table "deck.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [1 21])
+            ("deck.h" include nil nil [22 39])
+            ("card_arr" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{ 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x10}"
+                :type "int")
+                nil [41 163])
+            ("fill" function
+               (:parent "Deck"
+                :type "void")
+                nil [165 418])
+            ("empty" function
+               (:parent "Deck"
+                :type "void")
+                nil [420 458])
+            ("size" function
+               (:parent "Deck"
+                :type "int")
+                nil [460 508])
+            ("push" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("card" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [526 536]))                  
+                :type "bool")
+                nil [510 578])
+            ("pop" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("card" variable
+                       (:reference 1
+                        :type ("Card" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [595 606]))                  
+                :type "bool")
+                nil [580 696])
+            ("myrandom" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [711 717]))                  
+                :type "int")
+                nil [698 746])
+            ("shuffle" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("seed" variable (:type "int") (reparse-symbol arg-sub-list) [767 776]))                  
+                :type "bool")
+                nil [748 887])
+            ("get_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [915 936]))                  
+                :type "void")
+                nil [889 1050])
+            ("get_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1078 1099])
+                    ("card_type" variable (:type "int") (reparse-symbol arg-sub-list) [1100 1114]))                  
+                :type "void")
+                nil [1052 1678])
+            ("change_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1709 1730])
+                    ("pos" variable (:type "int") (reparse-symbol arg-sub-list) [1731 1739]))                  
+                :type "void")
+                nil [1680 1881])
+            ("delete_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("tmp" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1907 1930]))                  
+                :type "void")
+                nil [1883 2166])
+            ("debug" function
+               (:parent "Deck"
+                :type "void")
+                nil [2168 2216])
+            ("get_next_card" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2243 2264]))                  
+                :type "void")
+                nil [2218 2360])
+            ("see_next_card" function
+               (:parent "Deck"
+                :type "int")
+                nil [2362 2449]))          
+      :file "deck.cc"
+      :pointmax 2450
+      :fsize 2449
+      :lastmodtime '(22376 46436 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "card.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_CARD_H_" variable (:constant-flag t) nil [26 34])
+            ("string" include (:system-flag t) nil [36 53])
+            ("iostream" include (:system-flag t) nil [54 73])
+            ("cstdio" include (:system-flag t) nil [74 91])
+            ("vector" include (:system-flag t) nil [92 109])
+            ("map" include (:system-flag t) nil [110 124])
+            ("algorithm" include (:system-flag t) nil [125 145])
+            ("card_type.h" include nil nil [147 169])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [171 191])
+            ("Card" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [346 353])
+                    ("Face" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("One" variable
+                                     (:constant-flag t
+                                      :default-value (385 386)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [379 386])
+                                  ("Two" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [390 394])
+                                  ("Three" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [397 403])
+                                  ("Four" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [406 411])
+                                  ("Five" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [414 419])
+                                  ("Six" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [422 426])
+                                  ("Seven" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [429 435])
+                                  ("Eight" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [438 444])
+                                  ("Nine" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [447 452])
+                                  ("East" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [455 460])
+                                  ("South" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [463 469])
+                                  ("West" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [472 477])
+                                  ("North" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [480 486])
+                                  ("Zhong" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [489 495])
+                                  ("Fa" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [498 501])
+                                  ("Bai" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [504 510]))                                
+                              :type "enum")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [355 516])
+                    ("face" variable (:type "int") (reparse-symbol classsubparts) [519 528])
+                    ("value" variable (:type "int") (reparse-symbol classsubparts) [530 540])
+                    ("Card" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Card" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [543 550])
+                    ("Card" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol arg-sub-list) [557 565]))                          
+                        :type ("Card" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [552 566])
+                    ("set_value" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol arg-sub-list) [583 591]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [568 592])
+                    ("get_card" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [595 618])
+                    ("<" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [637 651]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [621 689])
+                    (">" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [710 724]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [694 762])
+                    ("==" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [784 798]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [767 837])
+                    ("compare" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [862 876])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [877 891]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [843 1054])
+                    ("lesser_callback" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1085 1099])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1100 1114]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1057 1193])
+                    ("greater_callback" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1225 1239])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1240 1254]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1196 1332])
+                    ("sort_by_ascending" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1365 1386]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1335 1443])
+                    ("sort_by_descending" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1477 1498]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1446 1556])
+                    ("dump_cards" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1582 1603])
+                            ("str" variable
+                               (:default-value "\"cards\""
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1604 1624]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1559 1827])
+                    ("dump_cards" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("m" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1853 1876])
+                            ("str" variable
+                               (:default-value "\"cards\""
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1877 1897]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1830 2109]))                  
+                :type "class")
+                nil [333 2112]))          
+      :file "card.h"
+      :pointmax 2136
+      :fsize 2135
+      :lastmodtime '(22342 40430 0 0)
+      :unmatched-syntax '((punctuation 839 . 840) (punctuation 764 . 765) (punctuation 691 . 692))
+      :lexical-table 
+        '(("_CARD_H_")
+          )
+)
+    (semanticdb-table "deck.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_DECK_H_" variable (:constant-flag t) nil [26 34])
+            ("vector" include (:system-flag t) nil [36 53])
+            ("card.h" include nil nil [55 72])
+            ("hole_cards.h" include nil nil [73 96])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [98 118])
+            ("Deck" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [133 140])
+                    ("fill" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [142 154])
+                    ("empty" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [156 169])
+                    ("size" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [171 188])
+                    ("push" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("card" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [202 212]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [192 213])
+                    ("pop" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("card" variable
+                               (:reference 1
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [224 235]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [215 236])
+                    ("shuffle" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("seed" variable (:type "int") (reparse-symbol arg-sub-list) [251 260]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [238 261])
+                    ("get_hole_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("holecards" variable
+                               (:reference 1
+                                :type ("HoleCards" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [285 306]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [265 307])
+                    ("get_hole_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("holecards" variable
+                               (:reference 1
+                                :type ("HoleCards" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [329 350])
+                            ("card_type" variable (:type "int") (reparse-symbol arg-sub-list) [351 365]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [309 366])
+                    ("get_next_card" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("holecards" variable
+                               (:reference 1
+                                :type ("HoleCards" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [390 411]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [371 412])
+                    ("see_next_card" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [417 438])
+                    ("change_hole_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("holecards" variable
+                               (:reference 1
+                                :type ("HoleCards" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [463 484])
+                            ("pos" variable (:type "int") (reparse-symbol arg-sub-list) [485 493]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [440 494])
+                    ("debug" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [496 509])
+                    ("public" label nil (reparse-symbol classsubparts) [511 518])
+                    ("cards" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("Card" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [520 539])
+                    ("private" label nil (reparse-symbol classsubparts) [541 549])
+                    ("get_baozi_hole_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("holecards" variable
+                               (:reference 1
+                                :type ("HoleCards" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [577 598]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [551 599])
+                    ("get_shunjin_hole_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("holecards" variable
+                               (:reference 1
+                                :type ("HoleCards" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [629 650]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [601 651])
+                    ("get_jinhua_hole_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("holecards" variable
+                               (:reference 1
+                                :type ("HoleCards" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [680 701]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [653 702])
+                    ("get_shunzi_hole_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("holecards" variable
+                               (:reference 1
+                                :type ("HoleCards" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [731 752]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [704 753])
+                    ("get_duizi_hole_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("holecards" variable
+                               (:reference 1
+                                :type ("HoleCards" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [781 802]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [755 803])
+                    ("get_danpai_hole_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("holecards" variable
+                               (:reference 1
+                                :type ("HoleCards" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [832 853]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [805 854])
+                    ("get_teshu_hole_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("holecards" variable
+                               (:reference 1
+                                :type ("HoleCards" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [882 903]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [856 904])
+                    ("delete_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tmp" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [924 947]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [906 948]))                  
+                :type "class")
+                nil [120 951]))          
+      :file "deck.h"
+      :pointmax 975
+      :fsize 974
+      :lastmodtime '(22349 22932 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_DECK_H_")
+          )
+)
+    (semanticdb-table "hole_cards.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_HOLE_CARDS_H_" variable (:constant-flag t) nil [32 46])
+            ("vector" include (:system-flag t) nil [48 65])
+            ("list" include (:system-flag t) nil [66 81])
+            ("set" include (:system-flag t) nil [82 96])
+            ("algorithm" include (:system-flag t) nil [97 117])
+            ("card.h" include nil nil [119 136])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [138 158])
+            ("HoleCards" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [178 185])
+                    ("HoleCards" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [187 199])
+                    ("add_card" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("c" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [216 223]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [202 224])
+                    ("sort" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [227 239])
+                    ("analysis" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [242 258])
+                    ("compare" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hc" variable
+                               (:reference 1
+                                :type ("HoleCards" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [273 287]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [261 288])
+                    ("clear" function (:type "void") (reparse-symbol classsubparts) [291 534])
+                    ("copy_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [553 574]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [537 575])
+                    ("copy_cards" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [594 614]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [578 615])
+                    ("handler_chu" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [638 648]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [621 649])
+                    ("handler_chi" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [671 681])
+                            ("pattern" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [682 697])
+                            ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [698 707]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [654 708])
+                    ("handler_peng" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [731 741])
+                            ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [742 751]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [713 752])
+                    ("handler_gang" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [775 785])
+                            ("gang_flag" variable (:type "int") (reparse-symbol arg-sub-list) [786 800])
+                            ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [801 810]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [757 811])
+                    ("handler_ting" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [834 844]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [816 845])
+                    ("permit_ting" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [851 870])
+                    ("permit_gang" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [875 894])
+                    ("permit_gang" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [916 926]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [899 927])
+                    ("permit_peng" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [949 959]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [932 960])
+                    ("permit_chi" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [981 991]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [965 992])
+                    ("permit_hu" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [1012 1022]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [997 1023])
+                    ("permit_hu" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1028 1045])
+                    ("has_card" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [1065 1075]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1051 1076])
+                    ("size" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1079 1096])
+                    ("debug" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1098 1111])
+                    ("cards" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Card" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1114 1138])
+                    ("oldcards" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Card" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1143 1170])
+                    ("discard_cards" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("Card" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1176 1206])
+                    ("obsorb_cards" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1211 1256])
+                    ("hu_cards" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Card" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1261 1288])
+                    ("eat_cards" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Card" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1294 1322])
+                    ("gang_cards" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("Card" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1347 1376])
+                    ("gang_flag" variable (:type "int") (reparse-symbol classsubparts) [1387 1401])
+                    ("card_type" variable (:type "int") (reparse-symbol classsubparts) [1437 1451])
+                    ("last_card" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1456 1471])
+                    ("ting_cards" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("vector" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1476 1516])
+                    ("private" label nil (reparse-symbol classsubparts) [1518 1526])
+                    ("is_shunzi" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("card1" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1546 1557])
+                            ("card2" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1558 1569])
+                            ("card3" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1570 1581]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1531 1582])
+                    ("is_same" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("card1" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1600 1611])
+                            ("card2" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1612 1623]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1587 1624])
+                    ("is_same" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("card1" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1642 1653])
+                            ("card2" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1654 1665])
+                            ("card3" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1666 1677]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1629 1678])
+                    ("is_same" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("card1" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1696 1707])
+                            ("card2" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1708 1719])
+                            ("card3" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1720 1731])
+                            ("card4" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1732 1743]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1683 1744])
+                    ("is_complete" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("acards" variable
+                               (:reference 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1766 1787])
+                            ("d1" variable (:type "int") (reparse-symbol arg-sub-list) [1788 1795])
+                            ("d2" variable (:type "int") (reparse-symbol arg-sub-list) [1796 1803]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1749 1804])
+                    ("is_complete" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("acards" variable
+                               (:reference 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1833 1854]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1809 1855]))                  
+                :type "class")
+                nil [160 1859]))          
+      :file "hole_cards.h"
+      :pointmax 1889
+      :fsize 1958
+      :lastmodtime '(22376 44811 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_HOLE_CARDS_H_")
+          )
+)
+    (semanticdb-table "hole_cards.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("card.h" include nil nil [1 18])
+            ("card_type.h" include nil nil [19 41])
+            ("hole_cards.h" include nil nil [42 65])
+            ("HoleCards" function
+               (:constructor-flag t
+                :parent "HoleCards"
+                :type ("HoleCards" type (:type "class") nil nil))
+                nil [379 449])
+            ("add_card" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("card" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [476 486]))                  
+                :type "void")
+                nil [451 544])
+            ("sort" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [546 605])
+            ("analysis" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [607 3076])
+            ("compare" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("hc" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3101 3115]))                  
+                :type "int")
+                nil [3078 3130])
+            ("copy_cards" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3159 3180]))                  
+                :type "void")
+                nil [3132 3196])
+            ("copy_cards" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3225 3245]))                  
+                :type "void")
+                nil [3198 3335])
+            ("size" function
+               (:parent "HoleCards"
+                :type "int")
+                nil [3337 3390])
+            ("debug" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [3392 3505])
+            ("handler_chu" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [3535 3545]))                  
+                :type "void")
+                nil [3507 3886])
+            ("handler_chi" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [3916 3926])
+                    ("pattern" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [3927 3942])
+                    ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [3943 3952]))                  
+                :type "void")
+                nil [3888 4990])
+            ("handler_peng" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [5021 5031])
+                    ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [5032 5041]))                  
+                :type "void")
+                nil [4992 5971])
+            ("handler_gang" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [6002 6012])
+                    ("gang_flag" variable (:type "int") (reparse-symbol arg-sub-list) [6013 6027])
+                    ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [6028 6037]))                  
+                :type "void")
+                nil [5973 8036])
+            ("permit_ting" function
+               (:parent "HoleCards"
+                :type "bool")
+                nil [8038 8154])
+            ("permit_gang" function
+               (:parent "HoleCards"
+                :type "bool")
+                nil [8156 9508])
+            ("permit_gang" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [9538 9548]))                  
+                :type "bool")
+                nil [9510 10192])
+            ("permit_peng" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [10222 10232]))                  
+                :type "bool")
+                nil [10194 10722])
+            ("is_shunzi" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("card1" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10750 10761])
+                    ("card2" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10762 10773])
+                    ("card3" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10774 10785]))                  
+                :type "bool")
+                nil [10724 11033])
+            ("is_same" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("card1" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11059 11070])
+                    ("card2" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11071 11082]))                  
+                :type "bool")
+                nil [11035 11174])
+            ("is_same" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("card1" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11200 11211])
+                    ("card2" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11212 11223])
+                    ("card3" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11224 11235]))                  
+                :type "bool")
+                nil [11176 11357])
+            ("is_same" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("card1" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11383 11394])
+                    ("card2" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11395 11406])
+                    ("card3" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11407 11418])
+                    ("card4" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11419 11430]))                  
+                :type "bool")
+                nil [11359 11583])
+            ("has_card" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [11610 11620]))                  
+                :type "bool")
+                nil [11585 11821])
+            ("permit_hu" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [11849 11859]))                  
+                :type "bool")
+                nil [11823 13024])
+            ("permit_hu" function
+               (:parent "HoleCards"
+                :type "bool")
+                nil [13026 13593])
+            ("permit_chi" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [13622 13632]))                  
+                :type "bool")
+                nil [13595 15009])
+            ("is_complete" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("acards" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15039 15060]))                  
+                :type "bool")
+                nil [15011 16176])
+            ("is_complete" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("acards" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16206 16227])
+                    ("d1" variable (:type "int") (reparse-symbol arg-sub-list) [16228 16235])
+                    ("d2" variable (:type "int") (reparse-symbol arg-sub-list) [16236 16243]))                  
+                :type "bool")
+                nil [16178 16621])
+            ("handler_ting" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("value" variable (:type "int") (reparse-symbol arg-sub-list) [16651 16661]))                  
+                :type "int")
+                nil [16623 17182]))          
+      :file "hole_cards.cc"
+      :pointmax 17183
+      :fsize 17324
+      :lastmodtime '(22379 22200 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "card_type.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_CARD_TYPE_H_" variable (:constant-flag t) nil [31 44])
+            ("CardType" type
+               (:members 
+                  ( ("CARD_TYPE_ERROR" variable
+                       (:constant-flag t
+                        :default-value (81 82)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [63 82])
+                    ("CARD_TYPE_BAOZI" variable
+                       (:constant-flag t
+                        :default-value (113 114)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [95 114])
+                    ("CARD_TYPE_SHUNJIN" variable
+                       (:constant-flag t
+                        :default-value (145 146)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [125 146])
+                    ("CARD_TYPE_JINHUA" variable
+                       (:constant-flag t
+                        :default-value (179 180)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [160 180])
+                    ("CARD_TYPE_SHUNZI" variable
+                       (:constant-flag t
+                        :default-value (210 211)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [191 211])
+                    ("CARD_TYPE_DUIZI" variable
+                       (:constant-flag t
+                        :default-value (243 244)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [225 244])
+                    ("CARD_TYPE_DANPAI" variable
+                       (:constant-flag t
+                        :default-value (274 275)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [255 275])
+                    ("CARD_TYPE_TESHU" variable
+                       (:constant-flag t
+                        :default-value (304 305)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [286 305]))                  
+                :type "enum")
+                nil [46 323]))          
+      :file "card_type.h"
+      :pointmax 352
+      :fsize 387
+      :lastmodtime '(22342 37816 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_CARD_TYPE_H_")
+          )
+)
+    (semanticdb-table "card.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("card.h" include nil nil [1 18])
+            ("face_symbols" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{ \"1万\", \"2万\", \"3万\", \"4万\", \"5万\", \"6万\", \"7万\", \"8万\", \"9万\", \"东\", \"南\", \"西\", \"北\", \"中\", \"发\", \"白\"}"
+                :type ("string" type (:type "class") nil nil))
+                nil [20 142])
+            ("Card" function
+               (:constructor-flag t
+                :parent "Card"
+                :type ("Card" type (:type "class") nil nil))
+                nil [145 180])
+            ("Card" function
+               (:constructor-flag t
+                :parent "Card"
+                :arguments 
+                  ( ("val" variable (:type "int") (reparse-symbol arg-sub-list) [193 201]))                  
+                :type ("Card" type (:type "class") nil nil))
+                nil [182 234])
+            ("set_value" function
+               (:parent "Card"
+                :arguments 
+                  ( ("val" variable (:type "int") (reparse-symbol arg-sub-list) [257 265]))                  
+                :type "void")
+                nil [236 299])
+            ("get_card" function
+               (:parent "Card"
+                :type ("string" type (:type "class") nil nil))
+                nil [301 491]))          
+      :file "card.cc"
+      :pointmax 492
+      :fsize 523
+      :lastmodtime '(22347 64512 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "test.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("card.h" include nil nil [1 18])
+            ("deck.h" include nil nil [19 36])
+            ("hole_cards.h" include nil nil [37 60])
+            ("test_card_type" function
+               (:arguments 
+                  ( ("deck" variable
+                       (:reference 1
+                        :type ("Deck" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82 93])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [94 104])
+                    ("card_type" variable (:type "int") (reparse-symbol arg-sub-list) [105 119]))                  
+                :type "void")
+                nil [62 1051])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1062 1071])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1072 1085]))                  
+                :type "int")
+                nil [1053 3348]))          
+      :file "test.cc"
+      :pointmax 3349
+      :fsize 3497
+      :lastmodtime '(22351 40939 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!local!zjhapp!majiang!libmajiang!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

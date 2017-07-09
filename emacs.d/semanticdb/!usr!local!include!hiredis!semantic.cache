@@ -1,0 +1,678 @@
+;; Object hiredis/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "hiredis/"
+  :tables
+  (list
+    (semanticdb-table "hiredis.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__HIREDIS_H" variable (:constant-flag t) nil [1719 1730])
+            ("stdio.h" include (:system-flag t) nil [1731 1749])
+            ("stdarg.h" include (:system-flag t) nil [1767 1786])
+            ("sys/time.h" include (:system-flag t) nil [1805 1826])
+            ("HIREDIS_MAJOR" variable (:constant-flag t) nil [1861 1874])
+            ("HIREDIS_MINOR" variable (:constant-flag t) nil [1885 1898])
+            ("HIREDIS_PATCH" variable (:constant-flag t) nil [1910 1923])
+            ("REDIS_ERR" variable (:constant-flag t) nil [1935 1944])
+            ("REDIS_OK" variable (:constant-flag t) nil [1956 1964])
+            ("REDIS_ERR_IO" variable (:constant-flag t) nil [2257 2269])
+            ("REDIS_ERR_EOF" variable (:constant-flag t) nil [2309 2322])
+            ("REDIS_ERR_PROTOCOL" variable (:constant-flag t) nil [2351 2369])
+            ("REDIS_ERR_OOM" variable (:constant-flag t) nil [2401 2414])
+            ("REDIS_ERR_OTHER" variable (:constant-flag t) nil [2445 2460])
+            ("REDIS_BLOCK" variable (:constant-flag t) nil [2630 2641])
+            ("REDIS_CONNECTED" variable (:constant-flag t) nil [2788 2803])
+            ("REDIS_DISCONNECTING" variable (:constant-flag t) nil [3077 3096])
+            ("REDIS_FREEING" variable (:constant-flag t) nil [3219 3232])
+            ("REDIS_IN_CALLBACK" variable (:constant-flag t) nil [3305 3322])
+            ("REDIS_SUBSCRIBED" variable (:constant-flag t) nil [3414 3430])
+            ("REDIS_MONITORING" variable (:constant-flag t) nil [3496 3512])
+            ("REDIS_REPLY_STRING" variable (:constant-flag t) nil [3527 3545])
+            ("REDIS_REPLY_ARRAY" variable (:constant-flag t) nil [3556 3573])
+            ("REDIS_REPLY_INTEGER" variable (:constant-flag t) nil [3584 3603])
+            ("REDIS_REPLY_NIL" variable (:constant-flag t) nil [3614 3629])
+            ("REDIS_REPLY_STATUS" variable (:constant-flag t) nil [3640 3658])
+            ("REDIS_REPLY_ERROR" variable (:constant-flag t) nil [3669 3686])
+            ("REDIS_READER_MAX_BUF" variable (:constant-flag t) nil [3698 3718])
+            ("redisCommandArgv" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("redisContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8813 8829])
+                    ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [8830 8839])
+                    ("argv" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8840 8858])
+                    ("argvlen" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8859 8881]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8790 8882])
+            ("redisCommand" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("redisContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8747 8763])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8764 8783])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [8784 8788]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8728 8789])
+            ("redisvCommand" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("redisContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8678 8694])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8695 8714])
+                    ("ap" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8715 8726]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8658 8727])
+            ("redisAppendCommandArgv" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("redisContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8224 8240])
+                    ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [8241 8250])
+                    ("argv" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8251 8269])
+                    ("argvlen" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8270 8292]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8197 8293])
+            ("redisAppendCommand" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("redisContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8154 8170])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8171 8190])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [8191 8195]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8131 8196])
+            ("redisvAppendCommand" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("redisContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8081 8097])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8098 8117])
+                    ("ap" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8118 8129]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8057 8130])
+            ("redisGetReplyFromReader" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("redisContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7909 7925])
+                    ("reply" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7926 7939]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7881 7940])
+            ("redisGetReply" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("redisContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7849 7865])
+                    ("reply" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7866 7879]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7831 7880])
+            ("redisBufferWrite" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("redisContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7499 7515])
+                    ("done" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [7516 7526]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7478 7527])
+            ("redisBufferRead" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("redisContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7460 7476]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7440 7477])
+            ("redisFree" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("redisContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7422 7438]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7407 7439])
+            ("redisSetTimeout" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("redisContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7370 7386])
+                    ("tv" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [7387 7405]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7350 7406])
+            ("redisConnectUnixNonBlock" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("redisContext" type (:type "class") nil nil)
+                :arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7331 7348]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7292 7349])
+            ("redisConnectUnixWithTimeout" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("redisContext" type (:type "class") nil nil)
+                :arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7254 7271])
+                    ("tv" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [7272 7290]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7212 7291])
+            ("redisConnectUnix" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("redisContext" type (:type "class") nil nil)
+                :arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7193 7210]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7162 7211])
+            ("redisConnectNonBlock" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("redisContext" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ip" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7135 7150])
+                    ("port" variable (:type "int") (reparse-symbol arg-sub-list) [7151 7160]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7100 7161])
+            ("redisConnectWithTimeout" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("redisContext" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ip" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7054 7069])
+                    ("port" variable (:type "int") (reparse-symbol arg-sub-list) [7070 7079])
+                    ("tv" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [7080 7098]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [7016 7099])
+            ("redisConnect" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("redisContext" type (:type "class") nil nil)
+                :arguments 
+                  ( ("ip" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6989 7004])
+                    ("port" variable (:type "int") (reparse-symbol arg-sub-list) [7005 7014]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6962 7015])
+            ("redisContext" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("redisContext" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [6674 6960])
+            ("redisContext" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("err" variable (:type "int") (reparse-symbol classsubparts) [6708 6716])
+                    ("errstr" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [6765 6782])
+                    ("fd" variable (:type "int") (reparse-symbol classsubparts) [6840 6847])
+                    ("flags" variable (:type "int") (reparse-symbol classsubparts) [6852 6862])
+                    ("obuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [6867 6878])
+                    ("reader" variable
+                       (:pointer 1
+                        :type ("redisReader" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6902 6922]))                  )
+                (reparse-symbol extern-c-contents) [6674 6960])
+            ("redisFormatCommandArgv" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("target" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6565 6579])
+                    ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6580 6589])
+                    ("argv" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6590 6608])
+                    ("argvlen" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6609 6631]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6538 6632])
+            ("redisFormatCommand" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("target" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6497 6511])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6512 6531])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [6532 6536]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6474 6537])
+            ("redisvFormatCommand" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("target" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6426 6440])
+                    ("format" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6441 6460])
+                    ("ap" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6461 6472]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6402 6473])
+            ("freeReplyObject" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("reply" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6324 6336]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [6303 6337])
+            ("redisReplyReaderGetError" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6173 6197])
+            ("redisReplyReaderGetObject" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6105 6130])
+            ("redisReplyReaderSetPrivdata" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [6016 6043])
+            ("redisReplyReaderGetReply" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5963 5987])
+            ("redisReplyReaderFeed" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5918 5938])
+            ("redisReplyReaderFree" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5873 5893])
+            ("redisReplyReaderCreate" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :constant-flag t)
+                (reparse-symbol extern-c-contents) [5824 5846])
+            ("redisReaderGetReply" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("redisReader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5717 5732])
+                    ("reply" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5733 5746]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5693 5747])
+            ("redisReaderFeed" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("redisReader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5647 5662])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5663 5679])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5680 5691]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5627 5692])
+            ("redisReaderFree" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("redisReader" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5610 5625]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5589 5626])
+            ("redisReaderCreate" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("redisReader" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [5582 5587]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [5551 5588])
+            ("redisReader" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("redisReader" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [4993 5507])
+            ("redisReader" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("err" variable (:type "int") (reparse-symbol classsubparts) [5026 5034])
+                    ("errstr" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [5083 5100])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [5159 5169])
+                    ("pos" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5192 5203])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5228 5239])
+                    ("maxbuf" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5264 5278])
+                    ("rstack" variable
+                       (:dereference 1
+                        :type ("redisReadTask" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5318 5342])
+                    ("ridx" variable (:type "int") (reparse-symbol classsubparts) [5347 5356])
+                    ("reply" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [5394 5406])
+                    ("fn" variable
+                       (:pointer 1
+                        :type ("redisReplyObjectFunctions" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5442 5472])
+                    ("privdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [5477 5492]))                  )
+                (reparse-symbol extern-c-contents) [4993 5507])
+            ("redisReplyObjectFunctions" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("redisReplyObjectFunctions" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [4629 4955])
+            ("redisReplyObjectFunctions" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("createString" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("redisReadTask" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4698 4719])
+                            ("" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4720 4726])
+                            ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4727 4734]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4676 4735])
+                    ("createArray" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("redisReadTask" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4761 4782])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [4783 4787]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4740 4788])
+                    ("createInteger" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("redisReadTask" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4816 4837])
+                            ("" variable (:type "long long") (reparse-symbol arg-sub-list) [4838 4848]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4793 4849])
+                    ("createNil" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("redisReadTask" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4873 4894]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4854 4895])
+                    ("freeObject" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [4919 4925]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4900 4926]))                  )
+                (reparse-symbol extern-c-contents) [4629 4955])
+            ("redisReadTask" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("redisReadTask" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [4278 4627])
+            ("redisReadTask" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [4313 4322])
+                    ("elements" variable (:type "int") (reparse-symbol classsubparts) [4327 4340])
+                    ("idx" variable (:type "int") (reparse-symbol classsubparts) [4393 4401])
+                    ("obj" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [4443 4453])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("redisReadTask" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4507 4536])
+                    ("privdata" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [4559 4574]))                  )
+                (reparse-symbol extern-c-contents) [4278 4627])
+            ("redisReply" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "typedef"
+                :typedef ("redisReply" type (:type "struct") nil nil))
+                (reparse-symbol extern-c-contents) [3869 4276])
+            ("redisReply" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "struct"
+                :members 
+                  ( ("type" variable (:type "int") (reparse-symbol classsubparts) [3901 3910])
+                    ("integer" variable (:type "long long") (reparse-symbol classsubparts) [3935 3953])
+                    ("len" variable (:type "int") (reparse-symbol classsubparts) [4009 4017])
+                    ("str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4045 4055])
+                    ("elements" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4121 4137])
+                    ("element" variable
+                       (:pointer 2
+                        :type ("redisReply" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [4190 4218]))                  )
+                (reparse-symbol extern-c-contents) [3869 4276]))          
+      :file "hiredis.h"
+      :pointmax 8920
+      :fsize 8919
+      :lastmodtime '(21889 19854 123514 872000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("HIREDIS_PATCH" . ((number "1" 1924 . 1925)))
+          ("REDIS_ERR_PROTOCOL" . ((number "4" 2370 . 2371)))
+          ("redisReplyReaderCreate" . ((symbol "redisReaderCreate" 5847 . 5864)))
+          ("REDIS_FREEING" . ((number "0x8" 3233 . 3236)))
+          ("REDIS_REPLY_STATUS" . ((number "5" 3659 . 3660)))
+          ("redisReplyReaderGetObject" (spp-arg-list ("_r") 6130 . 6134) . ((semantic-list "(((redisReader*)(_r))->reply)" 6135 . 6164)))
+          ("redisReplyReaderGetError" (spp-arg-list ("_r") 6197 . 6201) . ((semantic-list "(((redisReader*)(_r))->errstr)" 6202 . 6232)))
+          ("__HIREDIS_H")
+          ("HIREDIS_MINOR" . ((number "10" 1899 . 1901)))
+          ("REDIS_OK" . ((number "0" 1965 . 1966)))
+          ("REDIS_BLOCK" . ((number "0x1" 2642 . 2645)))
+          ("REDIS_REPLY_STRING" . ((number "1" 3546 . 3547)))
+          ("redisReplyReaderSetPrivdata" (spp-arg-list ("_r" "_p") 6043 . 6051) . ((semantic-list "(int)" 6052 . 6057) (semantic-list "(((redisReader*)(_r))->privdata = (_p))" 6057 . 6096)))
+          ("REDIS_REPLY_ERROR" . ((number "6" 3687 . 3688)))
+          ("REDIS_ERR_EOF" . ((number "3" 2323 . 2324)))
+          ("REDIS_ERR_OTHER" . ((number "2" 2461 . 2462)))
+          ("REDIS_ERR_IO" . ((number "1" 2270 . 2271)))
+          ("REDIS_IN_CALLBACK" . ((number "0x10" 3323 . 3327)))
+          ("REDIS_SUBSCRIBED" . ((number "0x20" 3431 . 3435)))
+          ("redisReplyReaderGetReply" . ((symbol "redisReaderGetReply" 5988 . 6007)))
+          ("REDIS_DISCONNECTING" . ((number "0x4" 3097 . 3100)))
+          ("REDIS_REPLY_ARRAY" . ((number "2" 3574 . 3575)))
+          ("redisReplyReaderFeed" . ((symbol "redisReaderFeed" 5939 . 5954)))
+          ("HIREDIS_MAJOR" . ((number "0" 1875 . 1876)))
+          ("REDIS_ERR" . ((punctuation "-" 1945 . 1946) (number "1" 1946 . 1947)))
+          ("REDIS_ERR_OOM" . ((number "5" 2415 . 2416)))
+          ("REDIS_CONNECTED" . ((number "0x2" 2804 . 2807)))
+          ("REDIS_MONITORING" . ((number "0x40" 3513 . 3517)))
+          ("REDIS_REPLY_INTEGER" . ((number "3" 3604 . 3605)))
+          ("REDIS_REPLY_NIL" . ((number "4" 3630 . 3631)))
+          ("REDIS_READER_MAX_BUF" . ((semantic-list "(1024*16)" 3719 . 3728)))
+          ("redisReplyReaderFree" . ((symbol "redisReaderFree" 5894 . 5909)))
+          )
+))
+  :file "!usr!local!include!hiredis!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

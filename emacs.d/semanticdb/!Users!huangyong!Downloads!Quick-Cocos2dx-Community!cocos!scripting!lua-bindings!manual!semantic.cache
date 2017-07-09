@@ -1,0 +1,1769 @@
+;; Object manual/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "manual/"
+  :tables
+  (list
+    (semanticdb-table "tolua_fix.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("tolua_fix.h" include nil nil [2 24])
+            ("base/CCRef.h" include nil nil [25 48])
+            ("LuaBasicConversions.h" include nil nil [49 81])
+            ("stdlib.h" include (:system-flag t) nil [82 101])
+            ("cocos2d" using (:type ("cocos2d" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [103 127])
+            ("s_function_ref_id" variable
+               (:typemodifiers ("static")
+                :default-value "0"
+                :type "int")
+                nil [129 162])
+            ("toluafix_open" function
+               (:arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [193 206]))                  
+                :type "void")
+                nil [174 539])
+            ("toluafix_pushusertype_ccobject" function
+               (:arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [586 599])
+                    ("refid" variable (:type "int") (reparse-symbol arg-sub-list) [645 655])
+                    ("p_refid" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [701 714])
+                    ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [760 770])
+                    ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [816 833]))                  
+                :type "int")
+                nil [551 2310])
+            ("toluafix_remove_ccobject_by_refid" function
+               (:arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2360 2373])
+                    ("refid" variable (:type "int") (reparse-symbol arg-sub-list) [2374 2384]))                  
+                :type "int")
+                nil [2322 6719])
+            ("toluafix_ref_function" function
+               (:arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6757 6770])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [6771 6778])
+                    ("def" variable (:type "int") (reparse-symbol arg-sub-list) [6779 6787]))                  
+                :type "int")
+                nil [6731 7588])
+            ("toluafix_get_function_by_refid" function
+               (:arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7636 7649])
+                    ("refid" variable (:type "int") (reparse-symbol arg-sub-list) [7650 7660]))                  
+                :type "void")
+                nil [7600 8085])
+            ("toluafix_remove_function_by_refid" function
+               (:arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8136 8149])
+                    ("refid" variable (:type "int") (reparse-symbol arg-sub-list) [8150 8160]))                  
+                :type "void")
+                nil [8097 8727])
+            ("toluafix_isfunction" function
+               (:arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8794 8807])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [8808 8815])
+                    ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8816 8833])
+                    ("def" variable (:type "int") (reparse-symbol arg-sub-list) [8834 8842])
+                    ("err" variable
+                       (:pointer 1
+                        :type ("tolua_Error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8843 8860]))                  
+                :type "int")
+                nil [8770 9042])
+            ("toluafix_totable" function
+               (:arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9075 9088])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [9089 9096])
+                    ("def" variable (:type "int") (reparse-symbol arg-sub-list) [9097 9105]))                  
+                :type "int")
+                nil [9054 9124])
+            ("toluafix_istable" function
+               (:arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9157 9170])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [9171 9178])
+                    ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9179 9196])
+                    ("def" variable (:type "int") (reparse-symbol arg-sub-list) [9197 9205])
+                    ("err" variable
+                       (:pointer 1
+                        :type ("tolua_Error" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9206 9223]))                  
+                :type "int")
+                nil [9136 9270])
+            ("toluafix_stack_dump" function
+               (:arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9307 9320])
+                    ("label" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9321 9339]))                  
+                :type "void")
+                nil [9282 10071]))          
+      :file "tolua_fix.cpp"
+      :pointmax 10072
+      :fsize 10071
+      :lastmodtime '(21658 42580 0 0)
+      :unmatched-syntax '((symbol 9272 . 9281) (symbol 9126 . 9135) (symbol 9044 . 9053) (symbol 8760 . 8769) (symbol 8087 . 8096) (symbol 7590 . 7599) (symbol 6721 . 6730) (symbol 2312 . 2321) (symbol 541 . 550) (symbol 164 . 173)))
+    (semanticdb-table "LuaBasicConversions.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__COCOS2DX_SCRIPTING_LUA_COCOS2DXSUPPORT_LUABAISCCONVERSIONS_H__" variable (:constant-flag t) nil [1360 1424])
+            ("tolua++.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [1456 1476])
+            ("lua.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [1439 1455])
+            ("tolua_fix.h" include nil nil [1479 1501])
+            ("cocos2d.h" include nil nil [1502 1522])
+            ("cocos2d" using (:type ("cocos2d" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1524 1548])
+            ("g_luaType" variable
+               (:typemodifiers ("extern")
+                :type ("std::unordered_map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1550 1613])
+            ("g_typeCast" variable
+               (:typemodifiers ("extern")
+                :type ("std::unordered_map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1614 1678])
+            ("LUA_PRECONDITION" variable (:constant-flag t) nil [1819 1835])
+            ("luaval_is_usertype" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2232 2245])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [2245 2252])
+                    ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2252 2269])
+                    ("def" variable (:type "int") (reparse-symbol arg-sub-list) [2270 2278]))                  
+                :type "bool")
+                nil [2201 2279])
+            ("luaval_to_ulong" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2321 2334])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [2334 2341])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type "unsigned long")
+                        (reparse-symbol arg-sub-list) [2342 2366])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2367 2390]))                  
+                :type "bool")
+                nil [2293 2392])
+            ("luaval_to_ushort" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2422 2435])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [2436 2443])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type "unsigned short")
+                        (reparse-symbol arg-sub-list) [2444 2469])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2470 2495]))                  
+                :type "bool")
+                nil [2393 2497])
+            ("luaval_to_int32" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2526 2539])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [2539 2546])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2546 2560])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2561 2586]))                  
+                :type "bool")
+                nil [2498 2588])
+            ("luaval_to_uint32" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2618 2631])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [2632 2639])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [2640 2663])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2664 2689]))                  
+                :type "bool")
+                nil [2589 2691])
+            ("luaval_to_uint16" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2721 2734])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [2734 2741])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("uint16_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2741 2760])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2761 2786]))                  
+                :type "bool")
+                nil [2692 2788])
+            ("luaval_to_boolean" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2819 2832])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [2832 2839])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [2839 2854])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2855 2880]))                  
+                :type "bool")
+                nil [2789 2882])
+            ("luaval_to_number" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2912 2925])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [2925 2932])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2932 2949])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2950 2975]))                  
+                :type "bool")
+                nil [2883 2977])
+            ("luaval_to_long_long" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3010 3023])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [3023 3030])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type "long long")
+                        (reparse-symbol arg-sub-list) [3030 3050])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3051 3076]))                  
+                :type "bool")
+                nil [2978 3078])
+            ("luaval_to_std_string" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3112 3125])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [3126 3133])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3134 3156])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3157 3182]))                  
+                :type "bool")
+                nil [3079 3184])
+            ("luaval_to_long" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3212 3225])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [3225 3232])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type "long")
+                        (reparse-symbol arg-sub-list) [3233 3248])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3249 3274]))                  
+                :type "bool")
+                nil [3185 3276])
+            ("luaval_to_ssize" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3305 3318])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [3318 3325])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3326 3344])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3345 3370]))                  
+                :type "bool")
+                nil [3277 3372])
+            ("luaval_to_size" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3400 3413])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [3413 3420])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("Size" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3420 3435])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3436 3461]))                  
+                :type "bool")
+                nil [3373 3463])
+            ("luaval_to_rect" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3491 3504])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [3504 3511])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("Rect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3511 3526])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3527 3552]))                  
+                :type "bool")
+                nil [3464 3554])
+            ("luaval_to_color3b" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3585 3598])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [3598 3605])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("Color3B" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3605 3623])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3624 3649]))                  
+                :type "bool")
+                nil [3555 3651])
+            ("luaval_to_color4b" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3682 3695])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [3695 3702])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("Color4B" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3702 3720])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3721 3746]))                  
+                :type "bool")
+                nil [3652 3748])
+            ("luaval_to_color4f" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3779 3792])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [3792 3799])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("Color4F" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3799 3817])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3818 3843]))                  
+                :type "bool")
+                nil [3749 3845])
+            ("luaval_to_affinetransform" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4034 4047])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [4047 4054])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("AffineTransform" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4055 4081])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4082 4107]))                  
+                :type "bool")
+                nil [3996 4109])
+            ("luaval_to_fontdefinition" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4147 4160])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [4161 4168])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("FontDefinition" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4169 4195])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4196 4221]))                  
+                :type "bool")
+                nil [4110 4223])
+            ("luaval_to_mat4" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4251 4264])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [4265 4272])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("cocos2d::Mat4" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4273 4298])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4299 4324]))                  
+                :type "bool")
+                nil [4224 4326])
+            ("luaval_to_array" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4355 4368])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [4368 4375])
+                    ("outValue" variable
+                       (:pointer 2
+                        :type ("__Array" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4376 4395])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4396 4421]))                  
+                :type "bool")
+                nil [4327 4423])
+            ("luaval_to_dictionary" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4457 4470])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [4470 4477])
+                    ("outValue" variable
+                       (:pointer 2
+                        :type ("__Dictionary" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4478 4502])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4503 4528]))                  
+                :type "bool")
+                nil [4424 4530])
+            ("luaval_to_array_of_vec2" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4567 4580])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [4580 4587])
+                    ("points" variable
+                       (:pointer 2
+                        :type ("cocos2d::Vec2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4587 4610])
+                    ("numPoints" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4611 4626])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4627 4652]))                  
+                :type "bool")
+                nil [4531 4654])
+            ("luavals_variadic_to_array" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4693 4706])
+                    ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [4706 4715])
+                    ("ret" variable
+                       (:pointer 2
+                        :type ("__Array" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4716 4730]))                  
+                :type "bool")
+                nil [4655 4731])
+            ("luavals_variadic_to_ccvaluevector" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4778 4791])
+                    ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [4792 4801])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("cocos2d::ValueVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4802 4828]))                  
+                :type "bool")
+                nil [4732 4829])
+            ("luaval_to_vec2" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4857 4870])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [4870 4877])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("cocos2d::Vec2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4877 4901])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4902 4927]))                  
+                :type "bool")
+                nil [4830 4929])
+            ("luaval_to_vec3" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4957 4970])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [4970 4977])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("cocos2d::Vec3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4977 5001])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5002 5027]))                  
+                :type "bool")
+                nil [4930 5029])
+            ("luaval_to_vec4" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5057 5070])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [5070 5077])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("cocos2d::Vec4" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5077 5101])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5102 5127]))                  
+                :type "bool")
+                nil [5030 5129])
+            ("luaval_to_blendfunc" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5162 5175])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [5176 5183])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("cocos2d::BlendFunc" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5184 5213])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5214 5239]))                  
+                :type "bool")
+                nil [5130 5241])
+            ("luaval_to_ttfconfig" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5274 5287])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [5288 5295])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("cocos2d::TTFConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5296 5325])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5326 5351]))                  
+                :type "bool")
+                nil [5242 5353])
+            ("luaval_to_uniform" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5384 5397])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [5398 5405])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("cocos2d::Uniform" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5406 5433])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5434 5459]))                  
+                :type "bool")
+                nil [5354 5461])
+            ("luaval_to_vertexattrib" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5497 5510])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [5511 5518])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("cocos2d::VertexAttrib" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5519 5551])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5552 5577]))                  
+                :type "bool")
+                nil [5462 5579])
+            ("luaval_to_point" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5616 5629])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [5629 5636])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("cocos2d::Vec2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5636 5660])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5661 5686]))                  
+                :type "bool")
+                nil [5581 5735])
+            ("luaval_to_kmMat4" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5797 5810])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [5811 5818])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("cocos2d::Mat4" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5819 5844])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5845 5870]))                  
+                :type "bool")
+                nil [5761 5919])
+            ("luaval_to_array_of_Point" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5988 6001])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [6001 6008])
+                    ("points" variable
+                       (:pointer 2
+                        :type ("cocos2d::Vec2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6008 6031])
+                    ("numPoints" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6032 6047])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6048 6073]))                  
+                :type "bool")
+                nil [5944 6140])
+            ("luavals_variadic_to_ccvector" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6197 6210])
+                    ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [6211 6220])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("cocos2d::Vector" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6221 6245]))                  )
+                nil [6143 6752])
+            ("luaval_to_ccvector" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6797 6810])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [6811 6819])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("cocos2d::Vector" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6820 6844])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6845 6870]))                  )
+                nil [6754 7630])
+            ("luaval_to_std_vector_string" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7665 7678])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [7679 7686])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7687 7717])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7718 7743]))                  
+                :type "bool")
+                nil [7632 7745])
+            ("luaval_to_std_vector_int" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7776 7789])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [7790 7797])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7798 7820])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7821 7846]))                  
+                :type "bool")
+                nil [7746 7848])
+            ("luaval_to_ccmap_string_key" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7901 7914])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [7915 7922])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("cocos2d::Map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7923 7957])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7958 7983]))                  )
+                nil [7850 9289])
+            ("luaval_to_ccvalue" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9322 9335])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [9336 9343])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("cocos2d::Value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9344 9364])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9365 9390]))                  
+                :type "bool")
+                nil [9292 9392])
+            ("luaval_to_ccvaluemap" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9426 9439])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [9440 9447])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("cocos2d::ValueMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9448 9471])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9472 9497]))                  
+                :type "bool")
+                nil [9393 9499])
+            ("luaval_to_ccvaluemapintkey" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9539 9552])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [9553 9560])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("cocos2d::ValueMapIntKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9561 9590])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9591 9616]))                  
+                :type "bool")
+                nil [9500 9618])
+            ("luaval_to_ccvaluevector" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9655 9668])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [9669 9676])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("cocos2d::ValueVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9677 9703])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9704 9729]))                  
+                :type "bool")
+                nil [9619 9731])
+            ("luaval_to_object" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9774 9787])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [9788 9795])
+                    ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9796 9813])
+                    ("ret" variable
+                       (:pointer 2
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9814 9822]))                  )
+                nil [9733 10131])
+            ("luaval_to_mesh_vertex_attrib" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10174 10187])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [10188 10195])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("cocos2d::MeshVertexAttrib" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10196 10227])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10228 10253]))                  
+                :type "bool")
+                nil [10133 10255])
+            ("luaval_to_std_vector_float" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10295 10308])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [10309 10316])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10317 10341])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10342 10367]))                  
+                :type "bool")
+                nil [10256 10369])
+            ("luaval_to_std_vector_ushort" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10410 10423])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [10424 10431])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("unsigned short" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10432 10465])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10466 10491]))                  
+                :type "bool")
+                nil [10370 10493])
+            ("luaval_to_quaternion" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10527 10540])
+                    ("lo" variable (:type "int") (reparse-symbol arg-sub-list) [10540 10547])
+                    ("outValue" variable
+                       (:pointer 1
+                        :type ("cocos2d::Quaternion" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10547 10577])
+                    ("funcName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :default-value "\"\""
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10578 10603]))                  
+                :type "bool")
+                nil [10494 10605])
+            ("vec2_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10649 10662])
+                    ("vec2" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::Vec2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10662 10688]))                  
+                :type "void")
+                nil [10622 10689])
+            ("vec3_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10717 10730])
+                    ("vec3" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::Vec3" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10730 10756]))                  
+                :type "void")
+                nil [10690 10757])
+            ("vec4_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10785 10798])
+                    ("vec4" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::Vec4" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10798 10824]))                  
+                :type "void")
+                nil [10758 10825])
+            ("vec2_array_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10859 10872])
+                    ("points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cocos2d::Vec2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10872 10900])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [10901 10911]))                  
+                :type "void")
+                nil [10826 10912])
+            ("size_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10940 10953])
+                    ("sz" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Size" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10953 10968]))                  
+                :type "void")
+                nil [10913 10969])
+            ("rect_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10997 11010])
+                    ("rt" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Rect" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11010 11025]))                  
+                :type "void")
+                nil [10970 11026])
+            ("color3b_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11057 11070])
+                    ("cc" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Color3B" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11070 11088]))                  
+                :type "void")
+                nil [11027 11089])
+            ("color4b_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11120 11133])
+                    ("cc" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Color4B" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11133 11151]))                  
+                :type "void")
+                nil [11090 11152])
+            ("color4f_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11183 11196])
+                    ("cc" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Color4F" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11196 11214]))                  
+                :type "void")
+                nil [11153 11215])
+            ("affinetransform_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11538 11551])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("AffineTransform" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11551 11582]))                  
+                :type "void")
+                nil [11500 11583])
+            ("fontdefinition_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11621 11634])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("FontDefinition" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11634 11664]))                  
+                :type "void")
+                nil [11584 11665])
+            ("array_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11694 11707])
+                    ("inValue" variable
+                       (:pointer 1
+                        :type ("__Array" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11708 11725]))                  
+                :type "void")
+                nil [11666 11726])
+            ("dictionary_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11760 11773])
+                    ("dict" variable
+                       (:pointer 1
+                        :type ("__Dictionary" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11774 11793]))                  
+                :type "void")
+                nil [11727 11794])
+            ("mat4_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11822 11835])
+                    ("mat" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::Mat4" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11836 11861]))                  
+                :type "void")
+                nil [11795 11862])
+            ("blendfunc_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11895 11908])
+                    ("func" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::BlendFunc" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11909 11940]))                  
+                :type "void")
+                nil [11863 11941])
+            ("ttfconfig_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11974 11987])
+                    ("config" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::TTFConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11988 12021]))                  
+                :type "void")
+                nil [11942 12022])
+            ("uniform_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12053 12066])
+                    ("uniform" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::Uniform" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12067 12099]))                  
+                :type "void")
+                nil [12023 12100])
+            ("vertexattrib_to_luaval" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12136 12149])
+                    ("verAttrib" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::VertexAttrib" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12150 12189]))                  
+                :type "void")
+                nil [12101 12190])
+            ("point_to_luaval" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12227 12240])
+                    ("pt" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::Vec2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12240 12264]))                  
+                :type "void")
+                nil [12192 12295])
+            ("points_to_luaval" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12357 12370])
+                    ("points" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("cocos2d::Vec2" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12370 12398])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [12399 12409]))                  
+                :type "void")
+                nil [12321 12457])
+            ("ccvector_to_luaval" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12502 12515])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::Vector" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12515 12549]))                  )
+                nil [12459 13337])
+            ("ccmap_string_key_to_luaval" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13390 13403])
+                    ("v" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::Map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13404 13442]))                  )
+                nil [13339 14198])
+            ("ccvalue_to_luaval" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14223 14236])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::Value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14236 14266]))                  
+                :type "void")
+                nil [14200 14267])
+            ("ccvaluemap_to_luaval" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14294 14307])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::ValueMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14307 14340]))                  
+                :type "void")
+                nil [14268 14341])
+            ("ccvaluemapintkey_to_luaval" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14374 14387])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::ValueMapIntKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14388 14427]))                  
+                :type "void")
+                nil [14342 14428])
+            ("ccvaluevector_to_luaval" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14458 14471])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::ValueVector" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14472 14508]))                  
+                :type "void")
+                nil [14429 14509])
+            ("getLuaTypeName" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "char"
+                :arguments 
+                  ( ("ret" variable
+                       (:pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14666 14673])
+                    ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14673 14690]))                  
+                :constant-flag t
+                :pointer 1)
+                nil [14620 15009])
+            ("object_to_luaval" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "void"
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15052 15065])
+                    ("type" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15065 15082])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15083 15090]))                  )
+                nil [15011 15633])
+            ("mesh_vertex_attrib_to_luaval" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15669 15682])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::MeshVertexAttrib" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15683 15724]))                  
+                :type "void")
+                nil [15635 15725])
+            ("ccvector_std_string_to_luaval" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15761 15774])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15775 15815]))                  
+                :type "void")
+                nil [15726 15816])
+            ("ccvector_int_to_luaval" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15845 15858])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15859 15891]))                  
+                :type "void")
+                nil [15817 15892])
+            ("ccvector_float_to_luaval" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15923 15936])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("float" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15937 15971]))                  
+                :type "void")
+                nil [15893 15972])
+            ("ccvector_ushort_to_luaval" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16004 16017])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("unsigned short" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16018 16061]))                  
+                :type "void")
+                nil [15973 16062])
+            ("quaternion_to_luaval" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("L" variable
+                       (:pointer 1
+                        :type ("lua_State" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16089 16102])
+                    ("inValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("cocos2d::Quaternion" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16102 16137]))                  
+                :type "void")
+                nil [16063 16138]))          
+      :file "LuaBasicConversions.h"
+      :pointmax 16214
+      :fsize 16213
+      :lastmodtime '(21658 42580 0 0)
+      :unmatched-syntax '((symbol 12297 . 12320) (symbol 5920 . 5943) (symbol 5737 . 5760))
+      :lexical-table 
+        '(("__COCOS2DX_SCRIPTING_LUA_COCOS2DXSUPPORT_LUABAISCCONVERSIONS_H__")
+          ("LUA_PRECONDITION" (spp-arg-list ("condition" "...") 1835 . 1852) . 
+              ((IF "if" 1853 . 1855) (semantic-list "( ! (condition) )" 1855 . 1872) (semantic-list "{														\\
+cocos2d::log(\"lua: ERROR: File %s: Line: %d, Function: %s\", __FILE__, __LINE__, __FUNCTION__ );                                                         \\
+cocos2d::log(__VA_ARGS__);                                                  \\
+}" 1873 . 2123)))
+          )
+))
+  :file "!Users!huangyong!Downloads!Quick-Cocos2dx-Community!cocos!scripting!lua-bindings!manual!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

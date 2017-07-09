@@ -1,0 +1,1551 @@
+;; Object Driver/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Driver/"
+  :tables
+  (list
+    (semanticdb-table "ToolChains.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("ToolChains.h" include nil nil [343 366])
+            ("clang/Basic/ObjCRuntime.h" include nil nil [367 403])
+            ("clang/Basic/Version.h" include nil nil [404 436])
+            ("clang/Driver/Compilation.h" include nil nil [437 474])
+            ("clang/Driver/Driver.h" include nil nil [475 507])
+            ("clang/Driver/DriverDiagnostic.h" include nil nil [508 550])
+            ("clang/Driver/Options.h" include nil nil [551 584])
+            ("clang/Driver/SanitizerArgs.h" include nil nil [585 624])
+            ("llvm/ADT/STLExtras.h" include nil nil [625 656])
+            ("llvm/ADT/SmallString.h" include nil nil [657 690])
+            ("llvm/ADT/StringExtras.h" include nil nil [691 725])
+            ("llvm/ADT/StringSwitch.h" include nil nil [726 760])
+            ("llvm/Option/Arg.h" include nil nil [761 789])
+            ("llvm/Option/ArgList.h" include nil nil [790 822])
+            ("llvm/Option/OptTable.h" include nil nil [823 856])
+            ("llvm/Option/Option.h" include nil nil [857 888])
+            ("llvm/Support/ErrorHandling.h" include nil nil [889 928])
+            ("llvm/Support/FileSystem.h" include nil nil [929 965])
+            ("llvm/Support/MemoryBuffer.h" include nil nil [966 1004])
+            ("llvm/Support/Path.h" include nil nil [1005 1035])
+            ("llvm/Support/raw_ostream.h" include nil nil [1036 1073])
+            ("llvm/Support/system_error.h" include nil nil [1074 1112])
+            ("llvm/Support/Program.h" include nil nil [1113 1146])
+            ("clang/Config/config.h" include nil nil [1273 1305])
+            ("cstdlib" include (:system-flag t) nil [1333 1351])
+            ("clang::driver" using (:type ("clang::driver" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1365 1395])
+            ("clang::driver::toolchains" using (:type ("clang::driver::toolchains" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1396 1438])
+            ("clang" using (:type ("clang" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1439 1461])
+            ("llvm::opt" using (:type ("llvm::opt" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1462 1488])
+            ("Darwin" function
+               (:constructor-flag t
+                :parent "Darwin"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1558 1574])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1575 1602])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1603 1623]))                  
+                :type ("Darwin" type (:type "class") nil nil))
+                nil [1543 2404])
+            ("LookupTypeForExtension" function
+               (:parent "Darwin"
+                :arguments 
+                  ( ("Ext" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2447 2463]))                  
+                :type ("types::ID" type (:type "class") nil nil))
+                nil [2406 2676])
+            ("HasNativeLLVMSupport" function
+               (:parent "Darwin"
+                :type "bool")
+                nil [2678 2738])
+            ("getDefaultObjCRuntime" function
+               (:parent "Darwin"
+                :arguments 
+                  ( ("isNonFragile" variable (:type "bool") (reparse-symbol arg-sub-list) [2855 2873]))                  
+                :type ("ObjCRuntime" type (:type "class") nil nil))
+                nil [2813 3111])
+            ("hasBlocksRuntime" function
+               (:parent "Darwin"
+                :type "bool")
+                nil [3188 3339])
+            ("GetArmArchForMArch" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("Value" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3379 3395]))                  
+                :type "char")
+                nil [3341 3937])
+            ("GetArmArchForMCpu" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("Value" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3976 3992]))                  
+                :type "char")
+                nil [3939 4699])
+            ("getDarwinArchName" function
+               (:parent "Darwin"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4737 4757]))                  
+                :type ("StringRef" type (:type "class") nil nil))
+                nil [4701 5218])
+            ("Darwin" function
+               (:destructor-flag t
+                :parent "Darwin"
+                :type "void")
+                nil [5220 5241])
+            ("ComputeEffectiveClangTriple" function
+               (:parent "Darwin"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5291 5311])
+                    ("InputType" variable (:type ("types::ID" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5360 5380]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [5243 6084])
+            ("anchor" function
+               (:parent "Generic_ELF"
+                :type "void")
+                nil [6086 6115])
+            ("getTool" function
+               (:pointer 1
+                :parent "Darwin"
+                :arguments 
+                  ( ("AC" variable (:type ("Action::ActionClass" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6139 6162]))                  
+                :type ("Tool" type (:type "class") nil nil))
+                nil [6117 6639])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "Darwin"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [6641 6719])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "Darwin"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [6721 6806])
+            ("DarwinClang" function
+               (:constructor-flag t
+                :parent "DarwinClang"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6833 6849])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6850 6877])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6903 6923]))                  
+                :type ("DarwinClang" type (:type "class") nil nil))
+                nil [6808 7359])
+            ("AddLinkARCArgs" function
+               (:parent "DarwinClang"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7394 7414])
+                    ("CmdArgs" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7448 7471]))                  
+                :type "void")
+                nil [7361 7947])
+            ("AddLinkRuntimeLib" function
+               (:parent "DarwinClang"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7985 8005])
+                    ("CmdArgs" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8042 8065])
+                    ("DarwinStaticLib" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8102 8130])
+                    ("AlwaysLink" variable (:type "bool") (reparse-symbol arg-sub-list) [8167 8183]))                  
+                :type "void")
+                nil [7949 8616])
+            ("AddLinkRuntimeLibArgs" function
+               (:parent "DarwinClang"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8658 8678])
+                    ("CmdArgs" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8719 8742]))                  
+                :type "void")
+                nil [8618 13531])
+            ("AddDeploymentTarget" function
+               (:parent "Darwin"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :type ("DerivedArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13566 13587]))                  
+                :type "void")
+                nil [13533 19986])
+            ("AddCXXStdlibLibArgs" function
+               (:parent "DarwinClang"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20026 20046])
+                    ("CmdArgs" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20085 20108]))                  
+                :type "void")
+                nil [19988 21576])
+            ("AddCCKextLibArgs" function
+               (:parent "DarwinClang"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21613 21633])
+                    ("CmdArgs" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21669 21692]))                  
+                :type "void")
+                nil [21578 22514])
+            ("TranslateArgs" function
+               (:pointer 1
+                :parent "Darwin"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DerivedArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22554 22581])
+                    ("BoundArch" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22620 22642]))                  
+                :type ("DerivedArgList" type (:type "class") nil nil))
+                nil [22516 32399])
+            ("IsUnwindTablesDefault" function
+               (:parent "Darwin"
+                :type "bool")
+                nil [32401 32491])
+            ("UseDwarfDebugFlags" function
+               (:parent "Darwin"
+                :type "bool")
+                nil [32493 32629])
+            ("UseSjLjExceptions" function
+               (:parent "Darwin"
+                :type "bool")
+                nil [32631 32827])
+            ("isPICDefault" function
+               (:parent "Darwin"
+                :type "bool")
+                nil [32829 32881])
+            ("isPIEDefault" function
+               (:parent "Darwin"
+                :type "bool")
+                nil [32883 32936])
+            ("isPICDefaultForced" function
+               (:parent "Darwin"
+                :type "bool")
+                nil [32938 33025])
+            ("SupportsProfiling" function
+               (:parent "Darwin"
+                :type "bool")
+                nil [33027 33204])
+            ("SupportsObjCGC" function
+               (:parent "Darwin"
+                :type "bool")
+                nil [33206 33344])
+            ("CheckObjCARC" function
+               (:parent "Darwin"
+                :type "void")
+                nil [33346 33510])
+            ("ComputeEffectiveClangTriple" function
+               (:parent "Darwin_Generic_GCC"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33572 33592])
+                    ("InputType" variable (:type ("types::ID" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33641 33661]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [33512 33716])
+            ("Parse" function
+               (:parent "Linux::GCCVersion"
+                :arguments 
+                  ( ("VersionText" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [34066 34088]))                  
+                :type ("Generic_GCC::GCCVersion" type (:type "class") nil nil))
+                nil [34017 35466])
+            ("isOlderThan" function
+               (:parent "Generic_GCC::GCCVersion"
+                :arguments 
+                  ( ("RHSMajor" variable (:type "int") (reparse-symbol arg-sub-list) [35584 35597])
+                    ("RHSMinor" variable (:type "int") (reparse-symbol arg-sub-list) [35598 35611])
+                    ("RHSPatch" variable (:type "int") (reparse-symbol arg-sub-list) [35654 35667])
+                    ("RHSPatchSuffix" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [35710 35735]))                  
+                :type "bool")
+                nil [35542 36475])
+            ("getGCCToolchainDir" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36513 36533]))                  
+                :type ("StringRef" type (:type "class") nil nil))
+                nil [36477 36663])
+            ("GCCInstallationDetector" function
+               (:constructor-flag t
+                :parent "Generic_GCC::GCCInstallationDetector"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37189 37205])
+                    ("TargetTriple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37206 37239])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37240 37260]))                  
+                :type ("GCCInstallationDetector" type (:type "class") nil nil))
+                nil [37122 40048])
+            ("print" function
+               (:parent "Generic_GCC::GCCInstallationDetector"
+                :arguments 
+                  ( ("OS" variable
+                       (:reference 1
+                        :type ("raw_ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40099 40115]))                  
+                :type "void")
+                nil [40050 40414])
+            ("CollectLibDirsAndTriples" function
+               (:parent "Generic_GCC::GCCInstallationDetector"
+                :arguments 
+                  ( ("TargetTriple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40500 40533])
+                    ("BiarchTriple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40534 40567])
+                    ("LibDirs" variable
+                       (:reference 1
+                        :type ("SmallVectorImpl" type
+                             (:template-specifier 
+                                ( ("StringRef" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40572 40608])
+                    ("TripleAliases" variable
+                       (:reference 1
+                        :type ("SmallVectorImpl" type
+                             (:template-specifier 
+                                ( ("StringRef" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40613 40655])
+                    ("BiarchLibDirs" variable
+                       (:reference 1
+                        :type ("SmallVectorImpl" type
+                             (:template-specifier 
+                                ( ("StringRef" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40660 40702])
+                    ("BiarchTripleAliases" variable
+                       (:reference 1
+                        :type ("SmallVectorImpl" type
+                             (:template-specifier 
+                                ( ("StringRef" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [40707 40755]))                  
+                :type "void")
+                nil [40427 50305])
+            ("isSoftFloatABI" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50334 50354]))                  
+                :type "bool")
+                nil [50307 50717])
+            ("isMipsArch" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Arch" variable (:type ("llvm::Triple::ArchType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50742 50770]))                  
+                :type "bool")
+                nil [50719 50936])
+            ("isMips16" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [50959 50979]))                  
+                :type "bool")
+                nil [50938 51143])
+            ("isMips32r2" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51168 51188]))                  
+                :type "bool")
+                nil [51145 51347])
+            ("isMips64r2" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51372 51392]))                  
+                :type "bool")
+                nil [51349 51551])
+            ("isMicroMips" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51577 51597]))                  
+                :type "bool")
+                nil [51553 51772])
+            ("isMipsFP64" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51797 51817]))                  
+                :type "bool")
+                nil [51774 51947])
+            ("isMipsNan2008" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [51975 51995]))                  
+                :type "bool")
+                nil [51949 52099])
+            ("hasMipsN32ABIArg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52184 52204]))                  
+                :type "bool")
+                nil [52155 52309])
+            ("hasCrtBeginObj" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Path" variable (:type ("Twine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52338 52349]))                  
+                :type "bool")
+                nil [52311 52407])
+            ("findTargetBiarchSuffix" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Suffix" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52444 52464])
+                    ("Path" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52465 52480])
+                    ("TargetArch" variable (:type ("llvm::Triple::ArchType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52516 52550])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [52586 52606]))                  
+                :type "bool")
+                nil [52409 53196])
+            ("findMIPSABIDirSuffix" function
+               (:parent "Generic_GCC::GCCInstallationDetector"
+                :arguments 
+                  ( ("Suffix" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53267 53287])
+                    ("TargetArch" variable (:type ("llvm::Triple::ArchType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53288 53322])
+                    ("Path" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53323 53338])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::opt::ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [53343 53374]))                  
+                :type "void")
+                nil [53198 55852])
+            ("ScanLibDirForGCCTriple" function
+               (:parent "Generic_GCC::GCCInstallationDetector"
+                :arguments 
+                  ( ("TargetArch" variable (:type ("llvm::Triple::ArchType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55925 55959])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55960 55980])
+                    ("LibDir" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [55985 56011])
+                    ("CandidateTriple" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [56012 56038])
+                    ("NeedsBiarchSuffix" variable (:type "bool") (reparse-symbol arg-sub-list) [56043 56066]))                  
+                :type "void")
+                nil [55854 59389])
+            ("Generic_GCC" function
+               (:constructor-flag t
+                :parent "Generic_GCC"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59416 59432])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59433 59460])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59486 59506]))                  
+                :type ("Generic_GCC" type (:type "class") nil nil))
+                nil [59391 59753])
+            ("Generic_GCC" function
+               (:destructor-flag t
+                :parent "Generic_GCC"
+                :type "void")
+                nil [59755 59786])
+            ("getTool" function
+               (:pointer 1
+                :parent "Generic_GCC"
+                :arguments 
+                  ( ("AC" variable (:type ("Action::ActionClass" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [59815 59838]))                  
+                :type ("Tool" type (:type "class") nil nil))
+                nil [59788 60331])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "Generic_GCC"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [60333 60420])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "Generic_GCC"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [60422 60502])
+            ("printVerboseInfo" function
+               (:parent "Generic_GCC"
+                :arguments 
+                  ( ("OS" variable
+                       (:reference 1
+                        :type ("raw_ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60539 60555]))                  
+                :type "void")
+                nil [60504 60665])
+            ("IsUnwindTablesDefault" function
+               (:parent "Generic_GCC"
+                :type "bool")
+                nil [60667 60762])
+            ("isPICDefault" function
+               (:parent "Generic_GCC"
+                :type "bool")
+                nil [60764 60822])
+            ("isPIEDefault" function
+               (:parent "Generic_GCC"
+                :type "bool")
+                nil [60824 60882])
+            ("isPICDefaultForced" function
+               (:parent "Generic_GCC"
+                :type "bool")
+                nil [60884 60948])
+            ("GetGnuDir" function
+               (:parent "Hexagon_TC"
+                :arguments 
+                  ( ("InstalledDir" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61007 61039]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [60973 61455])
+            ("GetHexagonLibraryPaths" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61495 61515])
+                    ("Ver" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61518 61540])
+                    ("MarchString" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61543 61573])
+                    ("InstalledDir" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61576 61608])
+                    ("LibPaths" variable
+                       (:pointer 1
+                        :type ("ToolChain::path_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61611 61642]))                  
+                :type "void")
+                nil [61457 63252])
+            ("Hexagon_TC" function
+               (:constructor-flag t
+                :parent "Hexagon_TC"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [63277 63293])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [63294 63321])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [63345 63365]))                  
+                :type ("Hexagon_TC" type (:type "class") nil nil))
+                nil [63254 64627])
+            ("Hexagon_TC" function
+               (:destructor-flag t
+                :parent "Hexagon_TC"
+                :type "void")
+                nil [64629 64658])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "Hexagon_TC"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [64660 64750])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "Hexagon_TC"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [64752 64835])
+            ("AddClangSystemIncludeArgs" function
+               (:parent "Hexagon_TC"
+                :arguments 
+                  ( ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64880 64906])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64950 64973]))                  
+                :type "void")
+                nil [64837 65529])
+            ("AddClangCXXStdlibIncludeArgs" function
+               (:parent "Hexagon_TC"
+                :arguments 
+                  ( ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65577 65603])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [65650 65673]))                  
+                :type "void")
+                nil [65531 66115])
+            ("GetCXXStdlibType" function
+               (:parent "Hexagon_TC"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [66171 66191]))                  
+                :type ("ToolChain::CXXStdlibType" type (:type "class") nil nil))
+                nil [66117 66493])
+            ("getHexagonVersion" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [66524 66544]))                  
+                :type "int")
+                nil [66495 67137])
+            ("GetTargetCPU" function
+               (:parent "Hexagon_TC"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67174 67194]))                  
+                :type ("StringRef" type (:type "class") nil nil))
+                nil [67139 67510])
+            ("TCEToolChain" function
+               (:constructor-flag t
+                :parent "TCEToolChain"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67760 67776])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67777 67804])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67832 67852]))                  
+                :type ("TCEToolChain" type (:type "class") nil nil))
+                nil [67733 68022])
+            ("TCEToolChain" function
+               (:destructor-flag t
+                :parent "TCEToolChain"
+                :type "void")
+                nil [68024 68057])
+            ("IsMathErrnoDefault" function
+               (:parent "TCEToolChain"
+                :type "bool")
+                nil [68059 68123])
+            ("isPICDefault" function
+               (:parent "TCEToolChain"
+                :type "bool")
+                nil [68125 68184])
+            ("isPIEDefault" function
+               (:parent "TCEToolChain"
+                :type "bool")
+                nil [68186 68245])
+            ("isPICDefaultForced" function
+               (:parent "TCEToolChain"
+                :type "bool")
+                nil [68247 68312])
+            ("OpenBSD" function
+               (:constructor-flag t
+                :parent "OpenBSD"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68406 68422])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68423 68450])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68451 68471]))                  
+                :type ("OpenBSD" type (:type "class") nil nil))
+                nil [68389 68605])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "OpenBSD"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [68607 68694])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "OpenBSD"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [68696 68776])
+            ("Bitrig" function
+               (:constructor-flag t
+                :parent "Bitrig"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68866 68882])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68883 68910])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68911 68931]))                  
+                :type ("Bitrig" type (:type "class") nil nil))
+                nil [68851 69065])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "Bitrig"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [69067 69152])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "Bitrig"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [69154 69232])
+            ("AddClangCXXStdlibIncludeArgs" function
+               (:parent "Bitrig"
+                :arguments 
+                  ( ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69276 69302])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [69345 69368]))                  
+                :type "void")
+                nil [69234 70371])
+            ("AddCXXStdlibLibArgs" function
+               (:parent "Bitrig"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70406 70426])
+                    ("CmdArgs" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70460 70483]))                  
+                :type "void")
+                nil [70373 70817])
+            ("FreeBSD" function
+               (:constructor-flag t
+                :parent "FreeBSD"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70911 70927])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70928 70955])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [70956 70976]))                  
+                :type ("FreeBSD" type (:type "class") nil nil))
+                nil [70894 71441])
+            ("GetCXXStdlibType" function
+               (:parent "FreeBSD"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [71494 71514]))                  
+                :type ("ToolChain::CXXStdlibType" type (:type "class") nil nil))
+                nil [71443 71958])
+            ("AddClangCXXStdlibIncludeArgs" function
+               (:parent "FreeBSD"
+                :arguments 
+                  ( ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72003 72029])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [72073 72096]))                  
+                :type "void")
+                nil [71960 72691])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "FreeBSD"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [72693 72780])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "FreeBSD"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [72782 72862])
+            ("UseSjLjExceptions" function
+               (:parent "FreeBSD"
+                :type "bool")
+                nil [72864 73204])
+            ("NetBSD" function
+               (:constructor-flag t
+                :parent "NetBSD"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [73294 73310])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [73311 73338])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [73339 73359]))                  
+                :type ("NetBSD" type (:type "class") nil nil))
+                nil [73279 73890])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "NetBSD"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [73892 73977])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "NetBSD"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [73979 74057])
+            ("GetCXXStdlibType" function
+               (:parent "NetBSD"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [74109 74129]))                  
+                :type ("ToolChain::CXXStdlibType" type (:type "class") nil nil))
+                nil [74059 74772])
+            ("AddClangCXXStdlibIncludeArgs" function
+               (:parent "NetBSD"
+                :arguments 
+                  ( ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [74816 74842])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [74885 74908]))                  
+                :type "void")
+                nil [74774 75493])
+            ("Minix" function
+               (:constructor-flag t
+                :parent "Minix"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75579 75595])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75596 75623])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [75624 75644]))                  
+                :type ("Minix" type (:type "class") nil nil))
+                nil [75566 75778])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "Minix"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [75780 75863])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "Minix"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [75865 75941])
+            ("AuroraUX" function
+               (:constructor-flag t
+                :parent "AuroraUX"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76039 76055])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76056 76083])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76103 76123]))                  
+                :type ("AuroraUX" type (:type "class") nil nil))
+                nil [76020 76592])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "AuroraUX"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [76594 76683])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "AuroraUX"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [76685 76767])
+            ("Solaris" function
+               (:constructor-flag t
+                :parent "Solaris"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76861 76877])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76878 76905])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [76923 76943]))                  
+                :type ("Solaris" type (:type "class") nil nil))
+                nil [76844 77247])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "Solaris"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [77249 77336])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "Solaris"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [77338 77418])
+            ("Distro" type
+               (:members 
+                  ( ("ArchLinux" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77487 77497])
+                    ("DebianLenny" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77500 77512])
+                    ("DebianSqueeze" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77515 77529])
+                    ("DebianWheezy" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77532 77545])
+                    ("DebianJessie" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77548 77561])
+                    ("Exherbo" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77564 77572])
+                    ("RHEL4" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77575 77581])
+                    ("RHEL5" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77584 77590])
+                    ("RHEL6" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77593 77599])
+                    ("Fedora" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77602 77609])
+                    ("OpenSUSE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77612 77621])
+                    ("UbuntuHardy" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77624 77636])
+                    ("UbuntuIntrepid" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77639 77654])
+                    ("UbuntuJaunty" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77657 77670])
+                    ("UbuntuKarmic" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77673 77686])
+                    ("UbuntuLucid" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77689 77701])
+                    ("UbuntuMaverick" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77704 77719])
+                    ("UbuntuNatty" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77722 77734])
+                    ("UbuntuOneiric" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77737 77751])
+                    ("UbuntuPrecise" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77754 77768])
+                    ("UbuntuQuantal" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77771 77785])
+                    ("UbuntuRaring" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77788 77801])
+                    ("UbuntuSaucy" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77804 77816])
+                    ("UbuntuTrusty" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77819 77832])
+                    ("UnknownDistro" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [77835 77850]))                  
+                :type "enum")
+                nil [77471 77851])
+            ("IsRedhat" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Distro" variable (:type ("Distro" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [77874 77893]))                  
+                :type "bool")
+                nil [77853 77964])
+            ("IsOpenSUSE" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Distro" variable (:type ("Distro" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [77989 78008]))                  
+                :type "bool")
+                nil [77966 78041])
+            ("IsDebian" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Distro" variable (:type ("Distro" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [78064 78083]))                  
+                :type "bool")
+                nil [78043 78145])
+            ("IsUbuntu" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Distro" variable (:type ("Distro" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [78168 78187]))                  
+                :type "bool")
+                nil [78147 78249])
+            ("DetectDistro" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Arch" variable (:type ("llvm::Triple::ArchType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [78278 78306]))                  
+                :type ("Distro" type (:type "class") nil nil))
+                nil [78251 80762])
+            ("getMultiarchTriple" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("TargetTriple" variable
+                       (:constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [81140 81172])
+                    ("SysRoot" variable (:type ("StringRef" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [81211 81229]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [81102 83436])
+            ("addPathIfExists" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Path" variable (:type ("Twine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [83466 83477])
+                    ("Paths" variable
+                       (:reference 1
+                        :type ("ToolChain::path_list" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83478 83506]))                  
+                :type "void")
+                nil [83438 83574])
+            ("getMultilibDir" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83608 83635])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83668 83688]))                  
+                :type ("StringRef" type (:type "class") nil nil))
+                nil [83576 84735])
+            ("Linux" function
+               (:constructor-flag t
+                :parent "Linux"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84750 84766])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84767 84794])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [84795 84815]))                  
+                :type ("Linux" type (:type "class") nil nil))
+                nil [84737 92303])
+            ("HasNativeLLVMSupport" function
+               (:parent "FreeBSD"
+                :type "bool")
+                nil [92305 92366])
+            ("HasNativeLLVMSupport" function
+               (:parent "Linux"
+                :type "bool")
+                nil [92368 92427])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "Linux"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [92429 92508])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "Linux"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [92510 92596])
+            ("addClangTargetOptions" function
+               (:parent "Linux"
+                :arguments 
+                  ( ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92632 92658])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [92693 92716]))                  
+                :type "void")
+                nil [92598 93175])
+            ("computeSysRoot" function
+               (:parent "Linux"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [93177 94082])
+            ("AddClangSystemIncludeArgs" function
+               (:parent "Linux"
+                :arguments 
+                  ( ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [94122 94148])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [94187 94210]))                  
+                :type "void")
+                nil [94084 99173])
+            ("addLibStdCXXIncludePaths" function
+               (:parent "Linux"
+                :arguments 
+                  ( ("Base" variable (:type ("Twine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [99302 99313])
+                    ("TargetArchDir" variable (:type ("Twine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [99314 99334])
+                    ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [99383 99409])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [99458 99481]))                  
+                :type "bool")
+                nil [99265 99731])
+            ("addLibStdCXXIncludePaths" function
+               (:parent "Linux"
+                :arguments 
+                  ( ("Base" variable (:type ("Twine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [99881 99892])
+                    ("Suffix" variable (:type ("Twine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [99893 99906])
+                    ("TargetArchDir" variable (:type ("Twine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [99955 99975])
+                    ("BiarchSuffix" variable (:type ("Twine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [100024 100043])
+                    ("MIPSABIDirSuffix" variable (:type ("Twine" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [100092 100115])
+                    ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [100164 100190])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [100239 100262]))                  
+                :type "bool")
+                nil [99844 100613])
+            ("AddClangCXXStdlibIncludeArgs" function
+               (:parent "Linux"
+                :arguments 
+                  ( ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [100656 100682])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [100724 100747]))                  
+                :type "void")
+                nil [100615 103161])
+            ("isPIEDefault" function
+               (:parent "Linux"
+                :type "bool")
+                nil [103163 103248])
+            ("DragonFly" function
+               (:constructor-flag t
+                :parent "DragonFly"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [103350 103366])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [103367 103394])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [103395 103415]))                  
+                :type ("DragonFly" type (:type "class") nil nil))
+                nil [103329 103904])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "DragonFly"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [103906 103997])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "DragonFly"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [103999 104083])
+            ("XCore" function
+               (:constructor-flag t
+                :parent "XCore"
+                :arguments 
+                  ( ("D" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Driver" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [104120 104136])
+                    ("Triple" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::Triple" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [104137 104164])
+                    ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [104178 104198]))                  
+                :type ("XCore" type (:type "class") nil nil))
+                nil [104107 104292])
+            ("buildAssembler" function
+               (:pointer 1
+                :parent "XCore"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [104294 104377])
+            ("buildLinker" function
+               (:pointer 1
+                :parent "XCore"
+                :type ("Tool" type (:type "class") nil nil))
+                nil [104379 104455])
+            ("isPICDefault" function
+               (:parent "XCore"
+                :type "bool")
+                nil [104457 104509])
+            ("isPIEDefault" function
+               (:parent "XCore"
+                :type "bool")
+                nil [104511 104563])
+            ("isPICDefaultForced" function
+               (:parent "XCore"
+                :type "bool")
+                nil [104565 104623])
+            ("SupportsProfiling" function
+               (:parent "XCore"
+                :type "bool")
+                nil [104625 104682])
+            ("hasBlocksRuntime" function
+               (:parent "XCore"
+                :type "bool")
+                nil [104684 104740])
+            ("AddClangSystemIncludeArgs" function
+               (:parent "XCore"
+                :arguments 
+                  ( ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [104781 104807])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [104846 104869]))                  
+                :type "void")
+                nil [104743 105339])
+            ("addClangTargetOptions" function
+               (:parent "XCore"
+                :arguments 
+                  ( ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("llvm::opt::ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [105375 105412])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("llvm::opt::ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [105450 105484]))                  
+                :type "void")
+                nil [105341 105534])
+            ("AddClangCXXStdlibIncludeArgs" function
+               (:parent "XCore"
+                :arguments 
+                  ( ("DriverArgs" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [105577 105603])
+                    ("CC1Args" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [105645 105668]))                  
+                :type "void")
+                nil [105536 106142])
+            ("AddCXXStdlibLibArgs" function
+               (:parent "XCore"
+                :arguments 
+                  ( ("Args" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ArgList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [106176 106196])
+                    ("CmdArgs" variable
+                       (:reference 1
+                        :type ("ArgStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [106229 106252]))                  
+                :type "void")
+                nil [106144 106321]))          
+      :file "ToolChains.cpp"
+      :pointmax 106322
+      :fsize 106321
+      :lastmodtime '(21921 53878 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "ToolChains.h"
+      :file "ToolChains.h"
+      :fsize 24749
+      :lastmodtime '(21921 53878 0 0)))
+  :file "!usr!local!include!clang-3.4!lib!Driver!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

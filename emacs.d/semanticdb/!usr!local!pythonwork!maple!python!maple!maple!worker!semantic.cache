@@ -1,0 +1,791 @@
+;; Object worker/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "worker/"
+  :tables
+  (list
+    (semanticdb-table "mixins.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("functools" include nil nil [26 42])
+            ("events" include nil nil [43 68])
+            ("safe_func" include nil nil [83 99])
+            ("RoutesMixin" type
+               (:documentation "
+    专门做路由管理
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("rule_map" variable nil (reparse-symbol indented_block_body) [162 177])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [211 233]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [196 200]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [183 234])
+                    ("add_route_rule" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [258 262])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [264 267])
+                            ("view_func" variable nil (reparse-symbol function_parameters) [269 278])
+                            ("options" variable nil (reparse-symbol function_parameters) [280 289]))                          )
+                        (reparse-symbol indented_block_body) [239 780])
+                    ("route" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [795 799])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [801 804])
+                            ("options" variable nil (reparse-symbol function_parameters) [806 815]))                          )
+                        (reparse-symbol indented_block_body) [785 941])
+                    ("get_route_rule" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [965 969])
+                            ("cmd" variable nil (reparse-symbol function_parameters) [971 974]))                          )
+                        (reparse-symbol indented_block_body) [946 1015]))                  
+                :type "class")
+                nil [102 1015])
+            ("_reg_event_handler" function (:arguments 
+              ( ("func" variable nil (reparse-symbol function_parameters) [1040 1044]))              ) nil [1017 1245])
+            ("AppEventsMixin" type
+               (:superclasses ("object")
+                :members 
+                  ( ("events" variable nil (reparse-symbol indented_block_body) [1281 1294])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1328 1350]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1313 1317]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1300 1351])
+                    ("create_worker" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1398 1402])
+                            ("f" variable nil (reparse-symbol function_parameters) [1404 1405]))                          
+                        :documentation "
+        创建worker
+        f()
+        ")
+                        (reparse-symbol indented_block_body) [1356 1461])
+                    ("create_conn" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1506 1510])
+                            ("f" variable nil (reparse-symbol function_parameters) [1512 1513]))                          
+                        :documentation "
+        worker连接建立后
+        f(conn)
+        ")
+                        (reparse-symbol indented_block_body) [1466 1576])
+                    ("before_first_request" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1630 1634])
+                            ("f" variable nil (reparse-symbol function_parameters) [1636 1637]))                          
+                        :documentation "
+        第一个请求，请求解析成功后
+        f(request)
+        ")
+                        (reparse-symbol indented_block_body) [1581 1705])
+                    ("before_request" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1753 1757])
+                            ("f" variable nil (reparse-symbol function_parameters) [1759 1760]))                          
+                        :documentation "
+        请求解析成功后
+        f(request)
+        ")
+                        (reparse-symbol indented_block_body) [1710 1822])
+                    ("after_request" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1869 1873])
+                            ("f" variable nil (reparse-symbol function_parameters) [1875 1876]))                          
+                        :documentation "
+        执行完route对应的view_func后
+        f(request, exc)
+        ")
+                        (reparse-symbol indented_block_body) [1827 1957])
+                    ("before_response" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2006 2010])
+                            ("f" variable nil (reparse-symbol function_parameters) [2012 2013]))                          
+                        :documentation "
+        在 stream.write 之前，传入encode之后的data
+        f(conn, response)
+        ")
+                        (reparse-symbol indented_block_body) [1962 2108])
+                    ("after_response" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2156 2160])
+                            ("f" variable nil (reparse-symbol function_parameters) [2162 2163]))                          
+                        :documentation "
+        在 stream.write 之后，传入encode之后的data
+        f(conn, response, result)
+        ")
+                        (reparse-symbol indented_block_body) [2113 2266])
+                    ("close_conn" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2310 2314])
+                            ("f" variable nil (reparse-symbol function_parameters) [2316 2317]))                          
+                        :documentation "
+        worker连接close之后
+        f(conn)
+        ")
+                        (reparse-symbol indented_block_body) [2271 2384])
+                    ("create_client" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2431 2435])
+                            ("f" variable nil (reparse-symbol function_parameters) [2437 2438]))                          
+                        :documentation "
+        client 连接之后.
+        f(request)
+        ")
+                        (reparse-symbol indented_block_body) [2389 2505])
+                    ("close_client" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2551 2555])
+                            ("f" variable nil (reparse-symbol function_parameters) [2557 2558]))                          
+                        :documentation "
+        client close之后.
+        f(request)
+        ")
+                        (reparse-symbol indented_block_body) [2510 2628]))                  
+                :type "class")
+                nil [1247 2628])
+            ("BlueprintEventsMixin" type
+               (:superclasses ("object")
+                :members 
+                  ( ("events" variable nil (reparse-symbol indented_block_body) [2671 2684])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2718 2740]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2703 2707]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2690 2741])
+                    ("before_request" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2789 2793])
+                            ("f" variable nil (reparse-symbol function_parameters) [2795 2796]))                          
+                        :documentation "
+        请求解析成功后
+        f(request)
+        ")
+                        (reparse-symbol indented_block_body) [2746 2858])
+                    ("after_request" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2905 2909])
+                            ("f" variable nil (reparse-symbol function_parameters) [2911 2912]))                          
+                        :documentation "
+        执行完route对应的view_func后
+        f(request, exc)
+        ")
+                        (reparse-symbol indented_block_body) [2863 2993])
+                    ("create_app_worker" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3044 3048])
+                            ("f" variable nil (reparse-symbol function_parameters) [3050 3051]))                          
+                        :documentation "
+        创建worker
+        f()
+        ")
+                        (reparse-symbol indented_block_body) [2998 3107])
+                    ("create_app_conn" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3156 3160])
+                            ("f" variable nil (reparse-symbol function_parameters) [3162 3163]))                          
+                        :documentation "
+        worker连接建立后
+        f(conn)
+        ")
+                        (reparse-symbol indented_block_body) [3112 3226])
+                    ("before_app_first_request" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3284 3288])
+                            ("f" variable nil (reparse-symbol function_parameters) [3290 3291]))                          
+                        :documentation "
+        第一次请求，请求解析成功后
+        f(request)
+        ")
+                        (reparse-symbol indented_block_body) [3231 3359])
+                    ("before_app_request" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3411 3415])
+                            ("f" variable nil (reparse-symbol function_parameters) [3417 3418]))                          
+                        :documentation "
+        请求解析成功后
+        f(request)
+        ")
+                        (reparse-symbol indented_block_body) [3364 3480])
+                    ("after_app_request" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3531 3535])
+                            ("f" variable nil (reparse-symbol function_parameters) [3537 3538]))                          
+                        :documentation "
+        执行完route对应的view_func后
+        f(request, exc)
+        ")
+                        (reparse-symbol indented_block_body) [3485 3619])
+                    ("before_app_response" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3672 3676])
+                            ("f" variable nil (reparse-symbol function_parameters) [3678 3679]))                          
+                        :documentation "
+        在 stream.write 之前，传入encode之后的data
+        f(conn, response)
+        ")
+                        (reparse-symbol indented_block_body) [3624 3774])
+                    ("after_app_response" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3826 3830])
+                            ("f" variable nil (reparse-symbol function_parameters) [3832 3833]))                          
+                        :documentation "
+        在 stream.write 之后，传入encode之后的data
+        f(conn, response, result)
+        ")
+                        (reparse-symbol indented_block_body) [3779 3936])
+                    ("close_app_conn" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3984 3988])
+                            ("f" variable nil (reparse-symbol function_parameters) [3990 3991]))                          
+                        :documentation "
+        worker连接close之后
+        f(conn)
+        ")
+                        (reparse-symbol indented_block_body) [3941 4058])
+                    ("create_app_client" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4109 4113])
+                            ("f" variable nil (reparse-symbol function_parameters) [4115 4116]))                          
+                        :documentation "
+        client 连接之后.
+        f(request)
+        ")
+                        (reparse-symbol indented_block_body) [4063 4183])
+                    ("close_app_client" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4233 4237])
+                            ("f" variable nil (reparse-symbol function_parameters) [4239 4240]))                          
+                        :decorators 
+                          ( ("_reg_event_handler" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [4188 4309]))                  
+                :type "class")
+                nil [2630 4309]))          
+      :file "mixins.py"
+      :pointmax 4309
+      :fsize 4598
+      :lastmodtime '(22241 28394 0 0)
+      :unmatched-syntax '((PERIOD 76 . 77) (FROM 70 . 74) (PERIOD 75 . 76)))
+    (semanticdb-table "blueprint.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("BlueprintEventsMixin" include nil nil [39 79])
+            ("RoutesMixin" include nil nil [39 79])
+            ("Blueprint" type
+               (:superclasses ("RoutesMixin" "BlueprintEventsMixin")
+                :members 
+                  ( ("name" variable nil (reparse-symbol indented_block_body) [139 150])
+                    ("app" variable nil (reparse-symbol indented_block_body) [155 165])
+                    ("__init__" function
+                       (:suite 
+                          ( ("RoutesMixin" code nil (reparse-symbol indented_block_body) [205 231])
+                            ("BlueprintEventsMixin" code nil (reparse-symbol indented_block_body) [240 275])
+                            ("self" variable nil (reparse-symbol indented_block_body) [284 300]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [184 188])
+                            ("name" variable nil (reparse-symbol function_parameters) [190 194]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [171 301])
+                    ("register_to_app" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [326 330])
+                            ("app" variable nil (reparse-symbol function_parameters) [332 335]))                          
+                        :documentation "
+        注册到app上
+        ")
+                        (reparse-symbol indented_block_body) [306 456]))                  
+                :type "class")
+                nil [82 456]))          
+      :file "blueprint.py"
+      :pointmax 456
+      :fsize 469
+      :lastmodtime '(22241 28394 0 0)
+      :unmatched-syntax '((PERIOD 31 . 32)))
+    (semanticdb-table "connection.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("os" include nil nil [26 35])
+            ("socket" include nil nil [36 49])
+            ("thread" include nil nil [50 63])
+            ("netkit.contrib.tcp_client" include nil nil [64 111])
+            ("Task" include nil nil [124 135])
+            ("time" include nil nil [136 147])
+            ("constants" include nil nil [156 172])
+            ("logger" include nil nil [184 197])
+            ("Connection" type
+               (:superclasses ("object")
+                :members 
+                  ( ("work_progress" variable nil (reparse-symbol indented_block_body) [231 251])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [313 327])
+                            ("self" variable nil (reparse-symbol indented_block_body) [353 421]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [270 274])
+                            ("app" variable nil (reparse-symbol function_parameters) [276 279])
+                            ("address" variable nil (reparse-symbol function_parameters) [281 288])
+                            ("conn_timeout" variable nil (reparse-symbol function_parameters) [290 302]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [257 422])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [435 439]))                          )
+                        (reparse-symbol indented_block_body) [427 709])
+                    ("_monitor_work_timeout" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [740 744]))                          
+                        :documentation "
+        监控work超时
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [714 1378])
+                    ("_handle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1395 1399]))                          )
+                        (reparse-symbol indented_block_body) [1383 1868])
+                    ("_ask_for_task" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1891 1895]))                          )
+                        (reparse-symbol indented_block_body) [1873 2013])
+                    ("_connect" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2031 2035]))                          )
+                        (reparse-symbol indented_block_body) [2018 2359])
+                    ("write" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2374 2378])
+                            ("data" variable nil (reparse-symbol function_parameters) [2380 2384]))                          
+                        :documentation "
+        发送数据    True: 成功   else: 失败
+        ")
+                        (reparse-symbol indented_block_body) [2364 3029])
+                    ("_read_message" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3052 3056]))                          )
+                        (reparse-symbol indented_block_body) [3034 3593])
+                    ("_on_connection_close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3623 3627]))                          )
+                        (reparse-symbol indented_block_body) [3598 3850])
+                    ("_on_read_complete" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3877 3881])
+                            ("data" variable nil (reparse-symbol function_parameters) [3883 3887]))                          
+                        :documentation "
+        数据获取结束
+        ")
+                        (reparse-symbol indented_block_body) [3855 4192])
+                    ("_handle_request" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4217 4221])
+                            ("request" variable nil (reparse-symbol function_parameters) [4223 4230]))                          
+                        :documentation "
+        出现任何异常的时候，服务器不再主动关闭连接
+        ")
+                        (reparse-symbol indented_block_body) [4197 6300])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6315 6319]))                          
+                        :documentation "
+        直接关闭连接
+        ")
+                        (reparse-symbol indented_block_body) [6305 6389])
+                    ("closed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6405 6409]))                          
+                        :documentation "
+        连接是否已经关闭
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [6394 6506]))                  
+                :type "class")
+                nil [200 6506]))          
+      :file "connection.py"
+      :pointmax 6507
+      :fsize 6790
+      :lastmodtime '(22241 28394 0 0)
+      :unmatched-syntax '((PERIOD 179 . 180) (FROM 173 . 177) (PERIOD 178 . 179) (PERIOD 154 . 155) (FROM 148 . 152) (PERIOD 153 . 154) (PERIOD 118 . 119) (FROM 112 . 116) (PERIOD 117 . 118)))
+    (semanticdb-table "request.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("Task" include nil nil [38 49])
+            ("logger" include nil nil [61 74])
+            ("constants" include nil nil [83 99])
+            ("CloseUsers" include nil nil [117 146])
+            ("RspToUsers" include nil nil [117 146])
+            ("Request" type
+               (:documentation "
+    请求
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("conn" variable nil (reparse-symbol indented_block_body) [220 231])
+                    ("task" variable nil (reparse-symbol indented_block_body) [256 267])
+                    ("box" variable nil (reparse-symbol indented_block_body) [284 294])
+                    ("is_valid" variable nil (reparse-symbol indented_block_body) [312 328])
+                    ("responded" variable nil (reparse-symbol indented_block_body) [348 365])
+                    ("blueprint" variable nil (reparse-symbol indented_block_body) [370 386])
+                    ("route_rule" variable nil (reparse-symbol indented_block_body) [401 418])
+                    ("interrupted" variable nil (reparse-symbol indented_block_body) [470 489])
+                    ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [535 551])
+                            ("self" variable nil (reparse-symbol indented_block_body) [560 576])
+                            ("self" variable nil (reparse-symbol indented_block_body) [598 636]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [508 512])
+                            ("conn" variable nil (reparse-symbol function_parameters) [514 518])
+                            ("task" variable nil (reparse-symbol function_parameters) [520 524]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [495 637])
+                    ("app" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [664 668]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [642 700])
+                    ("gw_box" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [730 734]))                          
+                        :documentation "
+        向下兼容
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [705 816])
+                    ("_parse_raw_data" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [841 845]))                          )
+                        (reparse-symbol indented_block_body) [821 1300])
+                    ("_parse_route_rule" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1327 1331]))                          )
+                        (reparse-symbol indented_block_body) [1305 1769])
+                    ("cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1796 1800]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1774 1888])
+                    ("view_func" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1921 1925]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [1893 2001])
+                    ("endpoint" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2033 2037]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2006 2245])
+                    ("write_to_client" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2270 2274])
+                            ("data" variable nil (reparse-symbol function_parameters) [2276 2280]))                          
+                        :documentation "
+        写回
+        :param data: 可以是dict也可以是box
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [2250 2888])
+                    ("write_to_users" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2912 2916])
+                            ("data_list" variable nil (reparse-symbol function_parameters) [2918 2927]))                          
+                        :documentation "
+        格式为
+        [(uids, box), (uids, box, userdata) ...]
+        :param data_list: userdata可不传，默认为0，conn.userdata & userdata == userdata
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [2893 3836])
+                    ("close_client" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3858 3862]))                          )
+                        (reparse-symbol indented_block_body) [3841 4000])
+                    ("close_users" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4021 4025])
+                            ("uids" variable nil (reparse-symbol function_parameters) [4027 4031])
+                            ("userdata" variable nil (reparse-symbol function_parameters) [4033 4041]))                          )
+                        (reparse-symbol indented_block_body) [4005 4300])
+                    ("login_client" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4322 4326])
+                            ("uid" variable nil (reparse-symbol function_parameters) [4328 4331])
+                            ("userdata" variable nil (reparse-symbol function_parameters) [4333 4341]))                          )
+                        (reparse-symbol indented_block_body) [4305 4541])
+                    ("logout_client" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4564 4568]))                          )
+                        (reparse-symbol indented_block_body) [4546 4707])
+                    ("write_to_worker" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4732 4736])
+                            ("data" variable nil (reparse-symbol function_parameters) [4738 4742]))                          
+                        :documentation "
+        透传到worker进行处理
+        ")
+                        (reparse-symbol indented_block_body) [4712 5120])
+                    ("interrupt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5139 5143])
+                            ("data" variable nil (reparse-symbol function_parameters) [5145 5149]))                          
+                        :documentation "
+        中断处理
+        :param data: 要响应的数据，不传即不响应
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [5125 5391])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5409 5413]))                          )
+                        (reparse-symbol indented_block_body) [5396 5504]))                  
+                :type "class")
+                nil [149 5504]))          
+      :file "request.py"
+      :pointmax 5504
+      :fsize 5745
+      :lastmodtime '(22241 28394 0 0)
+      :unmatched-syntax '((RETURN 1936 . 1942) (IF 1972 . 1974) (ELSE 1991 . 1995) (PERIOD 106 . 107) (FROM 100 . 104) (PERIOD 105 . 106) (PERIOD 81 . 82) (FROM 75 . 79) (PERIOD 80 . 81) (PERIOD 56 . 57) (FROM 50 . 54) (PERIOD 55 . 56) (PERIOD 32 . 33) (PERIOD 31 . 32)))
+    (semanticdb-table "worker.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("time" include nil nil [26 37])
+            ("os" include nil nil [38 47])
+            ("subprocess" include nil nil [48 65])
+            ("sys" include nil nil [66 76])
+            ("signal" include nil nil [77 90])
+            ("copy" include nil nil [91 102])
+            ("collections" include nil nil [103 134])
+            ("setproctitle" include nil nil [136 155])
+            ("Request" include nil nil [170 184])
+            ("Connection" include nil nil [202 219])
+            ("AppEventsMixin" include nil nil [233 267])
+            ("RoutesMixin" include nil nil [233 267])
+            ("logger" include nil nil [279 292])
+            ("constants" include nil nil [301 317])
+            ("Worker" type
+               (:superclasses ("RoutesMixin" "AppEventsMixin")
+                :members 
+                  ( ("name" variable nil (reparse-symbol indented_block_body) [461 482])
+                    ("box_class" variable nil (reparse-symbol indented_block_body) [499 515])
+                    ("connection_class" variable nil (reparse-symbol indented_block_body) [539 568])
+                    ("request_class" variable nil (reparse-symbol indented_block_body) [589 612])
+                    ("debug" variable nil (reparse-symbol indented_block_body) [629 642])
+                    ("rsp_once" variable nil (reparse-symbol indented_block_body) [661 676])
+                    ("conn_timeout" variable nil (reparse-symbol indented_block_body) [697 734])
+                    ("work_timeout" variable nil (reparse-symbol indented_block_body) [784 803])
+                    ("stop_timeout" variable nil (reparse-symbol indented_block_body) [857 876])
+                    ("got_first_request" variable nil (reparse-symbol indented_block_body) [962 987])
+                    ("blueprints" variable nil (reparse-symbol indented_block_body) [992 1009])
+                    ("enable" variable nil (reparse-symbol indented_block_body) [1054 1067])
+                    ("processes" variable nil (reparse-symbol indented_block_body) [1084 1100])
+                    ("__init__" function
+                       (:suite 
+                          ( ("RoutesMixin" code nil (reparse-symbol indented_block_body) [1145 1171])
+                            ("AppEventsMixin" code nil (reparse-symbol indented_block_body) [1180 1209])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1218 1242])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1251 1274])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1283 1309]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1119 1123])
+                            ("box_class" variable nil (reparse-symbol function_parameters) [1125 1134]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1106 1310])
+                    ("register_blueprint" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1338 1342])
+                            ("blueprint" variable nil (reparse-symbol function_parameters) [1344 1353]))                          )
+                        (reparse-symbol indented_block_body) [1315 1396])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1409 1413])
+                            ("host" variable nil (reparse-symbol function_parameters) [1415 1419])
+                            ("port" variable nil (reparse-symbol function_parameters) [1421 1425])
+                            ("debug" variable nil (reparse-symbol function_parameters) [1427 1432])
+                            ("workers" variable nil (reparse-symbol function_parameters) [1439 1446]))                          )
+                        (reparse-symbol indented_block_body) [1401 2171])
+                    ("_make_proc_name" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2196 2200])
+                            ("subtitle" variable nil (reparse-symbol function_parameters) [2202 2210]))                          
+                        :documentation "
+        获取进程名称
+        :param subtitle:
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [2176 2493])
+                    ("_validate_cmds" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2517 2521]))                          
+                        :documentation "
+        确保 cmd 没有重复
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [2498 2868])
+                    ("_on_worker_run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2892 2896]))                          )
+                        (reparse-symbol indented_block_body) [2873 3012])
+                    ("_worker_run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3033 3037])
+                            ("address" variable nil (reparse-symbol function_parameters) [3039 3046]))                          )
+                        (reparse-symbol indented_block_body) [3017 3331])
+                    ("_spawn_workers" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3355 3359])
+                            ("workers" variable nil (reparse-symbol function_parameters) [3361 3368]))                          
+                        :documentation "
+        启动多个worker
+        :param workers:
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [3336 4395])
+                    ("_handle_parent_proc_signals" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4432 4436]))                          )
+                        (reparse-symbol indented_block_body) [4400 6122])
+                    ("_handle_child_proc_signals" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6158 6162]))                          )
+                        (reparse-symbol indented_block_body) [6127 6692]))                  
+                :type "class")
+                nil [320 6692]))          
+      :file "worker.py"
+      :pointmax 6692
+      :fsize 7421
+      :lastmodtime '(22241 28394 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "__init__.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22241 28394 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!local!pythonwork!maple!python!maple!maple!worker!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

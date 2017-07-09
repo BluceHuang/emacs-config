@@ -1,0 +1,353 @@
+;; Object table/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "table/"
+  :tables
+  (list
+    (semanticdb-table "table.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("leveldb/table.h" include nil nil [218 244])
+            ("leveldb/cache.h" include nil nil [246 272])
+            ("leveldb/comparator.h" include nil nil [273 304])
+            ("leveldb/env.h" include nil nil [305 329])
+            ("leveldb/filter_policy.h" include nil nil [330 364])
+            ("leveldb/options.h" include nil nil [365 393])
+            ("table/block.h" include nil nil [394 418])
+            ("table/filter_block.h" include nil nil [419 450])
+            ("table/format.h" include nil nil [451 476])
+            ("table/two_level_iterator.h" include nil nil [477 514])
+            ("util/coding.h" include nil nil [515 539])
+            ("leveldb" type
+               (:members 
+                  ( ("Rep" type
+                       (:parent "Table"
+                        :members 
+                          ( ("Rep" function
+                               (:destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [584 666])
+                            ("options" variable (:type ("Options" type (:type "class") nil nil)) (reparse-symbol classsubparts) [670 686])
+                            ("status" variable (:type ("Status" type (:type "class") nil nil)) (reparse-symbol classsubparts) [689 703])
+                            ("file" variable
+                               (:pointer 1
+                                :type ("RandomAccessFile" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [706 729])
+                            ("cache_id" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [732 750])
+                            ("filter" variable
+                               (:pointer 1
+                                :type ("FilterBlockReader" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [753 779])
+                            ("filter_data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [782 806])
+                            ("metaindex_handle" variable (:type ("BlockHandle" type (:type "class") nil nil)) (reparse-symbol classsubparts) [810 839])
+                            ("index_block" variable
+                               (:pointer 1
+                                :type ("Block" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [891 910]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [562 913])
+                    ("Open" function
+                       (:parent "Table"
+                        :arguments 
+                          ( ("options" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Options" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [934 957])
+                            ("file" variable
+                               (:pointer 1
+                                :type ("RandomAccessFile" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [977 1000])
+                            ("size" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1020 1034])
+                            ("table" variable
+                               (:pointer 2
+                                :type ("Table" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1054 1068]))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [915 2389])
+                    ("ReadMeta" function
+                       (:parent "Table"
+                        :arguments 
+                          ( ("footer" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Footer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2412 2433]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2391 3236])
+                    ("ReadFilter" function
+                       (:parent "Table"
+                        :arguments 
+                          ( ("filter_handle_value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3261 3294]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3238 3921])
+                    ("Table" function
+                       (:destructor-flag t
+                        :parent "Table"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3923 3957])
+                    ("DeleteBlock" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("arg" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3983 3993])
+                            ("ignored" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3994 4008]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [3959 4052])
+                    ("DeleteCachedBlock" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4084 4101])
+                            ("value" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [4102 4114]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4054 4184])
+                    ("ReleaseBlock" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("arg" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [4211 4221])
+                            ("h" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [4222 4230]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [4186 4371])
+                    ("BlockReader" function
+                       (:pointer 1
+                        :parent "Table"
+                        :arguments 
+                          ( ("arg" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [4534 4544])
+                            ("options" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ReadOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4574 4601])
+                            ("index_value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4631 4656]))                          
+                        :type ("Iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [4505 6320])
+                    ("NewIterator" function
+                       (:pointer 1
+                        :parent "Table"
+                        :arguments 
+                          ( ("options" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ReadOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6351 6378]))                          
+                        :type ("Iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6322 6545])
+                    ("InternalGet" function
+                       (:parent "Table"
+                        :arguments 
+                          ( ("options" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ReadOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6573 6600])
+                            ("k" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6601 6616])
+                            ("arg" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [6643 6653])
+                            ("saver" function
+                               (:function-pointer t
+                                :arguments 
+                                  ( ("" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [6694 6700])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Slice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6701 6714])
+                                    ("" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Slice" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6715 6728]))                                  
+                                :type "void")
+                                nil nil))                          
+                        :type ("Status" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [6547 7479])
+                    ("ApproximateOffsetOf" function
+                       (:parent "Table"
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7518 7535]))                          
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [7482 8396]))                  
+                :type "namespace")
+                nil [541 8399]))          
+      :file "table.cc"
+      :pointmax 8422
+      :fsize 8421
+      :lastmodtime '(21640 57496 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "block.h"
+      :file "block.h"
+      :fsize 1034
+      :lastmodtime '(21640 57496 0 0))
+    (semanticdb-table "filter_block.h"
+      :file "filter_block.h"
+      :fsize 2248
+      :lastmodtime '(21640 57496 0 0))
+    (semanticdb-table "format.h"
+      :file "format.h"
+      :fsize 3142
+      :lastmodtime '(21640 57496 0 0))
+    (semanticdb-table "two_level_iterator.h"
+      :file "two_level_iterator.h"
+      :fsize 1223
+      :lastmodtime '(21640 57496 0 0))
+    (semanticdb-table "iterator.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("leveldb/iterator.h" include nil nil [218 247])
+            ("leveldb" type
+               (:members 
+                  ( ("Iterator" function
+                       (:constructor-flag t
+                        :parent "Iterator"
+                        :type ("Iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [270 346])
+                    ("Iterator" function
+                       (:destructor-flag t
+                        :parent "Iterator"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [348 629])
+                    ("RegisterCleanup" function
+                       (:parent "Iterator"
+                        :arguments 
+                          ( ("func" variable (:type ("CleanupFunction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [662 683])
+                            ("arg1" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [684 695])
+                            ("arg2" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [696 707]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [631 949])
+                    ("unnamed" type
+                       (:members 
+                          ( ("EmptyIterator" type
+                               (:superclasses 
+                                  ( ("Iterator" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [1004 1011])
+                                    ("EmptyIterator" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("s" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Status" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1028 1044]))                                          
+                                        :type ("EmptyIterator" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1014 1061])
+                                    ("Valid" function
+                                       (:typemodifiers ("virtual")
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1064 1108])
+                                    ("Seek" function
+                                       (:typemodifiers ("virtual")
+                                        :arguments 
+                                          ( ("target" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("Slice" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1129 1149]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1111 1153])
+                                    ("SeekToFirst" function
+                                       (:typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1156 1186])
+                                    ("SeekToLast" function
+                                       (:typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1189 1218])
+                                    ("Next" function
+                                       (:typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1221 1259])
+                                    ("Prev" function
+                                       (:typemodifiers ("virtual")
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1262 1300])
+                                    ("key" function (:type ("Slice" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1303 1355])
+                                    ("value" function (:type ("Slice" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1358 1412])
+                                    ("status" function
+                                       (:typemodifiers ("virtual")
+                                        :type ("Status" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1415 1464])
+                                    ("private" label nil (reparse-symbol classsubparts) [1466 1474])
+                                    ("status_" variable (:type ("Status" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1477 1492]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [963 1495]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [951 1497])
+                    ("NewEmptyIterator" function
+                       (:pointer 1
+                        :type ("Iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1513 1587])
+                    ("NewErrorIterator" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("status" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Status" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1616 1637]))                          
+                        :type ("Iterator" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1589 1677]))                  
+                :type "namespace")
+                nil [249 1680]))          
+      :file "iterator.cc"
+      :pointmax 1703
+      :fsize 1702
+      :lastmodtime '(21640 57496 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!huangyong!Downloads!leveldb-master!table!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

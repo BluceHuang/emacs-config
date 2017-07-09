@@ -1,0 +1,1 @@
+("~/games/jsoncpp-src-0.6.0-rc2/" "/sudo:root@huangyongs-MacBook-Air.local:/Users/huangyong/android/Intel_x86_sysimg_4.4_Source_Files_20131206/external/ganymed-ssh2/" "~/.emacs.d/")

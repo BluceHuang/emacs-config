@@ -1,0 +1,630 @@
+;; Object libdouniu/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "libdouniu/"
+  :tables
+  (list
+    (semanticdb-table "hole_cards.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("card.h" include nil nil [1 18])
+            ("card_type.h" include nil nil [19 41])
+            ("hole_cards.h" include nil nil [42 65])
+            ("card_type_str" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	(char *)\"CARD_TYPE_NONNIU\",
+	(char *)\"CARD_TYPE_NIUDING\",
+	(char *)\"CARD_TYPE_NIUER\",
+	(char *)\"CARD_TYPE_NIUSAN\",
+	(char *)\"CARD_TYPE_NIUSI\",
+	(char *)\"CARD_TYPE_NIUWU\",
+	(char *)\"CARD_TYPE_NIULIU\",
+	(char *)\"CARD_TYPE_NIUQI\",
+	(char *)\"CARD_TYPE_NIUBA\",
+	(char *)\"CARD_TYPE_NIUJIU\",
+	(char *)\"CARD_TYPE_NIUNIU\",
+	(char *)\"CARD_TYPE_ZHADAN\",
+    (char *)\"CARD_TYPE_JINNIU\",
+	(char *)\"CARD_TYPE_WUXIAONIU\"
+}"
+                :type "char")
+                nil [67 516])
+            ("HoleCards" function
+               (:constructor-flag t
+                :parent "HoleCards"
+                :type ("HoleCards" type (:type "class") nil nil))
+                nil [518 572])
+            ("add_card" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("card" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [599 609]))                  
+                :type "void")
+                nil [574 664])
+            ("sort" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [666 726])
+            ("analysis" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [728 4571])
+            ("compare" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("hc" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4596 4610]))                  
+                :type "int")
+                nil [4573 4920])
+            ("set_card_type" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [4952 4961]))                  
+                :type "void")
+                nil [4922 4984])
+            ("copy_cards" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5013 5034]))                  
+                :type "void")
+                nil [4986 5050])
+            ("copy_cards" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5079 5099]))                  
+                :type "void")
+                nil [5052 5189])
+            ("debug" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [5191 5300]))          
+      :file "hole_cards.cc"
+      :pointmax 5301
+      :fsize 5300
+      :lastmodtime '(21917 3322 141044 277000)
+      :unmatched-syntax nil)
+    (semanticdb-table "card.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_CARD_H_" variable (:constant-flag t) nil [26 34])
+            ("string" include (:system-flag t) nil [36 53])
+            ("iostream" include (:system-flag t) nil [54 73])
+            ("cstdio" include (:system-flag t) nil [74 91])
+            ("vector" include (:system-flag t) nil [92 109])
+            ("map" include (:system-flag t) nil [110 124])
+            ("algorithm" include (:system-flag t) nil [125 145])
+            ("card_type.h" include nil nil [147 169])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [171 191])
+            ("Card" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [875 882])
+                    ("Face" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("Ace" variable
+                                     (:constant-flag t
+                                      :default-value (907 908)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [901 908])
+                                  ("Two" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [912 916])
+                                  ("Three" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [919 925])
+                                  ("Four" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [928 933])
+                                  ("Five" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [936 941])
+                                  ("Six" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [944 948])
+                                  ("Seven" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [951 957])
+                                  ("Eight" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [960 966])
+                                  ("Nine" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [969 974])
+                                  ("Ten" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [977 981])
+                                  ("Jack" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [984 989])
+                                  ("Queen" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [992 998])
+                                  ("King" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1001 1006])
+                                  ("FirstFace" variable
+                                     (:constant-flag t
+                                      :default-value (1022 1025)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1010 1025])
+                                  ("LastFace" variable
+                                     (:constant-flag t
+                                      :default-value (1040 1044)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1029 1044]))                                
+                              :type "enum")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [884 1053])
+                    ("Suit" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("Diamonds" variable
+                                     (:constant-flag t
+                                      :default-value (1085 1086)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1074 1086])
+                                  ("Clubs" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1090 1096])
+                                  ("Hearts" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1099 1106])
+                                  ("Spades" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1109 1116])
+                                  ("FirstSuit" variable
+                                     (:constant-flag t
+                                      :default-value (1134 1142)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1122 1142])
+                                  ("LastSuit" variable
+                                     (:constant-flag t
+                                      :default-value (1157 1163)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1146 1163]))                                
+                              :type "enum")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1057 1172])
+                    ("face" variable (:type "int") (reparse-symbol classsubparts) [1176 1185])
+                    ("suit" variable (:type "int") (reparse-symbol classsubparts) [1187 1196])
+                    ("value" variable (:type "int") (reparse-symbol classsubparts) [1200 1210])
+                    ("point" variable (:type "int") (reparse-symbol classsubparts) [1212 1222])
+                    ("Card" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Card" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1226 1233])
+                    ("Card" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol arg-sub-list) [1240 1248]))                          
+                        :type ("Card" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1235 1249])
+                    ("set_value" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "int") (reparse-symbol arg-sub-list) [1266 1274]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1251 1275])
+                    ("get_card" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1279 1302])
+                    ("<" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1324 1338]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1306 1371])
+                    (">" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1392 1406]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1374 1440])
+                    ("==" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("c" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1461 1475]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1443 1510])
+                    ("compare" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1534 1548])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1549 1563]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1515 1817])
+                    ("lesser_callback" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1848 1862])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1863 1877]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1820 1956])
+                    ("greater_callback" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1989 2003])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Card" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2004 2018]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1960 2096])
+                    ("sort_by_ascending" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2130 2151]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2100 2208])
+                    ("sort_by_descending" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2243 2264]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2212 2322])
+                    ("dump_cards" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2349 2370])
+                            ("str" variable
+                               (:default-value "\"cards\""
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2371 2391]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2326 2595])
+                    ("dump_cards" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("m" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2622 2645])
+                            ("str" variable
+                               (:default-value "\"cards\""
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2646 2666]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2599 2879]))                  
+                :type "class")
+                nil [862 2882]))          
+      :file "card.h"
+      :pointmax 2906
+      :fsize 2921
+      :lastmodtime '(21917 3322 226045 569000)
+      :unmatched-syntax '((punctuation 1510 . 1511) (punctuation 1440 . 1441) (punctuation 1371 . 1372))
+      :lexical-table 
+        '(("_CARD_H_")
+          )
+)
+    (semanticdb-table "card_type.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_CARD_TYPE_H_" variable (:constant-flag t) nil [31 44])
+            ("CardType" type
+               (:members 
+                  ( ("CARD_TYPE_NONNIU" variable
+                       (:constant-flag t
+                        :default-value (86 87)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [63 87])
+                    ("CARD_TYPE_NIUDING" variable
+                       (:constant-flag t
+                        :default-value (120 121)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [97 121])
+                    ("CARD_TYPE_NIUER" variable
+                       (:constant-flag t
+                        :default-value (147 148)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [124 148])
+                    ("CARD_TYPE_NIUSAN" variable
+                       (:constant-flag t
+                        :default-value (174 175)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [151 175])
+                    ("CARD_TYPE_NIUSI" variable
+                       (:constant-flag t
+                        :default-value (201 202)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [178 202])
+                    ("CARD_TYPE_NIUWU" variable
+                       (:constant-flag t
+                        :default-value (228 229)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [205 229])
+                    ("CARD_TYPE_NIULIU" variable
+                       (:constant-flag t
+                        :default-value (255 256)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [232 256])
+                    ("CARD_TYPE_NIUQI" variable
+                       (:constant-flag t
+                        :default-value (282 283)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [259 283])
+                    ("CARD_TYPE_NIUBA" variable
+                       (:constant-flag t
+                        :default-value (309 310)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [286 310])
+                    ("CARD_TYPE_NIUJIU" variable
+                       (:constant-flag t
+                        :default-value (334 335)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [313 335])
+                    ("CARD_TYPE_NIUNIU" variable
+                       (:constant-flag t
+                        :default-value (359 361)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [338 361])
+                    ("CARD_TYPE_ZHADAN" variable
+                       (:constant-flag t
+                        :default-value (388 390)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [367 390])
+                    ("CARD_TYPE_JINNIU" variable
+                       (:constant-flag t
+                        :default-value (414 416)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [393 416])
+                    ("CARD_TYPE_WUXIAONIU" variable
+                       (:constant-flag t
+                        :default-value (443 445)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [419 445]))                  
+                :type "enum")
+                nil [46 449])
+            ("CardRatio" type
+               (:members 
+                  ( ("CARD_RATIO_LESS" variable
+                       (:constant-flag t
+                        :default-value (490 491)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [469 491])
+                    ("CARD_RATIO_NIUBA" variable
+                       (:constant-flag t
+                        :default-value (515 516)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [494 516])
+                    ("CARD_RATIO_NIUJIU" variable
+                       (:constant-flag t
+                        :default-value (540 541)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [519 541])
+                    ("CARD_RATIO_NIUNIU" variable
+                       (:constant-flag t
+                        :default-value (565 566)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [544 566])
+                    ("CARD_RATIO_ZHADAN" variable
+                       (:constant-flag t
+                        :default-value (590 591)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [569 591])
+                    ("CARD_RATIO_JINNIU" variable
+                       (:constant-flag t
+                        :default-value (618 619)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [597 619])
+                    ("CARD_RATIO_WUXIAONIU" variable
+                       (:constant-flag t
+                        :default-value (646 647)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [622 647])
+                    ("CARD_RATIO_MAX" variable
+                       (:constant-flag t
+                        :default-value (668 688)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [651 688]))                  
+                :type "enum")
+                nil [451 692]))          
+      :file "card_type.h"
+      :pointmax 721
+      :fsize 724
+      :lastmodtime '(21917 3322 223045 527000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_CARD_TYPE_H_")
+          )
+)
+    (semanticdb-table "hole_cards.h"
+      :file "hole_cards.h"
+      :fsize 606
+      :lastmodtime '(21917 3322 101043 670000))
+    (semanticdb-table "deck.h"
+      :file "deck.h"
+      :fsize 465
+      :lastmodtime '(21917 3322 108043 776000))
+    (semanticdb-table "deck.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [1 21])
+            ("deck.h" include nil nil [22 39])
+            ("card_arr" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+0x01, 0x11, 0x21, 0x31,		//A 14 
+0x02, 0x12, 0x22, 0x32,		//2 15
+0x03, 0x13, 0x23, 0x33,		//3 3
+0x04, 0x14, 0x24, 0x34,		//4 4
+0x05, 0x15, 0x25, 0x35,		//5 5
+0x06, 0x16, 0x26, 0x36,		//6 6
+0x07, 0x17, 0x27, 0x37,		//7 7
+0x08, 0x18, 0x28, 0x38,		//8 8
+0x09, 0x19, 0x29, 0x39,		//9 9
+0x0A, 0x1A, 0x2A, 0x3A,		//10 10
+0x0B, 0x1B, 0x2B, 0x3B,		//J 11
+0x0C, 0x1C, 0x2C, 0x3C,		//Q 12
+0x0D, 0x1D, 0x2D, 0x3D,		//K 13
+}"
+                :type "int")
+                nil [41 480])
+            ("fill" function
+               (:parent "Deck"
+                :type "void")
+                nil [482 590])
+            ("empty" function
+               (:parent "Deck"
+                :type "void")
+                nil [592 630])
+            ("count" function
+               (:parent "Deck"
+                :type "int")
+                nil [632 681])
+            ("push" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("card" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [699 709]))                  
+                :type "bool")
+                nil [683 751])
+            ("pop" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("card" variable
+                       (:reference 1
+                        :type ("Card" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [768 779]))                  
+                :type "bool")
+                nil [753 871])
+            ("shuffle" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("seed" variable (:type "int") (reparse-symbol arg-sub-list) [892 901]))                  
+                :type "bool")
+                nil [873 994])
+            ("get_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1022 1043]))                  
+                :type "void")
+                nil [996 1157])
+            ("change_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("pos" variable (:type "int") (reparse-symbol arg-sub-list) [1188 1196])
+                    ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1197 1218]))                  
+                :type "void")
+                nil [1159 1361])
+            ("has_hole_cards" function
+               (:parent "Deck"
+                :type "bool")
+                nil [1363 1492])
+            ("debug" function
+               (:parent "Deck"
+                :type "void")
+                nil [1494 1542]))          
+      :file "deck.cc"
+      :pointmax 1543
+      :fsize 1542
+      :lastmodtime '(21917 3322 142044 292000)
+      :unmatched-syntax nil))
+  :file "!usr!local!app!znnrobot!src!znnrobot!libdouniu!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

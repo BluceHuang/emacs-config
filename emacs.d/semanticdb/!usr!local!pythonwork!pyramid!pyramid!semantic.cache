@@ -1,0 +1,64 @@
+;; Object pyramid/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pyramid/"
+  :tables
+  (list
+    (semanticdb-table "decorator.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("functools" include nil nil [1 17])
+            ("reify" type
+               (:documentation " Use as a class method decorator.  It operates almost exactly like the
+    Python ``@property`` decorator, but it puts the result of the method it
+    decorates into the instance dict after the first call, effectively
+    replacing the function it decorates with an instance variable.  It is, in
+    Python parlance, a non-data descriptor.  An example:
+
+    .. code-block:: python
+
+       class Foo(object):
+           @reify
+           def jammy(self):
+               print('jammy called')
+               return 1
+
+    And usage of Foo:
+
+    >>> f = Foo()
+    >>> v = f.jammy
+    'jammy called'
+    >>> print(v)
+    1
+    >>> f.jammy
+    1
+    >>> # jammy func not called the second time; it replaced itself with 1
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [813 835])
+                            ("functools" code nil (reparse-symbol indented_block_body) [844 883]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [789 793])
+                            ("wrapped" variable nil (reparse-symbol function_parameters) [795 802]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [776 884])
+                    ("__get__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [901 905])
+                            ("inst" variable nil (reparse-symbol function_parameters) [907 911])
+                            ("objtype" variable nil (reparse-symbol function_parameters) [913 920]))                          )
+                        (reparse-symbol indented_block_body) [889 1079]))                  
+                :type "class")
+                nil [20 1079]))          
+      :file "decorator.py"
+      :pointmax 1080
+      :fsize 1079
+      :lastmodtime '(22275 16973 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!local!pythonwork!pyramid!pyramid!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

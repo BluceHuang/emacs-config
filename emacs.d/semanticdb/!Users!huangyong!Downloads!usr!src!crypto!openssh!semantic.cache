@@ -1,0 +1,447 @@
+;; Object openssh/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "openssh/"
+  :tables (list 
+   (semanticdb-table "auth.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("includes.h" include nil nil [1379 1400])
+            ("sys/types.h" include (:system-flag t) nil [1495 1517])
+            ("sys/stat.h" include (:system-flag t) nil [1518 1539])
+            ("sys/param.h" include (:system-flag t) nil [1540 1562])
+            ("netinet/in.h" include (:system-flag t) nil [1564 1587])
+            ("errno.h" include (:system-flag t) nil [1589 1607])
+            ("fcntl.h" include (:system-flag t) nil [1608 1626])
+            ("pwd.h" include (:system-flag t) nil [1674 1690])
+            ("stdarg.h" include (:system-flag t) nil [1830 1849])
+            ("stdio.h" include (:system-flag t) nil [1850 1868])
+            ("string.h" include (:system-flag t) nil [1869 1888])
+            ("unistd.h" include (:system-flag t) nil [1889 1908])
+            ("xmalloc.h" include nil nil [1910 1930])
+            ("match.h" include nil nil [1931 1949])
+            ("groupaccess.h" include nil nil [1950 1974])
+            ("log.h" include nil nil [1975 1991])
+            ("buffer.h" include nil nil [1992 2011])
+            ("servconf.h" include nil nil [2012 2033])
+            ("key.h" include nil nil [2034 2050])
+            ("hostfile.h" include nil nil [2051 2072])
+            ("auth.h" include nil nil [2073 2090])
+            ("auth-options.h" include nil nil [2091 2116])
+            ("canohost.h" include nil nil [2117 2138])
+            ("uidswap.h" include nil nil [2139 2159])
+            ("misc.h" include nil nil [2160 2177])
+            ("packet.h" include nil nil [2178 2197])
+            ("loginrec.h" include nil nil [2198 2219])
+            ("authfile.h" include nil nil [2262 2283])
+            ("monitor_wrap.h" include nil nil [2284 2309])
+            ("krl.h" include nil nil [2310 2326])
+            ("compat.h" include nil nil [2327 2346])
+            ("options" variable
+               (:typemodifiers ("extern")
+                :type ("ServerOptions" type (:type "class") nil nil))
+                nil [2361 2390])
+            ("use_privsep" variable
+               (:typemodifiers ("extern")
+                :type "int")
+                nil [2391 2414])
+            ("loginmsg" variable
+               (:typemodifiers ("extern")
+                :type ("Buffer" type (:type "class") nil nil))
+                nil [2415 2438])
+            ("privsep_pw" variable
+               (:pointer 1
+                :typemodifiers ("extern")
+                :type ("passwd" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2439 2472])
+            ("auth_debug" variable (:type ("Buffer" type (:type "class") nil nil)) nil [2499 2517])
+            ("auth_debug_init" variable (:type "int") nil [2518 2538])
+            ("allowed_user" function
+               (:arguments 
+                  ( ("pw" variable
+                       (:pointer 1
+                        :type ("passwd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2982 3001]))                  
+                :type "int")
+                nil [2965 7356])
+            ("auth_info" function
+               (:arguments 
+                  ( ("authctxt" variable
+                       (:pointer 1
+                        :type ("Authctxt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7373 7392])
+                    ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7393 7409])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [7410 7414]))                  
+                :type "void")
+                nil [7358 7638])
+            ("auth_log" function
+               (:arguments 
+                  ( ("authctxt" variable
+                       (:pointer 1
+                        :type ("Authctxt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7654 7673])
+                    ("authenticated" variable (:type "int") (reparse-symbol arg-sub-list) [7674 7692])
+                    ("partial" variable (:type "int") (reparse-symbol arg-sub-list) [7693 7705])
+                    ("method" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7710 7729])
+                    ("submethod" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7730 7752]))                  
+                :type "void")
+                nil [7640 9302])
+            ("auth_root_allowed" function
+               (:arguments 
+                  ( ("method" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9378 9397]))                  
+                :type "int")
+                nil [9356 9760])
+            ("expand_authorized_keys" function
+               (:pointer 1
+                :arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10032 10053])
+                    ("pw" variable
+                       (:pointer 1
+                        :type ("passwd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10054 10072]))                  
+                :type "char")
+                nil [10002 10536])
+            ("authorized_principals_file" function
+               (:pointer 1
+                :arguments 
+                  ( ("pw" variable
+                       (:pointer 1
+                        :type ("passwd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10572 10590]))                  
+                :type "char")
+                nil [10538 10798])
+            ("check_key_in_hostfiles" function
+               (:arguments 
+                  ( ("pw" variable
+                       (:pointer 1
+                        :type ("passwd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10887 10905])
+                    ("key" variable
+                       (:pointer 1
+                        :type ("Key" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10906 10915])
+                    ("host" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10916 10933])
+                    ("sysfile" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10938 10958])
+                    ("userfile" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10959 10980]))                  
+                :type ("HostStatus" type (:type "class") nil nil))
+                nil [10853 12196])
+            ("auth_secure_path" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12734 12751])
+                    ("stp" variable
+                       (:pointer 1
+                        :type ("stat" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12752 12769])
+                    ("pw_dir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12770 12789])
+                    ("uid" variable (:type ("uid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12794 12804])
+                    ("err" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12805 12815])
+                    ("errlen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12816 12830]))                  
+                :type "int")
+                nil [12713 14177])
+            ("secure_filename" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("f" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14342 14350])
+                    ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14351 14368])
+                    ("pw" variable
+                       (:pointer 1
+                        :type ("passwd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14369 14387])
+                    ("err" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14392 14402])
+                    ("errlen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14403 14417]))                  
+                :type "int")
+                nil [14315 14686])
+            ("auth_openfile" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14716 14733])
+                    ("pw" variable
+                       (:pointer 1
+                        :type ("passwd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14734 14752])
+                    ("strict_modes" variable (:type "int") (reparse-symbol arg-sub-list) [14753 14770])
+                    ("log_missing" variable (:type "int") (reparse-symbol arg-sub-list) [14775 14791])
+                    ("file_type" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14792 14808]))                  
+                :type ("FILE" type (:type "class") nil nil))
+                nil [14688 15573])
+            ("auth_openkeyfile" function
+               (:pointer 1
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15600 15617])
+                    ("pw" variable
+                       (:pointer 1
+                        :type ("passwd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15618 15636])
+                    ("strict_modes" variable (:type "int") (reparse-symbol arg-sub-list) [15637 15654]))                  
+                :type ("FILE" type (:type "class") nil nil))
+                nil [15576 15727])
+            ("auth_openprincipals" function
+               (:pointer 1
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15756 15773])
+                    ("pw" variable
+                       (:pointer 1
+                        :type ("passwd" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15774 15792])
+                    ("strict_modes" variable (:type "int") (reparse-symbol arg-sub-list) [15793 15810]))                  
+                :type ("FILE" type (:type "class") nil nil))
+                nil [15729 15894])
+            ("getpwnamallow" function
+               (:pointer 1
+                :arguments 
+                  ( ("user" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15926 15943]))                  
+                :type ("passwd" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [15896 17583])
+            ("auth_key_is_revoked" function
+               (:arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :type ("Key" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17677 17686]))                  
+                :type "int")
+                nil [17653 18554])
+            ("auth_debug_add" function
+               (:arguments 
+                  ( ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18576 18592])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [18592 18596]))                  
+                :type "void")
+                nil [18556 18784])
+            ("auth_debug_send" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [18807 18812]))                  
+                :type "void")
+                nil [18786 18991])
+            ("auth_debug_reset" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [19015 19020]))                  
+                :type "void")
+                nil [18993 19137])
+            ("fakepw" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [19162 19167]))                  
+                :type ("passwd" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [19139 19690]))          
+    :file "auth.c"
+    :pointmax 19689
+    :fsize 19688
+    :lastmodtime '(21208 17022 0 0)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "includes.h"
+    :file "includes.h"
+    :fsize 4041
+    :lastmodtime '(21208 17021 0 0)
+    )
+   (semanticdb-table "xmalloc.h"
+    :file "xmalloc.h"
+    :fsize 1016
+    :lastmodtime '(21208 17023 0 0)
+    )
+   (semanticdb-table "match.h"
+    :file "match.h"
+    :fsize 1087
+    :lastmodtime '(21208 17023 0 0)
+    )
+   (semanticdb-table "groupaccess.h"
+    :file "groupaccess.h"
+    :fsize 1570
+    :lastmodtime '(21208 17022 0 0)
+    )
+   (semanticdb-table "log.h"
+    :file "log.h"
+    :fsize 2574
+    :lastmodtime '(21208 17025 0 0)
+    )
+   (semanticdb-table "buffer.h"
+    :file "buffer.h"
+    :fsize 3391
+    :lastmodtime '(21208 17018 0 0)
+    )
+   (semanticdb-table "servconf.h"
+    :file "servconf.h"
+    :fsize 9748
+    :lastmodtime '(21208 17025 0 0)
+    )
+   (semanticdb-table "key.h"
+    :file "key.h"
+    :fsize 4899
+    :lastmodtime '(21208 17021 0 0)
+    )
+   (semanticdb-table "hostfile.h"
+    :file "hostfile.h"
+    :fsize 1528
+    :lastmodtime '(21208 17021 0 0)
+    )
+   (semanticdb-table "auth.h"
+    :file "auth.h"
+    :fsize 7395
+    :lastmodtime '(21208 17022 0 0)
+    )
+   (semanticdb-table "auth-options.h"
+    :file "auth-options.h"
+    :fsize 1260
+    :lastmodtime '(21208 17025 0 0)
+    )
+   (semanticdb-table "canohost.h"
+    :file "canohost.h"
+    :fsize 1000
+    :lastmodtime '(21208 17023 0 0)
+    )
+   (semanticdb-table "uidswap.h"
+    :file "uidswap.h"
+    :fsize 716
+    :lastmodtime '(21208 17022 0 0)
+    )
+   (semanticdb-table "misc.h"
+    :file "misc.h"
+    :fsize 3453
+    :lastmodtime '(21208 17021 0 0)
+    )
+   (semanticdb-table "packet.h"
+    :file "packet.h"
+    :fsize 4577
+    :lastmodtime '(21208 17021 0 0)
+    )
+   (semanticdb-table "loginrec.h"
+    :file "loginrec.h"
+    :fsize 4712
+    :lastmodtime '(21208 17021 0 0)
+    )
+   (semanticdb-table "authfile.h"
+    :file "authfile.h"
+    :fsize 1283
+    :lastmodtime '(21208 17021 0 0)
+    )
+   (semanticdb-table "monitor_wrap.h"
+    :file "monitor_wrap.h"
+    :fsize 5030
+    :lastmodtime '(21208 17025 0 0)
+    )
+   (semanticdb-table "krl.h"
+    :file "krl.h"
+    :fsize 2533
+    :lastmodtime '(21208 17025 0 0)
+    )
+   (semanticdb-table "compat.h"
+    :file "compat.h"
+    :fsize 2916
+    :lastmodtime '(21208 17022 0 0)
+    )
+   )
+  :file "!Users!huangyong!Downloads!usr!src!crypto!openssh!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )

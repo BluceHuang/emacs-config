@@ -1,0 +1,458 @@
+;; Object libdouniu/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "libdouniu/"
+  :tables
+  (list
+    (semanticdb-table "deck.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("numeric" include (:system-flag t) nil [1 19])
+            ("algorithm" include (:system-flag t) nil [20 40])
+            ("deck.h" include nil nil [41 58])
+            ("card_arr" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    0x01, 0x11, 0x21, 0x31,		//A 14 
+    0x02, 0x12, 0x22, 0x32,		//2 15
+    0x03, 0x13, 0x23, 0x33,		//3 3
+    0x04, 0x14, 0x24, 0x34,		//4 4
+    0x05, 0x15, 0x25, 0x35,		//5 5
+    0x06, 0x16, 0x26, 0x36,		//6 6
+    0x07, 0x17, 0x27, 0x37,		//7 7
+    0x08, 0x18, 0x28, 0x38,		//8 8
+    0x09, 0x19, 0x29, 0x39,		//9 9
+    0x0A, 0x1A, 0x2A, 0x3A,		//10 10
+    0x0B, 0x1B, 0x2B, 0x3B,		//J 11
+    0x0C, 0x1C, 0x2C, 0x3C,		//Q 12
+    0x0D, 0x1D, 0x2D, 0x3D,		//K 13
+}"
+                :type "int")
+                nil [60 551])
+            ("fill" function
+               (:parent "Deck"
+                :type "void")
+                nil [553 661])
+            ("empty" function
+               (:parent "Deck"
+                :type "void")
+                nil [663 701])
+            ("count" function
+               (:parent "Deck"
+                :type "int")
+                nil [703 752])
+            ("push" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("card" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [770 780]))                  
+                :type "bool")
+                nil [754 822])
+            ("pop" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("card" variable
+                       (:reference 1
+                        :type ("Card" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [839 850]))                  
+                :type "bool")
+                nil [824 942])
+            ("shuffle" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("seed" variable (:type "int") (reparse-symbol arg-sub-list) [963 972]))                  
+                :type "bool")
+                nil [944 1065])
+            ("get_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1092 1113]))                  
+                :type "int")
+                nil [1067 1300])
+            ("change_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("pos" variable (:type "int") (reparse-symbol arg-sub-list) [1331 1339])
+                    ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1340 1361]))                  
+                :type "void")
+                nil [1302 1504])
+            ("has_hole_cards" function
+               (:parent "Deck"
+                :type "bool")
+                nil [1506 1635])
+            ("debug" function
+               (:parent "Deck"
+                :type "void")
+                nil [1637 1685])
+            ("get_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1712 1733])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [1734 1743]))                  
+                :type "int")
+                nil [1687 3177])
+            ("get_has_niu_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3212 3233]))                  
+                :type "int")
+                nil [3179 3351])
+            ("get_no_niu_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3385 3406]))                  
+                :type "int")
+                nil [3353 3473])
+            ("get_niu_jiu_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3508 3529]))                  
+                :type "int")
+                nil [3475 3594])
+            ("get_niu_ba_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3628 3649]))                  
+                :type "int")
+                nil [3596 3713])
+            ("get_niu_qi_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3747 3768]))                  
+                :type "int")
+                nil [3715 3832])
+            ("get_niu_liu_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3867 3888]))                  
+                :type "int")
+                nil [3834 3953])
+            ("get_niu_wu_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3987 4008]))                  
+                :type "int")
+                nil [3955 4072])
+            ("get_niu_si_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4106 4127]))                  
+                :type "int")
+                nil [4074 4191])
+            ("get_niu_san_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4226 4247]))                  
+                :type "int")
+                nil [4193 4312])
+            ("get_niu_er_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4346 4367]))                  
+                :type "int")
+                nil [4314 4431])
+            ("get_niu_ding_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4467 4488]))                  
+                :type "int")
+                nil [4433 4554])
+            ("get_zhadan_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4588 4609]))                  
+                :type "int")
+                nil [4556 7890])
+            ("get_wuhuaniu_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7926 7947]))                  
+                :type "int")
+                nil [7892 9495])
+            ("get_wuxiaoniu_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9532 9553]))                  
+                :type "int")
+                nil [9497 11339])
+            ("get_niu_niu_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11374 11395]))                  
+                :type "int")
+                nil [11341 11460])
+            ("deck_random" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("begin" variable (:type "int") (reparse-symbol arg-sub-list) [11484 11494])
+                    ("end" variable (:type "int") (reparse-symbol arg-sub-list) [11495 11503]))                  
+                :type "int")
+                nil [11462 11577])
+            ("delete_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("tmp" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11603 11626]))                  
+                :type "void")
+                nil [11579 11999])
+            ("get_hole_type_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12031 12052])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [12053 12062]))                  
+                :type "int")
+                nil [12001 14053])
+            ("has_niu" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14074 14095]))                  
+                :type "bool")
+                nil [14055 14752])
+            ("re_generate_spec" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:pointer 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14781 14802])
+                    ("win_orders" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14803 14827]))                  
+                :type "int")
+                nil [14754 15132])
+            ("re_get_hole_cards_bycomp" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15169 15190])
+                    ("compHoles" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15191 15212])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [15213 15222]))                  
+                :type "int")
+                nil [15134 17286])
+            ("re_get_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17317 17338])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [17339 17348]))                  
+                :type "int")
+                nil [17289 19316]))          
+      :file "deck.cc"
+      :pointmax 19318
+      :fsize 20038
+      :lastmodtime '(22174 62421 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "card.h"
+      :file "card.h"
+      :fsize 2921
+      :lastmodtime '(22081 38961 0 0))
+    (semanticdb-table "hole_cards.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("card.h" include nil nil [1 18])
+            ("card_type.h" include nil nil [19 41])
+            ("hole_cards.h" include nil nil [42 65])
+            ("card_type_str" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	(char *)\"CARD_TYPE_NONNIU\",
+	(char *)\"CARD_TYPE_NIUDING\",
+	(char *)\"CARD_TYPE_NIUER\",
+	(char *)\"CARD_TYPE_NIUSAN\",
+	(char *)\"CARD_TYPE_NIUSI\",
+	(char *)\"CARD_TYPE_NIUWU\",
+	(char *)\"CARD_TYPE_NIULIU\",
+	(char *)\"CARD_TYPE_NIUQI\",
+	(char *)\"CARD_TYPE_NIUBA\",
+	(char *)\"CARD_TYPE_NIUJIU\",
+	(char *)\"CARD_TYPE_NIUNIU\",
+	(char *)\"CARD_TYPE_ZHADAN\",
+    (char *)\"CARD_TYPE_JINNIU\",
+	(char *)\"CARD_TYPE_WUXIAONIU\"
+}"
+                :type "char")
+                nil [67 516])
+            ("HoleCards" function
+               (:constructor-flag t
+                :parent "HoleCards"
+                :type ("HoleCards" type (:type "class") nil nil))
+                nil [518 572])
+            ("add_card" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("card" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [599 609]))                  
+                :type "void")
+                nil [574 667])
+            ("sort" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [669 729])
+            ("analysis" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [731 4547])
+            ("compare" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("hc" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4572 4586]))                  
+                :type "int")
+                nil [4549 4896])
+            ("qsort_compare" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("pCards1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4927 4947])
+                    ("pCards2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4948 4968]))                  
+                :type "int")
+                nil [4898 5194])
+            ("compare" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("cards1" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5220 5238])
+                    ("cards2" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5239 5257]))                  
+                :type "bool")
+                nil [5196 5405])
+            ("set_card_type" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [5437 5446]))                  
+                :type "void")
+                nil [5407 5469])
+            ("copy_cards" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5498 5519]))                  
+                :type "void")
+                nil [5471 5535])
+            ("copy_cards" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5564 5584]))                  
+                :type "void")
+                nil [5537 5674])
+            ("debug" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [5676 5829])
+            ("delete_card" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [5831 5911]))          
+      :file "hole_cards.cc"
+      :pointmax 5912
+      :fsize 5911
+      :lastmodtime '(22374 15454 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!local!zjhapp!dnwanren!src!wanrennn!libdouniu!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,254 @@
+;; Object libzjh/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "libzjh/"
+  :tables
+  (list
+    (semanticdb-table "hole_cards.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("card.h" include nil nil [1 18])
+            ("card_type.h" include nil nil [19 41])
+            ("hole_cards.h" include nil nil [42 65])
+            ("card_type_str" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+    (const char *)\"CARD_TYPE_DANPAI\",
+}"
+                :type "char")
+                nil [67 146])
+            ("HoleCards" function
+               (:constructor-flag t
+                :parent "HoleCards"
+                :type ("HoleCards" type (:type "class") nil nil))
+                nil [148 190])
+            ("add_card" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("card" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [217 227]))                  
+                :type "void")
+                nil [192 255])
+            ("sort" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [257 317])
+            ("analysis" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [319 377])
+            ("qsort_compare" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("pCards1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [408 428])
+                    ("pCards2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [429 449]))                  
+                :type "int")
+                nil [379 675])
+            ("compare" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("hc" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [700 714]))                  
+                :type "int")
+                nil [677 889])
+            ("copy_cards" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [918 939]))                  
+                :type "void")
+                nil [891 955])
+            ("copy_cards" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [984 1004]))                  
+                :type "void")
+                nil [957 1094])
+            ("size" function
+               (:parent "HoleCards"
+                :type "int")
+                nil [1096 1149])
+            ("debug" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [1151 1260]))          
+      :file "hole_cards.cc"
+      :pointmax 1261
+      :fsize 1260
+      :lastmodtime '(22040 62396 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "card.h"
+      :file "card.h"
+      :fsize 2602
+      :lastmodtime '(22037 57201 0 0))
+    (semanticdb-table "deck.h"
+      :file "deck.h"
+      :fsize 697
+      :lastmodtime '(22037 57201 0 0))
+    (semanticdb-table "deck.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("algorithm" include (:system-flag t) nil [1 21])
+            ("deck.h" include nil nil [22 39])
+            ("card_arr" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+    0x01, 0x11, 0x21, 0x31,		//A 14
+    0x02, 0x12, 0x22, 0x32,		//2 15
+    0x03, 0x13, 0x23, 0x33,		//3 3
+    0x04, 0x14, 0x24, 0x34,		//4 4
+    0x05, 0x15, 0x25, 0x35,		//5 5
+    0x06, 0x16, 0x26, 0x36,		//6 6
+    0x07, 0x17, 0x27, 0x37,		//7 7
+    0x08, 0x18, 0x28, 0x38,		//8 8
+    0x09, 0x19, 0x29, 0x39,		//9 9
+    0x0A, 0x1A, 0x2A, 0x3A,		//10 10
+    0x0B, 0x1B, 0x2B, 0x3B,		//J 11
+    0x0C, 0x1C, 0x2C, 0x3C,		//Q 12
+    0x0D, 0x1D, 0x2D, 0x3D,		//K 13
+}"
+                :type "int")
+                nil [41 531])
+            ("fill" function
+               (:parent "Deck"
+                :type "void")
+                nil [533 725])
+            ("empty" function
+               (:parent "Deck"
+                :type "void")
+                nil [727 765])
+            ("size" function
+               (:parent "Deck"
+                :type "int")
+                nil [767 815])
+            ("push" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("card" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [833 843]))                  
+                :type "bool")
+                nil [817 885])
+            ("pop" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("card" variable
+                       (:reference 1
+                        :type ("Card" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [902 913]))                  
+                :type "bool")
+                nil [887 1003])
+            ("myrandom" function
+               (:arguments 
+                  ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [1018 1024]))                  
+                :type "int")
+                nil [1005 1053])
+            ("shuffle" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("seed" variable (:type "int") (reparse-symbol arg-sub-list) [1074 1083]))                  
+                :type "bool")
+                nil [1055 1194])
+            ("get_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1222 1243]))                  
+                :type "void")
+                nil [1196 1356])
+            ("get_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1384 1405])
+                    ("card_type" variable (:type "int") (reparse-symbol arg-sub-list) [1406 1420]))                  
+                :type "void")
+                nil [1358 1475])
+            ("change_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1506 1527])
+                    ("pos" variable (:type "int") (reparse-symbol arg-sub-list) [1528 1536]))                  
+                :type "void")
+                nil [1477 1730])
+            ("delete_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("tmp" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1757 1780]))                  
+                :type "void")
+                nil [1733 2016])
+            ("debug" function
+               (:parent "Deck"
+                :type "void")
+                nil [2018 2066])
+            ("get_he_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards1" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2097 2119])
+                    ("holecards2" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2120 2142]))                  
+                :type "void")
+                nil [2068 2401])
+            ("get_diff_hole_cards" function
+               (:parent "Deck"
+                :arguments 
+                  ( ("holecards1" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2434 2456])
+                    ("holecards2" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2457 2479]))                  
+                :type "void")
+                nil [2403 2760]))          
+      :file "deck.cc"
+      :pointmax 2760
+      :fsize 2757
+      :lastmodtime '(22041 7438 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!local!zjhapp!zjhlonghu!libzjh!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

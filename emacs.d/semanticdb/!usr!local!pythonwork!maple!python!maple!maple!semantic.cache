@@ -1,0 +1,170 @@
+;; Object maple/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "maple/"
+  :tables
+  (list
+    (semanticdb-table "log.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("logging" include nil nil [26 40])
+            ("constants" include nil nil [49 65])
+            ("logger" variable nil nil [67 109]))          
+      :file "log.py"
+      :pointmax 110
+      :fsize 109
+      :lastmodtime '(22241 28394 0 0)
+      :unmatched-syntax '((FROM 42 . 46) (PERIOD 47 . 48)))
+    (semanticdb-table "constants.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("NAME" variable nil nil [26 40])
+            ("RET_INVALID_CMD" code nil nil [50 74])
+            ("RET_INTERNAL" code nil nil [75 96])
+            ("CMD_CLIENT_REQ" variable nil nil [104 136])
+            ("CMD_CLIENT_CREATED" variable nil nil [151 183])
+            ("CMD_CLIENT_CLOSED" variable nil nil [195 227])
+            ("CMD_WRITE_TO_WORKER" variable nil nil [241 274])
+            ("CMD_WORKER_ASK_FOR_TASK" variable nil nil [290 324])
+            ("CMD_WRITE_TO_CLIENT" variable nil nil [333 366])
+            ("CMD_WRITE_TO_USERS" variable nil nil [372 405])
+            ("CMD_CLOSE_CLIENT" variable nil nil [413 446])
+            ("CMD_CLOSE_USERS" variable nil nil [469 502])
+            ("CMD_LOGIN_CLIENT" variable nil nil [513 546])
+            ("CMD_LOGOUT_CLIENT" variable nil nil [554 587])
+            ("TRY_CONNECT_INTERVAL" variable nil nil [606 630])
+            ("WORKER_ENV_KEY" variable nil nil [645 676])
+            ("CONN_TIMEOUT" variable nil nil [727 743]))          
+      :file "constants.py"
+      :pointmax 744
+      :fsize 909
+      :lastmodtime '(22241 28394 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "__init__.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__version__" variable nil nil [2 25])
+            ("logger" include nil nil [37 50])
+            ("safe_func" include nil nil [63 90])
+            ("safe_call" include nil nil [63 90])
+            ("Worker" include nil nil [111 124])
+            ("Blueprint" include nil nil [148 164])
+            ("Trigger" include nil nil [188 202]))          
+      :file "__init__.py"
+      :pointmax 203
+      :fsize 202
+      :lastmodtime '(22241 28394 0 0)
+      :unmatched-syntax '((FROM 166 . 170) (PERIOD 171 . 172) (FROM 125 . 129) (PERIOD 130 . 131) (FROM 91 . 95) (PERIOD 96 . 97) (FROM 51 . 55) (PERIOD 56 . 57) (FROM 27 . 31) (PERIOD 32 . 33)))
+    (semanticdb-table "task.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("netkit.box" include nil nil [26 52])
+            ("collections" include nil nil [53 88])
+            ("HEADER_ATTRS" variable nil nil [115 474])
+            ("Task" type
+               (:superclasses ("Box")
+                :members 
+                  ( ("header_attrs" variable nil (reparse-symbol indented_block_body) [498 525])
+                    ("map" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [539 543])
+                            ("map_data" variable nil (reparse-symbol function_parameters) [545 553]))                          
+                        :documentation "
+        获取对应的response
+        :param : map_data
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [531 897])
+                    ("client_ip" function
+                       (:parent "dummy"
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [930 934]))                          
+                        :documentation "
+        获取字符串格式的IP地址
+        由于对端时间转为网络序的int存入进来，所以这里也要用网络序来pack
+        字符串转int:
+            struct.unpack(\"!I\",socket.inet_aton(ip))[0]
+        :return:
+        ")
+                        (reparse-symbol indented_block_body) [902 1231]))                  
+                :type "class")
+                nil [477 1231]))          
+      :file "task.py"
+      :pointmax 1231
+      :fsize 1354
+      :lastmodtime '(22276 35414 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("functools" include nil nil [26 42])
+            ("logger" include nil nil [53 66])
+            ("safe_call" function
+               (:documentation "
+    安全调用
+    "
+                :arguments 
+                  ( ("func" variable nil (reparse-symbol function_parameters) [83 87])
+                    ("args" variable nil (reparse-symbol function_parameters) [89 94])
+                    ("kwargs" variable nil (reparse-symbol function_parameters) [96 104]))                  )
+                nil [69 353])
+            ("safe_func" function
+               (:documentation "
+    把函数变为安全的
+    "
+                :arguments 
+                  ( ("func" variable nil (reparse-symbol function_parameters) [369 373]))                  )
+                nil [355 543]))          
+      :file "utils.py"
+      :pointmax 543
+      :fsize 600
+      :lastmodtime '(22241 28394 0 0)
+      :unmatched-syntax '((FROM 43 . 47) (PERIOD 48 . 49)))
+    (semanticdb-table "maple_pb2.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("google.protobuf" include nil nil [83 136])
+            ("google.protobuf" include nil nil [137 184])
+            ("google.protobuf" include nil nil [185 238])
+            ("google.protobuf" include nil nil [239 281])
+            ("DESCRIPTOR" variable nil nil [322 821])
+            ("_RSPTOUSERS_ROW" variable nil nil [826 2169])
+            ("_RSPTOUSERS" variable nil nil [2171 2858])
+            ("_CLOSEUSERS" variable nil nil [2861 3865])
+            ("_RSPTOUSERS_ROW" variable nil nil [3867 3912])
+            ("_RSPTOUSERS" variable nil nil [3914 3979])
+            ("DESCRIPTOR" variable nil nil [3980 4040])
+            ("DESCRIPTOR" variable nil nil [4041 4101])
+            ("RspToUsers" type
+               (:superclasses ("_message.Message")
+                :members 
+                  ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [4141 4197])
+                    ("Row" type
+                       (:superclasses ("_message.Message")
+                        :members 
+                          ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [4234 4290])
+                            ("DESCRIPTOR" variable nil (reparse-symbol indented_block_body) [4295 4323]))                          
+                        :type "class")
+                        (reparse-symbol indented_block_body) [4201 4324])
+                    ("DESCRIPTOR" variable nil (reparse-symbol indented_block_body) [4398 4422]))                  
+                :type "class")
+                nil [4103 4423])
+            ("CloseUsers" type
+               (:superclasses ("_message.Message")
+                :members 
+                  ( ("__metaclass__" variable nil (reparse-symbol indented_block_body) [4528 4584])
+                    ("DESCRIPTOR" variable nil (reparse-symbol indented_block_body) [4587 4611]))                  
+                :type "class")
+                nil [4490 4612])
+            ("DESCRIPTOR" variable nil nil [4680 4709])
+            ("DESCRIPTOR" variable nil nil [4710 4827]))          
+      :file "maple_pb2.py"
+      :pointmax 4869
+      :fsize 5244
+      :lastmodtime '(22243 39088 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!local!pythonwork!maple!python!maple!maple!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

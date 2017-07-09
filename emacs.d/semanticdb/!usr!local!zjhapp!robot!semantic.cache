@@ -1,0 +1,556 @@
+;; Object robot/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "robot/"
+  :tables
+  (list
+    (semanticdb-table "logic.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("stdarg.h" include (:system-flag t) nil [40 59])
+            ("string.h" include (:system-flag t) nil [60 79])
+            ("unistd.h" include (:system-flag t) nil [80 99])
+            ("fcntl.h" include (:system-flag t) nil [100 118])
+            ("sys/types.h" include (:system-flag t) nil [119 141])
+            ("sys/stat.h" include (:system-flag t) nil [142 163])
+            ("time.h" include (:system-flag t) nil [164 181])
+            ("errno.h" include (:system-flag t) nil [182 200])
+            ("robot.h" include nil nil [202 220])
+            ("log.h" include nil nil [221 237])
+            ("proto.h" include nil nil [238 256])
+            ("jpacket.h" include nil nil [257 277])
+            ("tcpClient.h" include nil nil [278 300])
+            ("logic.h" include nil nil [301 319])
+            ("hole_cards.h" include nil nil [320 343])
+            ("card.h" include nil nil [344 361])
+            ("hole_cards.h" include nil nil [362 385])
+            ("community_cards.h" include nil nil [386 414])
+            ("card_statistics.h" include nil nil [415 443])
+            ("card_analysis.h" include nil nil [444 470])
+            ("card_find.h" include nil nil [471 493])
+            ("robot" variable
+               (:typemodifiers ("extern")
+                :type ("Robot" type (:type "class") nil nil))
+                nil [495 514])
+            ("log" variable
+               (:typemodifiers ("extern")
+                :type ("Log" type (:type "class") nil nil))
+                nil [515 530])
+            ("chatDefaultContent" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+    (char *)\"快点啊，都等到\\n我花都谢了\",
+    (char *)\"大家好，很高兴\\n见到各位\",
+    (char *)\"怎么又断线了，\\n网络怎么那么差\\n啊\",
+    (char *)\"和你合作真是太\\n愉快了啊\",
+    (char *)\"交个朋友吧，能\\n告诉我咋联系你\\n吗\",
+//    (char *)\"你是MM还是GG啊\",
+//   (char *)\"不要吵，不要吵，吵啥啊，专心玩游戏把\",
+//    (char *)\"不要走，决战到天亮啊\",
+//    (char *)\"各位，真是不好意思啊，我要离开一会儿\",
+//    (char *)\"再见了，俺会想念大家的\"
+}"
+                :type "char")
+                nil [532 891])
+            ("LogicTask" function
+               (:constructor-flag t
+                :parent "LogicTask"
+                :arguments 
+                  ( ("id" variable (:type "int") (reparse-symbol arg-sub-list) [914 921]))                  
+                :type ("LogicTask" type (:type "class") nil nil))
+                nil [893 1135])
+            ("run" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1157 1162]))                  
+                :type "void")
+                nil [1137 2076])
+            ("random" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("start" variable (:type "int") (reparse-symbol arg-sub-list) [2100 2110])
+                    ("end" variable (:type "int") (reparse-symbol arg-sub-list) [2111 2119]))                  
+                :type "int")
+                nil [2078 2178])
+            ("join_table_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [2180 2463])
+            ("robNorob_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [2465 2669])
+            ("robTorob_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [2673 2877])
+            ("callLandlordNocall_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [2881 3095])
+            ("callLandlordTocall_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [3099 3313])
+            ("callRatioNocall_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [3317 3528])
+            ("callRatioOne_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [3532 3740])
+            ("callRatioTwo_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [3744 3952])
+            ("callRatioThree_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [3956 4166])
+            ("playPass_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [4170 4442])
+            ("playPlayout_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [4445 4960])
+            ("ready_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [4962 5177])
+            ("quit_req" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [5179 5352])
+            ("chat_req" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("tag" variable (:type "int") (reparse-symbol arg-sub-list) [5378 5386]))                  
+                :type "int")
+                nil [5354 5583])
+            ("face_req" function
+               (:parent "LogicTask"
+                :arguments 
+                  ( ("faceid" variable (:type "int") (reparse-symbol arg-sub-list) [5609 5620]))                  
+                :type "int")
+                nil [5585 5774])
+            ("chat_or_face_req" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [5776 5955])
+            ("recv_data" function
+               (:parent "LogicTask"
+                :type "int")
+                nil [5957 7022])
+            ("handler_cmd_join_table_succ" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [7024 7248])
+            ("handler_cmd_join_table_err" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [7250 7343])
+            ("handler_cmd_table_info" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [7345 7481])
+            ("handler_cmd_game_ready" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [7483 7568])
+            ("handler_cmd_game_start" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [7570 7862])
+            ("handler_cmd_preplay_one" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [7864 8563])
+            ("handler_cmd_preplay_one_succ" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [8565 8662])
+            ("handler_cmd_preplay_two" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [8664 9008])
+            ("handler_cmd_preplay_two_succ" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [9010 9107])
+            ("handler_cmd_landlord" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [9109 9475])
+            ("handler_cmd_play_card" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [9477 10509])
+            ("handler_cmd_play_card_succ" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [10511 11109])
+            ("handler_cmd_play_card_err" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [11111 11201])
+            ("handler_cmd_game_end" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [11203 11332])
+            ("handler_cmd_game_preready" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [11334 11566])
+            ("handler_cmd_logout" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [11568 11645])
+            ("handler_cmd_rebind" function
+               (:parent "LogicTask"
+                :type "void")
+                nil [11647 12746]))          
+      :file "logic.cc"
+      :pointmax 12748
+      :fsize 13689
+      :lastmodtime '(20797 15415 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "robot.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_ROBOT_H_" variable (:constant-flag t) nil [27 36])
+            ("stdio.h" include (:system-flag t) nil [38 56])
+            ("stdint.h" include (:system-flag t) nil [57 76])
+            ("iostream" include (:system-flag t) nil [77 96])
+            ("fstream" include (:system-flag t) nil [97 115])
+            ("string" include (:system-flag t) nil [116 133])
+            ("json/json.h" include (:system-flag t) nil [134 156])
+            ("Robot" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [172 179])
+                    ("conf_file" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [184 214])
+                    ("is_daemonize" variable (:type "int") (reparse-symbol classsubparts) [219 252])
+                    ("conf" variable (:type ("Json::Value" type (:type "class") nil nil)) (reparse-symbol classsubparts) [257 282])
+                    ("private" label nil (reparse-symbol classsubparts) [285 293]))                  
+                :type "class")
+                nil [158 296]))          
+      :file "robot.h"
+      :pointmax 324
+      :fsize 345
+      :lastmodtime '(20768 18145 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_ROBOT_H_")
+          )
+)
+    (semanticdb-table "log.h"
+      :file "log.h"
+      :fsize 1235
+      :lastmodtime '(20768 18659 0 0))
+    (semanticdb-table "proto.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__PROTO_H__" variable (:constant-flag t) nil [29 40])
+            ("system_command" type
+               (:members 
+                  ( ("SYS_ECHO" variable
+                       (:constant-flag t
+                        :default-value (98 102)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [68 102])
+                    ("SYS_HEART_BIT_CLI" variable
+                       (:constant-flag t
+                        :default-value (155 159)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [125 159])
+                    ("SYS_HEART_BIT_SVR" variable
+                       (:constant-flag t
+                        :default-value (229 233)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [199 233])
+                    ("SYS_KICK_PLAYER" variable
+                       (:constant-flag t
+                        :default-value (301 305)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [271 305])
+                    ("SYS_CLOSE_TABLE" variable
+                       (:constant-flag t
+                        :default-value (378 382)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [348 382])
+                    ("SYS_STOP_SVR" variable
+                       (:constant-flag t
+                        :default-value (444 448)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [414 448]))                  
+                :type "enum")
+                nil [42 475])
+            ("client_command" type
+               (:members 
+                  ( ("CLIENT_HEART_BEAT" variable
+                       (:constant-flag t
+                        :default-value (523 527)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [500 527])
+                    ("CLIENT_JOIN_TABLE_REQ" variable
+                       (:constant-flag t
+                        :default-value (556 560)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [530 560])
+                    ("CLIENT_GAME_READY_REQ" variable
+                       (:constant-flag t
+                        :default-value (612 616)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [586 616])
+                    ("CLIENT_PREPLAY_ONE_REQ" variable
+                       (:constant-flag t
+                        :default-value (668 672)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [641 672])
+                    ("CLIENT_PREPLAY_TWO_REQ" variable
+                       (:constant-flag t
+                        :default-value (736 740)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [709 740])
+                    ("CLIENT_PLAY_CARD_REQ" variable
+                       (:constant-flag t
+                        :default-value (769 773)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [743 773])
+                    ("CLIENT_CHAT_REQ" variable
+                       (:constant-flag t
+                        :default-value (798 802)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [776 802])
+                    ("CLIENT_FACE_REQ" variable
+                       (:constant-flag t
+                        :default-value (827 831)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [805 831])
+                    ("CLIENT_LOGOUT_REQ" variable
+                       (:constant-flag t
+                        :default-value (857 861)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [834 861]))                  
+                :type "enum")
+                nil [477 865])
+            ("server_command" type
+               (:members 
+                  ( ("SERVER_JOIN_TABLE_SUCC_UC" variable
+                       (:constant-flag t
+                        :default-value (928 932)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [893 932])
+                    ("SERVER_JOIN_TABLE_ERR_UC" variable
+                       (:constant-flag t
+                        :default-value (1001 1005)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [966 1005])
+                    ("SERVER_TABLE_INFO_BC" variable
+                       (:constant-flag t
+                        :default-value (1064 1068)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1038 1068])
+                    ("SERVER_GAME_READY_BC" variable
+                       (:constant-flag t
+                        :default-value (1108 1112)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1082 1112])
+                    ("SERVER_GAME_START_UC" variable
+                       (:constant-flag t
+                        :default-value (1143 1147)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1117 1147])
+                    ("SERVER_PREPLAY_ONE_BC" variable
+                       (:constant-flag t
+                        :default-value (1180 1184)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1150 1184])
+                    ("SERVER_PREPLAY_ONE_SUCC_BC" variable
+                       (:constant-flag t
+                        :default-value (1218 1222)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1187 1222])
+                    ("SERVER_PREPLAY_TWO_BC" variable
+                       (:constant-flag t
+                        :default-value (1255 1259)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1225 1259])
+                    ("SERVER_PREPLAY_TWO_SUCC_BC" variable
+                       (:constant-flag t
+                        :default-value (1293 1297)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1262 1297])
+                    ("SERVER_LANDLORD_BC" variable
+                       (:constant-flag t
+                        :default-value (1328 1332)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1303 1332])
+                    ("SERVER_PLAY_CARD_BC" variable
+                       (:constant-flag t
+                        :default-value (1364 1368)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1337 1368])
+                    ("SERVER_PLAY_CARD_SUCC_BC" variable
+                       (:constant-flag t
+                        :default-value (1400 1404)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1371 1404])
+                    ("SERVER_PLAY_CARD_ERR_BC" variable
+                       (:constant-flag t
+                        :default-value (1439 1443)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1407 1443])
+                    ("SERVER_GAME_END_BC" variable
+                       (:constant-flag t
+                        :default-value (1474 1478)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1449 1478])
+                    ("SERVER_GAME_PREREADY_BC" variable
+                       (:constant-flag t
+                        :default-value (1510 1514)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1481 1514])
+                    ("SERVER_CHAT_BC" variable
+                       (:constant-flag t
+                        :default-value (1542 1546)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1520 1546])
+                    ("SERVER_FACE_BC" variable
+                       (:constant-flag t
+                        :default-value (1571 1575)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1549 1575])
+                    ("SERVER_LOGOUT_BC" variable
+                       (:constant-flag t
+                        :default-value (1605 1609)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1581 1609])
+                    ("SERVER_REBIND_UC" variable
+                       (:constant-flag t
+                        :default-value (1635 1639)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1612 1639]))                  
+                :type "enum")
+                nil [867 1643]))          
+      :file "proto.h"
+      :pointmax 1652
+      :fsize 1708
+      :lastmodtime '(20746 12167 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__PROTO_H__")
+          )
+)
+    (semanticdb-table "jpacket.h"
+      :file "jpacket.h"
+      :fsize 587
+      :lastmodtime '(20505 6844 0 0))
+    (semanticdb-table "tcpClient.h"
+      :file "tcpClient.h"
+      :fsize 711
+      :lastmodtime '(20772 27389 0 0))
+    (semanticdb-table "logic.h"
+      :file "logic.h"
+      :fsize 1705
+      :lastmodtime '(20778 16899 0 0))
+    (semanticdb-table "robot.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("string.h" include (:system-flag t) nil [40 59])
+            ("sys/types.h" include (:system-flag t) nil [60 82])
+            ("sys/socket.h" include (:system-flag t) nil [83 106])
+            ("netinet/in.h" include (:system-flag t) nil [107 130])
+            ("sys/stat.h" include (:system-flag t) nil [131 152])
+            ("fcntl.h" include (:system-flag t) nil [153 171])
+            ("sys/time.h" include (:system-flag t) nil [172 193])
+            ("sys/resource.h" include (:system-flag t) nil [194 219])
+            ("errno.h" include (:system-flag t) nil [220 238])
+            ("iostream" include (:system-flag t) nil [240 259])
+            ("fstream" include (:system-flag t) nil [260 278])
+            ("string" include (:system-flag t) nil [279 296])
+            ("vector" include (:system-flag t) nil [297 314])
+            ("daemonize.h" include nil nil [316 338])
+            ("robot.h" include nil nil [339 357])
+            ("log.h" include nil nil [358 374])
+            ("threadpool.h" include nil nil [375 398])
+            ("logic.h" include nil nil [399 417])
+            ("parse_arg" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [440 449])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [450 462]))                  
+                :type "int")
+                nil [419 463])
+            ("init_conf" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "int")
+                nil [464 487])
+            ("dump_conf" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "void")
+                nil [488 512])
+            ("set_rlimit" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [535 541]))                  
+                :type "int")
+                nil [513 542])
+            ("robot" variable (:type ("Robot" type (:type "class") nil nil)) nil [544 556])
+            ("log" variable (:type ("Log" type (:type "class") nil nil)) nil [557 565])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [576 585])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [586 598]))                  
+                :type "int")
+                nil [567 2131])
+            ("parse_arg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2154 2163])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2164 2176]))                  
+                :type "int")
+                nil [2133 2876])
+            ("init_conf" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [2878 3231])
+            ("dump_conf" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [3233 4306])
+            ("set_rlimit" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [4330 4336]))                  
+                :type "int")
+                nil [4308 4641]))          
+      :file "robot.cc"
+      :pointmax 4642
+      :fsize 4641
+      :lastmodtime '(20776 64370 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!local!zjhapp!robot!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

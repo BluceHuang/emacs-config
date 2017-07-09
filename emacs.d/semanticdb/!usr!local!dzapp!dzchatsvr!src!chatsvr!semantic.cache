@@ -1,0 +1,394 @@
+;; Object chatsvr/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "chatsvr/"
+  :tables
+  (list
+    (semanticdb-table "chat_comparator.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("__CHAT_COMPARATOR_H__" variable (:constant-flag t) nil [39 60])
+            ("stdio.h" include (:system-flag t) nil [62 80])
+            ("stdlib.h" include (:system-flag t) nil [81 100])
+            ("string" include (:system-flag t) nil [101 118])
+            ("signal.h" include (:system-flag t) nil [119 138])
+            ("vector" include (:system-flag t) nil [139 156])
+            ("string" include (:system-flag t) nil [157 174])
+            ("leveldb/slice.h" include nil nil [175 201])
+            ("leveldb/comparator.h" include nil nil [202 233])
+            ("leveldb" using (:type ("leveldb" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [235 259])
+            ("ChatComparator" type
+               (:superclasses 
+                  ( ("Comparator" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [304 311])
+                    ("ChatComparator" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("ChatComparator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [313 330])
+                    ("ChatComparator" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [332 358])
+                    ("public" label nil (reparse-symbol classsubparts) [360 367])
+                    ("Compare" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("a" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [392 407])
+                            ("b" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [408 423]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [372 430])
+                    ("Name" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [436 469])
+                    ("FindShortestSeparator" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("start" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [869 888])
+                            ("limit" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Slice" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [889 908]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [834 915])
+                    ("FindShortSuccessor" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("key" variable
+                               (:pointer 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1149 1166]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1117 1173]))                  
+                :type "class")
+                nil [261 1179]))          
+      :file "chat_comparator.h"
+      :pointmax 1189
+      :fsize 1188
+      :lastmodtime '(21996 3812 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__CHAT_COMPARATOR_H__")
+          )
+)
+    (semanticdb-table "chat_comparator.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("time.h" include (:system-flag t) nil [40 57])
+            ("string" include (:system-flag t) nil [58 75])
+            ("leveldb.h" include nil nil [76 96])
+            ("chat_comparator.h" include nil nil [97 125])
+            ("json/json.h" include nil nil [126 148])
+            ("parse.h" include nil nil [149 167])
+            ("leveldb" using (:type ("leveldb" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [169 193])
+            ("ChatComparator" function
+               (:constructor-flag t
+                :parent "ChatComparator"
+                :type ("ChatComparator" type (:type "class") nil nil))
+                nil [195 232])
+            ("ChatComparator" function
+               (:destructor-flag t
+                :parent "ChatComparator"
+                :type "void")
+                nil [234 272])
+            ("Name" function
+               (:pointer 1
+                :parent "ChatComparator"
+                :constant-flag t
+                :type "char")
+                nil [274 353])
+            ("Compare" function
+               (:parent "ChatComparator"
+                :arguments 
+                  ( ("a" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Slice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [383 398])
+                    ("b" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Slice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [399 414]))                  
+                :type "int")
+                nil [355 1038])
+            ("FindShortestSeparator" function
+               (:parent "ChatComparator"
+                :arguments 
+                  ( ("start" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1083 1102])
+                    ("limit" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Slice" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1102 1121]))                  
+                :type "void")
+                nil [1040 1196])
+            ("FindShortSuccessor" function
+               (:parent "ChatComparator"
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1238 1255]))                  
+                :type "void")
+                nil [1198 1318]))          
+      :file "chat_comparator.cc"
+      :pointmax 1319
+      :fsize 1318
+      :lastmodtime '(21996 3812 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "leveldb.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("time.h" include (:system-flag t) nil [40 57])
+            ("string" include (:system-flag t) nil [58 75])
+            ("leveldb.h" include nil nil [76 96])
+            ("parse.h" include nil nil [97 115])
+            ("log.h" include nil nil [116 132])
+            ("log" variable
+               (:typemodifiers ("extern")
+                :type ("Log" type (:type "class") nil nil))
+                nil [134 149])
+            ("MAX_GET_MSG" variable (:constant-flag t) nil [158 169])
+            ("Leveldb" function
+               (:constructor-flag t
+                :parent "Leveldb"
+                :type ("Leveldb" type (:type "class") nil nil))
+                nil [174 214])
+            ("Leveldb" function
+               (:destructor-flag t
+                :parent "Leveldb"
+                :type "void")
+                nil [216 255])
+            ("open_db" function
+               (:parent "Leveldb"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [278 295]))                  
+                :type "int")
+                nil [257 795])
+            ("close_db" function
+               (:parent "Leveldb"
+                :type "int")
+                nil [797 917])
+            ("save_chat" function
+               (:parent "Leveldb"
+                :arguments 
+                  ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [942 950])
+                    ("dstuid" variable (:type "int") (reparse-symbol arg-sub-list) [951 962])
+                    ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [963 979])
+                    ("timestamp" variable
+                       (:reference 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [980 1004]))                  
+                :type "int")
+                nil [919 3869])
+            ("get_chat" function
+               (:parent "Leveldb"
+                :arguments 
+                  ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [3893 3901])
+                    ("dstuid" variable (:type "int") (reparse-symbol arg-sub-list) [3902 3913])
+                    ("timestamp" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3914 3937])
+                    ("value" variable
+                       (:reference 1
+                        :type ("Json::Value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3938 3957]))                  
+                :type "int")
+                nil [3871 5710])
+            ("clear_chat" function
+               (:parent "Leveldb"
+                :arguments 
+                  ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [5736 5744])
+                    ("dstuid" variable (:type "int") (reparse-symbol arg-sub-list) [5745 5756]))                  
+                :type "int")
+                nil [5712 7082])
+            ("get_new_chat" function
+               (:parent "Leveldb"
+                :arguments 
+                  ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [7110 7118])
+                    ("dstuid" variable (:type "int") (reparse-symbol arg-sub-list) [7119 7130])
+                    ("value" variable
+                       (:reference 1
+                        :type ("Json::Value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7131 7150]))                  
+                :type "int")
+                nil [7084 9964])
+            ("update_chat_time" function
+               (:parent "Leveldb"
+                :arguments 
+                  ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [9996 10004])
+                    ("dstuid" variable (:type "int") (reparse-symbol arg-sub-list) [10005 10016])
+                    ("time" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [10017 10035]))                  
+                :type "int")
+                nil [9966 11382]))          
+      :file "leveldb.cc"
+      :pointmax 11383
+      :fsize 11416
+      :lastmodtime '(21996 3812 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAX_GET_MSG" . ((number "50" 170 . 172)))
+          )
+)
+    (semanticdb-table "chatsvr.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("string.h" include (:system-flag t) nil [40 59])
+            ("sys/types.h" include (:system-flag t) nil [60 82])
+            ("sys/socket.h" include (:system-flag t) nil [83 106])
+            ("netinet/in.h" include (:system-flag t) nil [107 130])
+            ("sys/stat.h" include (:system-flag t) nil [131 152])
+            ("fcntl.h" include (:system-flag t) nil [153 171])
+            ("sys/time.h" include (:system-flag t) nil [172 193])
+            ("sys/resource.h" include (:system-flag t) nil [194 219])
+            ("unistd.h" include (:system-flag t) nil [220 239])
+            ("errno.h" include (:system-flag t) nil [240 258])
+            ("iostream" include (:system-flag t) nil [260 279])
+            ("fstream" include (:system-flag t) nil [280 298])
+            ("string" include (:system-flag t) nil [299 316])
+            ("vector" include (:system-flag t) nil [317 334])
+            ("ev.h" include (:system-flag t) nil [335 350])
+            ("daemonize.h" include nil nil [352 374])
+            ("chatsvr.h" include nil nil [375 395])
+            ("game.h" include nil nil [396 413])
+            ("log.h" include nil nil [414 430])
+            ("parse_arg" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [453 462])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [463 475]))                  
+                :type "int")
+                nil [432 476])
+            ("init_conf" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "int")
+                nil [477 500])
+            ("dump_conf" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "void")
+                nil [501 525])
+            ("set_rlimit" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [548 554]))                  
+                :type "int")
+                nil [526 555])
+            ("init_redis" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "int")
+                nil [556 580])
+            ("init_db" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type "int")
+                nil [581 602])
+            ("DB_NAME" variable (:constant-flag t) nil [612 619])
+            ("chat_svr" variable (:type ("ChatSvr" type (:type "class") nil nil)) nil [644 661])
+            ("log" variable (:type ("Log" type (:type "class") nil nil)) nil [662 670])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [681 690])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [691 703]))                  
+                :type "int")
+                nil [672 2306])
+            ("parse_arg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2329 2338])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2339 2351]))                  
+                :type "int")
+                nil [2308 2838])
+            ("init_conf" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [2840 3192])
+            ("dump_conf" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [3194 4710])
+            ("set_rlimit" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("n" variable (:type "int") (reparse-symbol arg-sub-list) [4734 4740]))                  
+                :type "int")
+                nil [4712 4984])
+            ("init_redis" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [4986 5753])
+            ("init_db" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [5755 5852]))          
+      :file "chatsvr.cc"
+      :pointmax 5853
+      :fsize 5852
+      :lastmodtime '(21996 3812 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("DB_NAME" . ((string "\"/data/leveldb/chatdb\"" 620 . 642)))
+          )
+))
+  :file "!usr!local!dzapp!dzchatsvr!src!chatsvr!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

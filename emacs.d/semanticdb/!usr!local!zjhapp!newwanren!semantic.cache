@@ -1,0 +1,1254 @@
+;; Object newwanren/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "newwanren/"
+  :tables
+  (list
+    (semanticdb-table "logic.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("stdarg.h" include (:system-flag t) nil [40 59])
+            ("string.h" include (:system-flag t) nil [60 79])
+            ("unistd.h" include (:system-flag t) nil [80 99])
+            ("fcntl.h" include (:system-flag t) nil [100 118])
+            ("sys/types.h" include (:system-flag t) nil [119 141])
+            ("sys/stat.h" include (:system-flag t) nil [142 163])
+            ("time.h" include (:system-flag t) nil [164 181])
+            ("errno.h" include (:system-flag t) nil [182 200])
+            ("algorithm" include (:system-flag t) nil [201 221])
+            ("assert.h" include (:system-flag t) nil [222 241])
+            ("game.h" include nil nil [243 260])
+            ("log.h" include nil nil [261 277])
+            ("client.h" include nil nil [278 297])
+            ("player.h" include nil nil [298 317])
+            ("proto.h" include nil nil [318 336])
+            ("card.h" include nil nil [337 354])
+            ("logic.h" include nil nil [355 373])
+            ("log_agent.h" include nil nil [374 396])
+            ("wanren.h" include nil nil [397 416])
+            ("wanren" variable
+               (:typemodifiers ("extern")
+                :type ("WanRen" type (:type "class") nil nil))
+                nil [418 439])
+            ("log" variable
+               (:typemodifiers ("extern")
+                :type ("Log" type (:type "class") nil nil))
+                nil [440 455])
+            ("Logic" function
+               (:constructor-flag t
+                :parent "Logic"
+                :type ("Logic" type (:type "class") nil nil))
+                nil [457 1029])
+            ("Logic" function
+               (:destructor-flag t
+                :parent "Logic"
+                :type "void")
+                nil [1031 1178])
+            ("init" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("my_type" variable (:type "int") (reparse-symbol arg-sub-list) [1196 1208])
+                    ("my_fee" variable (:type "float") (reparse-symbol arg-sub-list) [1209 1222])
+                    ("my_min_money" variable (:type "int") (reparse-symbol arg-sub-list) [1223 1240])
+                    ("my_max_money" variable (:type "int") (reparse-symbol arg-sub-list) [1241 1258])
+                    ("my_base_money" variable (:type "int") (reparse-symbol arg-sub-list) [1259 1277])
+                    ("my_max_bet" variable (:type "int") (reparse-symbol arg-sub-list) [1280 1295])
+                    ("my_banker_min_money" variable (:type "int") (reparse-symbol arg-sub-list) [1296 1320])
+                    ("my_banker_down_money" variable (:type "int") (reparse-symbol arg-sub-list) [1321 1346])
+                    ("my_banker_round" variable (:type "int") (reparse-symbol arg-sub-list) [1347 1367])
+                    ("my_fanbei" variable (:type "int") (reparse-symbol arg-sub-list) [1370 1384])
+                    ("my_type_id_begin" variable (:type "int") (reparse-symbol arg-sub-list) [1385 1406])
+                    ("my_type_id_end" variable (:type "int") (reparse-symbol arg-sub-list) [1407 1426])
+                    ("my_laba_win" variable (:type "int") (reparse-symbol arg-sub-list) [1427 1443])
+                    ("my_laba_lose" variable (:type "int") (reparse-symbol arg-sub-list) [1444 1461]))                  
+                :type "int")
+                nil [1180 2416])
+            ("broadcast" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2439 2449])
+                    ("packet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2450 2476]))                  
+                :type "int")
+                nil [2418 2729])
+            ("unicast" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2750 2760])
+                    ("packet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2761 2787]))                  
+                :type "int")
+                nil [2731 2859])
+            ("random" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("start" variable (:type "int") (reparse-symbol arg-sub-list) [2879 2889])
+                    ("end" variable (:type "int") (reparse-symbol arg-sub-list) [2890 2898]))                  
+                :type "int")
+                nil [2861 2979])
+            ("random" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("start" variable (:type "int") (reparse-symbol arg-sub-list) [2999 3009])
+                    ("end" variable (:type "int") (reparse-symbol arg-sub-list) [3010 3018])
+                    ("seed" variable (:type "int") (reparse-symbol arg-sub-list) [3019 3028]))                  
+                :type "int")
+                nil [2981 3114])
+            ("set_sys_mode" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [3141 3150]))                  
+                :type "void")
+                nil [3116 3172])
+            ("reset" function
+               (:parent "Logic"
+                :type "void")
+                nil [3174 3891])
+            ("vector_to_json_array" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("cards" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3926 3951])
+                    ("packet" variable
+                       (:reference 1
+                        :type ("Jpacket" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3952 3968])
+                    ("key" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3971 3982]))                  
+                :type "void")
+                nil [3893 4143])
+            ("map_to_json_array" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("cards" variable
+                       (:reference 1
+                        :type ("std::map" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil)
+                                  ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4175 4202])
+                    ("packet" variable
+                       (:reference 1
+                        :type ("Jpacket" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4203 4219])
+                    ("key" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4222 4233]))                  
+                :type "void")
+                nil [4145 4394])
+            ("json_array_to_vector" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("cards" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4429 4454])
+                    ("packet" variable
+                       (:reference 1
+                        :type ("Jpacket" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4455 4471])
+                    ("key" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4474 4485]))                  
+                :type "void")
+                nil [4396 4645])
+            ("handler_login" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4672 4687]))                  
+                :type "int")
+                nil [4647 4948])
+            ("del_player" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4972 4987]))                  
+                :type "int")
+                nil [4950 5193])
+            ("handler_login_succ_uc" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5228 5243]))                  
+                :type "int")
+                nil [5195 5370])
+            ("ready_timer_cb" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("loop" variable
+                       (:pointer 1
+                        :type ("ev_loop" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5399 5420])
+                    ("w" variable
+                       (:pointer 1
+                        :type ("ev_timer" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5421 5440])
+                    ("revents" variable (:type "int") (reparse-symbol arg-sub-list) [5443 5455]))                  
+                :type "void")
+                nil [5372 5566])
+            ("clear_zombie_players" function
+               (:parent "Logic"
+                :type "void")
+                nil [5568 6195])
+            ("get_cards_normal" function
+               (:parent "Logic"
+                :type "void")
+                nil [6197 8636])
+            ("get_cards_normal1" function
+               (:parent "Logic"
+                :type "void")
+                nil [8638 11937])
+            ("get_cards_normal2" function
+               (:parent "Logic"
+                :type "void")
+                nil [11939 13298])
+            ("get_cards_special" function
+               (:parent "Logic"
+                :type "void")
+                nil [13300 14221])
+            ("game_start" function
+               (:parent "Logic"
+                :type "int")
+                nil [14223 15812])
+            ("bet_timer_cb" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("loop" variable
+                       (:pointer 1
+                        :type ("ev_loop" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15839 15860])
+                    ("w" variable
+                       (:pointer 1
+                        :type ("ev_timer" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [15861 15880])
+                    ("revents" variable (:type "int") (reparse-symbol arg-sub-list) [15881 15893]))                  
+                :type "void")
+                nil [15814 16029])
+            ("handler_bet" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16054 16069]))                  
+                :type "int")
+                nil [16031 18615])
+            ("handler_info" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18641 18656]))                  
+                :type "int")
+                nil [18617 18764])
+            ("handler_info" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18790 18805])
+                    ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [18806 18815]))                  
+                :type "int")
+                nil [18766 19727])
+            ("game_end" function
+               (:parent "Logic"
+                :type "int")
+                nil [19729 30207])
+            ("win_add" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("ori" variable (:type "int") (reparse-symbol arg-sub-list) [30228 30236])
+                    ("left" variable (:type "int") (reparse-symbol arg-sub-list) [30237 30246])
+                    ("total_bet" variable (:type "int") (reparse-symbol arg-sub-list) [30247 30261]))                  
+                :type "int")
+                nil [30209 30674])
+            ("lose_add" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("ori" variable (:type "int") (reparse-symbol arg-sub-list) [30696 30704])
+                    ("left" variable (:type "int") (reparse-symbol arg-sub-list) [30705 30714])
+                    ("total_bet" variable (:type "int") (reparse-symbol arg-sub-list) [30715 30729]))                  
+                :type "int")
+                nil [30676 31427])
+            ("dump_player_info" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [31458 31467])
+                    ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [31468 31476])
+                    ("player_win" variable (:type "int") (reparse-symbol arg-sub-list) [31477 31492]))                  
+                :type "void")
+                nil [31429 32168])
+            ("handler_player_info" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32201 32216]))                  
+                :type "int")
+                nil [32170 32781])
+            ("handler_chat" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32807 32822]))                  
+                :type "int")
+                nil [32783 33213])
+            ("handler_chat_noplayer" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("client" variable
+                       (:pointer 1
+                        :type ("Client" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33248 33263]))                  
+                :type "int")
+                nil [33215 33746])
+            ("get_max_list" function
+               (:parent "Logic"
+                :type "int")
+                nil [33748 33865])
+            ("handler_up" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33889 33904]))                  
+                :type "int")
+                nil [33867 35546])
+            ("handler_up_err" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [35574 35589])
+                    ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [35590 35599]))                  
+                :type "int")
+                nil [35548 35751])
+            ("handler_down" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [35777 35792]))                  
+                :type "int")
+                nil [35753 36201])
+            ("handler_show_up_list" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [36235 36250]))                  
+                :type "int")
+                nil [36203 37000])
+            ("change_banker" function
+               (:parent "Logic"
+                :type "void")
+                nil [37002 37719])
+            ("set_up_list_flag" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [37750 37758])
+                    ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [37759 37768]))                  
+                :type "void")
+                nil [37721 38223])
+            ("set_banker_flag" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [38253 38261]))                  
+                :type "void")
+                nil [38225 38412])
+            ("exec_change_banker" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [38445 38454]))                  
+                :type "void")
+                nil [38414 40014])
+            ("banker_info" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40040 40055]))                  
+                :type "void")
+                nil [40016 40759])
+            ("clear_low_money_blankers" function
+               (:parent "Logic"
+                :type "void")
+                nil [40761 41252])
+            ("dump_holes" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("packet" variable
+                       (:reference 1
+                        :type ("Jpacket" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41277 41293]))                  
+                :type "void")
+                nil [41254 41767])
+            ("get_ratio" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("card_type" variable (:type "int") (reparse-symbol arg-sub-list) [41790 41804]))                  
+                :type "int")
+                nil [41769 42003])
+            ("add_player_count" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [42033 42043])
+                    ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [42044 42052])
+                    ("count" variable (:type "int") (reparse-symbol arg-sub-list) [42053 42063]))                  
+                :type "int")
+                nil [42005 42348])
+            ("get_player_count" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [42378 42388])
+                    ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [42389 42397]))                  
+                :type "int")
+                nil [42350 42585])
+            ("dump_info" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [42609 42624]))                  
+                :type "void")
+                nil [42587 42629])
+            ("send_laba_msg" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [42657 42672])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [42673 42682])
+                    ("money" variable (:type "int") (reparse-symbol arg-sub-list) [42683 42693]))                  
+                :type "void")
+                nil [42631 44194])
+            ("update_timer_cb" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("loop" variable
+                       (:pointer 1
+                        :type ("ev_loop" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [44224 44245])
+                    ("w" variable
+                       (:pointer 1
+                        :type ("ev_timer" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [44246 44265])
+                    ("revents" variable (:type "int") (reparse-symbol arg-sub-list) [44266 44278]))                  
+                :type "void")
+                nil [44196 44386])
+            ("update" function
+               (:parent "Logic"
+                :type "void")
+                nil [44388 45210])
+            ("update_last_wins" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [45241 45247])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [45248 45254])
+                    ("c" variable (:type "int") (reparse-symbol arg-sub-list) [45255 45261])
+                    ("d" variable (:type "int") (reparse-symbol arg-sub-list) [45262 45268]))                  
+                :type "void")
+                nil [45212 45662])
+            ("last_wins_to_json_array" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("packet" variable
+                       (:reference 1
+                        :type ("Jpacket" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45700 45716]))                  
+                :type "void")
+                nil [45664 45849])
+            ("insert_flow_log" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("ts" variable (:type "int") (reparse-symbol arg-sub-list) [46115 46122])
+                    ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [46123 46131])
+                    ("ip" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [46132 46142])
+                    ("pos" variable (:type "int") (reparse-symbol arg-sub-list) [46143 46151])
+                    ("vid" variable (:type "int") (reparse-symbol arg-sub-list) [46152 46160])
+                    ("zid" variable (:type "int") (reparse-symbol arg-sub-list) [46161 46169])
+                    ("tid" variable (:type "int") (reparse-symbol arg-sub-list) [46170 46178])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [46179 46188])
+                    ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [46189 46198])
+                    ("num" variable (:type "int") (reparse-symbol arg-sub-list) [46199 46207])
+                    ("anum" variable (:type "int") (reparse-symbol arg-sub-list) [46208 46217]))                  
+                :type "int")
+                nil [46088 46668])
+            ("check_up_list" function
+               (:parent "Logic"
+                :arguments 
+                  ( ("client" variable
+                       (:pointer 1
+                        :type ("Client" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [46695 46710]))                  
+                :type "int")
+                nil [46670 47505]))          
+      :file "logic.cc"
+      :pointmax 47506
+      :fsize 49989
+      :lastmodtime '(22163 21329 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "logic.h"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("_LOGIC_H_" variable (:constant-flag t) nil [27 36])
+            ("stdio.h" include (:system-flag t) nil [38 56])
+            ("stdlib.h" include (:system-flag t) nil [57 76])
+            ("string.h" include (:system-flag t) nil [77 96])
+            ("stdint.h" include (:system-flag t) nil [97 116])
+            ("ev++.h" include (:system-flag t) nil [117 134])
+            ("netinet/in.h" include (:system-flag t) nil [135 158])
+            ("sys/socket.h" include (:system-flag t) nil [159 182])
+            ("errno.h" include (:system-flag t) nil [183 201])
+            ("iostream" include (:system-flag t) nil [202 221])
+            ("fstream" include (:system-flag t) nil [222 240])
+            ("string" include (:system-flag t) nil [241 258])
+            ("vector" include (:system-flag t) nil [259 276])
+            ("json/json.h" include (:system-flag t) nil [278 300])
+            ("map" include (:system-flag t) nil [302 316])
+            ("set" include (:system-flag t) nil [317 331])
+            ("list" include (:system-flag t) nil [332 347])
+            ("jpacket.h" include nil nil [349 369])
+            ("deck.h" include nil nil [370 387])
+            ("hole_cards.h" include nil nil [388 411])
+            ("Player" type
+               (:prototype t
+                :type "class")
+                nil [413 426])
+            ("Client" type
+               (:prototype t
+                :type "class")
+                nil [427 440])
+            ("Deck" type
+               (:prototype t
+                :type "class")
+                nil [441 452])
+            ("HoleCards" type
+               (:prototype t
+                :type "class")
+                nil [453 469])
+            ("State" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("READY" variable
+                             (:constant-flag t
+                              :default-value (494 495)
+                              :type "int")
+                              (reparse-symbol enumsubparts) [486 495])
+                          ("BETTING" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [498 506])
+                          ("END" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [508 512]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [470 521])
+            ("Logic" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [537 544])
+                    ("type" variable (:type "int") (reparse-symbol classsubparts) [546 555])
+                    ("fee" variable (:type "float") (reparse-symbol classsubparts) [569 579])
+                    ("min_money" variable (:type "int") (reparse-symbol classsubparts) [587 601])
+                    ("max_money" variable (:type "int") (reparse-symbol classsubparts) [612 626])
+                    ("base_money" variable (:type "int") (reparse-symbol classsubparts) [646 661])
+                    ("max_bet" variable (:type "int") (reparse-symbol classsubparts) [669 681])
+                    ("banker_min_money" variable (:type "int") (reparse-symbol classsubparts) [691 712])
+                    ("banker_down_money" variable (:type "int") (reparse-symbol classsubparts) [721 743])
+                    ("banker_round" variable (:type "int") (reparse-symbol classsubparts) [752 769])
+                    ("fanbei" variable (:type "int") (reparse-symbol classsubparts) [779 790])
+                    ("type_id_begin" variable (:type "int") (reparse-symbol classsubparts) [799 817])
+                    ("type_id_end" variable (:type "int") (reparse-symbol classsubparts) [831 847])
+                    ("laba_win" variable (:type "int") (reparse-symbol classsubparts) [861 874])
+                    ("laba_lose" variable (:type "int") (reparse-symbol classsubparts) [886 900])
+                    ("timestamp" variable (:type "int") (reparse-symbol classsubparts) [912 926])
+                    ("sys_mode" variable (:type "int") (reparse-symbol classsubparts) [935 948])
+                    ("deck" variable (:type ("Deck" type (:type "class") nil nil)) (reparse-symbol classsubparts) [950 960])
+                    ("banker_hole_cards" variable (:type ("HoleCards" type (:type "class") nil nil)) (reparse-symbol classsubparts) [962 990])
+                    ("player_hole_cards" variable
+                       (:dereference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [992 1023])
+                    ("wins" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [1025 1037])
+                    ("state" variable (:type ("State" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1039 1051])
+                    ("sys_banker" variable (:type "int") (reparse-symbol classsubparts) [1067 1082])
+                    ("cur_round" variable (:type "int") (reparse-symbol classsubparts) [1084 1098])
+                    ("banker_player" variable
+                       (:pointer 1
+                        :type ("Player" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1100 1122])
+                    ("banker_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1124 1148])
+                    ("players" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("Player" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1150 1181])
+                    ("player_total_counts" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1183 1222])
+                    ("type_counts" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [1241 1260])
+                    ("type_ratios" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [1282 1301])
+                    ("type_player_counts" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("std::map" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1306 1360])
+                    ("winlist" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1388 1415])
+                    ("winlist2" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1427 1455])
+                    ("loselist" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1467 1495])
+                    ("orilist" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1507 1534])
+                    ("banker_win" variable (:type "int") (reparse-symbol classsubparts) [1546 1561])
+                    ("type_bets" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil)
+                              ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1563 1592])
+                    ("fee_count" variable (:type "int") (reparse-symbol classsubparts) [1621 1635])
+                    ("laba_value" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [1637 1655])
+                    ("laba_flag" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [1663 1680])
+                    ("last_wins" variable
+                       (:dereference 2
+                        :type "int")
+                        (reparse-symbol classsubparts) [1682 1703])
+                    ("up_list" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1705 1728])
+                    ("big_win_name" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1730 1750])
+                    ("big_win_money" variable (:type "int") (reparse-symbol classsubparts) [1752 1770])
+                    ("big_lose_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1772 1798])
+                    ("big_lose_money" variable (:type "int") (reparse-symbol classsubparts) [1800 1819])
+                    ("ts" variable (:type "int") (reparse-symbol classsubparts) [1821 1828])
+                    ("sys_total_win" variable (:type "long long") (reparse-symbol classsubparts) [1830 1854])
+                    ("ready_timer" variable (:type ("ev_timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1883 1904])
+                    ("ready_timer_stamp" variable (:type ("ev_tstamp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1906 1934])
+                    ("bet_timer" variable (:type ("ev_timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1937 1956])
+                    ("bet_timer_stamp" variable (:type ("ev_tstamp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1958 1984])
+                    ("update_timer" variable (:type ("ev_timer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1987 2009])
+                    ("update_timer_stamp" variable (:type ("ev_tstamp" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2011 2040])
+                    ("public" label nil (reparse-symbol classsubparts) [2042 2049])
+                    ("Logic" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Logic" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2051 2059])
+                    ("Logic" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2061 2078])
+                    ("init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("my_type" variable (:type "int") (reparse-symbol arg-sub-list) [2089 2101])
+                            ("my_fee" variable (:type "float") (reparse-symbol arg-sub-list) [2102 2115])
+                            ("my_min_money" variable (:type "int") (reparse-symbol arg-sub-list) [2116 2133])
+                            ("my_max_money" variable (:type "int") (reparse-symbol arg-sub-list) [2134 2151])
+                            ("my_base_money" variable (:type "int") (reparse-symbol arg-sub-list) [2152 2170])
+                            ("my_max_bet" variable (:type "int") (reparse-symbol arg-sub-list) [2174 2189])
+                            ("my_banker_min_money" variable (:type "int") (reparse-symbol arg-sub-list) [2190 2214])
+                            ("my_banker_down_money" variable (:type "int") (reparse-symbol arg-sub-list) [2215 2240])
+                            ("my_banker_round" variable (:type "int") (reparse-symbol arg-sub-list) [2241 2261])
+                            ("my_fanbei" variable (:type "int") (reparse-symbol arg-sub-list) [2265 2279])
+                            ("my_type_id_begin" variable (:type "int") (reparse-symbol arg-sub-list) [2280 2301])
+                            ("my_type_id_end" variable (:type "int") (reparse-symbol arg-sub-list) [2302 2321])
+                            ("my_laba_win" variable (:type "int") (reparse-symbol arg-sub-list) [2322 2338])
+                            ("my_laba_lose" variable (:type "int") (reparse-symbol arg-sub-list) [2339 2356]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2080 2357])
+                    ("broadcast" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2373 2388])
+                            ("packet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2389 2415]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2359 2416])
+                    ("unicast" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2430 2445])
+                            ("packet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2446 2472]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2418 2473])
+                    ("random" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("start" variable (:type "int") (reparse-symbol arg-sub-list) [2486 2496])
+                            ("end" variable (:type "int") (reparse-symbol arg-sub-list) [2497 2505]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2475 2506])
+                    ("random" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("start" variable (:type "int") (reparse-symbol arg-sub-list) [2519 2529])
+                            ("end" variable (:type "int") (reparse-symbol arg-sub-list) [2530 2538])
+                            ("seed" variable (:type "int") (reparse-symbol arg-sub-list) [2539 2548]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2508 2549])
+                    ("reset" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2551 2564])
+                    ("set_sys_mode" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [2584 2593]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2566 2594])
+                    ("vector_to_json_array" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cards" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2622 2647])
+                            ("packet" variable
+                               (:reference 1
+                                :type ("Jpacket" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2648 2664])
+                            ("key" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2668 2679]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2596 2680])
+                    ("map_to_json_array" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cards" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("int" type nil nil nil)
+                                          ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2705 2732])
+                            ("packet" variable
+                               (:reference 1
+                                :type ("Jpacket" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2733 2749])
+                            ("key" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2753 2764]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2682 2765])
+                    ("json_array_to_vector" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("cards" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Card" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2793 2818])
+                            ("packet" variable
+                               (:reference 1
+                                :type ("Jpacket" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2819 2835])
+                            ("key" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2839 2850]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2767 2851])
+                    ("del_player" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2869 2884]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2854 2885])
+                    ("handler_login" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2905 2920]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2887 2921])
+                    ("handler_login_succ_uc" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2949 2964]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2923 2965])
+                    ("ready_timer_cb" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("loop" variable
+                               (:pointer 1
+                                :type ("ev_loop" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2994 3015])
+                            ("w" variable
+                               (:pointer 1
+                                :type ("ev_timer" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3016 3035])
+                            ("revents" variable (:type "int") (reparse-symbol arg-sub-list) [3039 3051]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2967 3052])
+                    ("clear_zombie_players" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3054 3082])
+                    ("game_start" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3084 3101])
+                    ("bet_timer_cb" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("loop" variable
+                               (:pointer 1
+                                :type ("ev_loop" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3128 3149])
+                            ("w" variable
+                               (:pointer 1
+                                :type ("ev_timer" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3150 3169])
+                            ("revents" variable (:type "int") (reparse-symbol arg-sub-list) [3173 3185]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3103 3186])
+                    ("handler_bet" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3204 3219]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3188 3220])
+                    ("handler_info" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3239 3254]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3222 3255])
+                    ("handler_info" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3274 3289])
+                            ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [3290 3299]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3257 3300])
+                    ("game_end" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3302 3317])
+                    ("win_add" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ori" variable (:type "int") (reparse-symbol arg-sub-list) [3331 3339])
+                            ("left" variable (:type "int") (reparse-symbol arg-sub-list) [3340 3349])
+                            ("total_bet" variable (:type "int") (reparse-symbol arg-sub-list) [3350 3364]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3319 3365])
+                    ("lose_add" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ori" variable (:type "int") (reparse-symbol arg-sub-list) [3380 3388])
+                            ("left" variable (:type "int") (reparse-symbol arg-sub-list) [3389 3398])
+                            ("total_bet" variable (:type "int") (reparse-symbol arg-sub-list) [3399 3413]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3367 3414])
+                    ("dump_player_info" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [3438 3447])
+                            ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [3448 3456])
+                            ("player_win" variable (:type "int") (reparse-symbol arg-sub-list) [3457 3472]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3416 3473])
+                    ("handler_player_info" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3499 3514]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3475 3515])
+                    ("handler_chat" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3534 3549]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3517 3550])
+                    ("handler_chat_noplayer" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("client" variable
+                               (:pointer 1
+                                :type ("Client" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3578 3593]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3552 3594])
+                    ("get_max_list" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3596 3615])
+                    ("handler_up" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3632 3647]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3617 3648])
+                    ("handler_up_err" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3669 3684])
+                            ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [3685 3694]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3650 3695])
+                    ("handler_down" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3714 3729]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3697 3730])
+                    ("handler_show_up_list" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3757 3772]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3732 3773])
+                    ("change_banker" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3775 3796])
+                    ("exec_change_banker" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [3822 3831]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3798 3832])
+                    ("banker_info" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3851 3866]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3834 3867])
+                    ("clear_low_money_blankers" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3869 3901])
+                    ("dump_holes" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("packet" variable
+                               (:reference 1
+                                :type ("Jpacket" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3919 3935]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3903 3936])
+                    ("get_ratio" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("card_type" variable (:type "int") (reparse-symbol arg-sub-list) [3952 3966]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3938 3967])
+                    ("add_player_count" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [3990 4000])
+                            ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [4001 4009])
+                            ("count" variable (:type "int") (reparse-symbol arg-sub-list) [4010 4020]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3969 4021])
+                    ("get_player_count" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [4044 4054])
+                            ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [4055 4063]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4023 4064])
+                    ("dump_info" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4081 4096]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4066 4097])
+                    ("send_laba_msg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("player" variable
+                               (:pointer 1
+                                :type ("Player" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4118 4133])
+                            ("type" variable (:type "int") (reparse-symbol arg-sub-list) [4134 4143])
+                            ("money" variable (:type "int") (reparse-symbol arg-sub-list) [4144 4154]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4099 4155])
+                    ("update_timer_cb" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("loop" variable
+                               (:pointer 1
+                                :type ("ev_loop" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4185 4206])
+                            ("w" variable
+                               (:pointer 1
+                                :type ("ev_timer" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4207 4226])
+                            ("revents" variable (:type "int") (reparse-symbol arg-sub-list) [4230 4242]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4157 4243])
+                    ("update" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4245 4259])
+                    ("update_last_wins" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [4283 4289])
+                            ("b" variable (:type "int") (reparse-symbol arg-sub-list) [4290 4296])
+                            ("c" variable (:type "int") (reparse-symbol arg-sub-list) [4297 4303])
+                            ("d" variable (:type "int") (reparse-symbol arg-sub-list) [4304 4310]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4261 4311])
+                    ("last_wins_to_json_array" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("packet" variable
+                               (:reference 1
+                                :type ("Jpacket" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4342 4358]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4313 4359])
+                    ("insert_flow_log" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ts" variable (:type "int") (reparse-symbol arg-sub-list) [4381 4388])
+                            ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [4389 4397])
+                            ("ip" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4398 4408])
+                            ("pos" variable (:type "int") (reparse-symbol arg-sub-list) [4409 4417])
+                            ("vid" variable (:type "int") (reparse-symbol arg-sub-list) [4418 4426])
+                            ("zid" variable (:type "int") (reparse-symbol arg-sub-list) [4427 4435])
+                            ("tid" variable (:type "int") (reparse-symbol arg-sub-list) [4436 4444])
+                            ("type" variable (:type "int") (reparse-symbol arg-sub-list) [4445 4454])
+                            ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [4455 4464])
+                            ("num" variable (:type "int") (reparse-symbol arg-sub-list) [4465 4473])
+                            ("anum" variable (:type "int") (reparse-symbol arg-sub-list) [4474 4483]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4361 4484])
+                    ("get_cards_normal" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4489 4513])
+                    ("get_cards_special" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4518 4543])
+                    ("set_banker_flag" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [4570 4578]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4549 4579])
+                    ("set_up_list_flag" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [4607 4615])
+                            ("flag" variable (:type "int") (reparse-symbol arg-sub-list) [4616 4625]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4585 4626])
+                    ("check_up_list" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("client" variable
+                               (:pointer 1
+                                :type ("Client" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4650 4665]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4632 4666])
+                    ("get_cards_normal1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4672 4697])
+                    ("get_cards_normal2" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4703 4728]))                  
+                :type "class")
+                nil [523 4732]))          
+      :file "logic.h"
+      :pointmax 4741
+      :fsize 4956
+      :lastmodtime '(22163 21259 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_LOGIC_H_")
+          )
+))
+  :file "!usr!local!zjhapp!newwanren!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,187 @@
+;; Object chatsvr/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "chatsvr/"
+  :tables
+  (list
+    (semanticdb-table "parse.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("parse.h" include nil nil [1 19])
+            ("string.h" include nil nil [20 39])
+            ("decode_key" function
+               (:arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [56 72])
+                    ("auid" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [73 83])
+                    ("buid" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [84 94])
+                    ("time" variable
+                       (:reference 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [95 114]))                  
+                :type "int")
+                nil [41 281])
+            ("encode_key" function
+               (:arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [298 315])
+                    ("auid" variable (:type "int") (reparse-symbol arg-sub-list) [316 325])
+                    ("buid" variable (:type "int") (reparse-symbol arg-sub-list) [326 335])
+                    ("time" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [336 354]))                  
+                :type "int")
+                nil [283 572])
+            ("decode_value" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [591 609])
+                    ("uid" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [610 619])
+                    ("time" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [620 630])
+                    ("msg" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [631 648]))                  
+                :type "int")
+                nil [574 859])
+            ("encode_value" function
+               (:arguments 
+                  ( ("value" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [878 897])
+                    ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [898 906])
+                    ("time" variable (:type "int") (reparse-symbol arg-sub-list) [907 916])
+                    ("msg" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [917 927]))                  
+                :type "int")
+                nil [861 1196]))          
+      :file "parse.cc"
+      :pointmax 1197
+      :fsize 1196
+      :lastmodtime '(21996 3812 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "leveldb.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("stdlib.h" include (:system-flag t) nil [20 39])
+            ("time.h" include (:system-flag t) nil [40 57])
+            ("string" include (:system-flag t) nil [58 75])
+            ("leveldb.h" include nil nil [76 96])
+            ("parse.h" include nil nil [97 115])
+            ("log.h" include nil nil [116 132])
+            ("log" variable
+               (:typemodifiers ("extern")
+                :type ("Log" type (:type "class") nil nil))
+                nil [134 149])
+            ("MAX_GET_MSG" variable (:constant-flag t) nil [158 169])
+            ("Leveldb" function
+               (:constructor-flag t
+                :parent "Leveldb"
+                :type ("Leveldb" type (:type "class") nil nil))
+                nil [174 214])
+            ("Leveldb" function
+               (:destructor-flag t
+                :parent "Leveldb"
+                :type "void")
+                nil [216 255])
+            ("open_db" function
+               (:parent "Leveldb"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [278 295]))                  
+                :type "int")
+                nil [257 795])
+            ("close_db" function
+               (:parent "Leveldb"
+                :type "int")
+                nil [797 917])
+            ("save_chat" function
+               (:parent "Leveldb"
+                :arguments 
+                  ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [942 950])
+                    ("dstuid" variable (:type "int") (reparse-symbol arg-sub-list) [951 962])
+                    ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [963 979])
+                    ("timestamp" variable
+                       (:reference 1
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [980 1004]))                  
+                :type "int")
+                nil [919 3869])
+            ("get_chat" function
+               (:parent "Leveldb"
+                :arguments 
+                  ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [3893 3901])
+                    ("dstuid" variable (:type "int") (reparse-symbol arg-sub-list) [3902 3913])
+                    ("timestamp" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3914 3937])
+                    ("value" variable
+                       (:reference 1
+                        :type ("Json::Value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3938 3957]))                  
+                :type "int")
+                nil [3871 5710])
+            ("clear_chat" function
+               (:parent "Leveldb"
+                :arguments 
+                  ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [5736 5744])
+                    ("dstuid" variable (:type "int") (reparse-symbol arg-sub-list) [5745 5756]))                  
+                :type "int")
+                nil [5712 7082])
+            ("get_new_chat" function
+               (:parent "Leveldb"
+                :arguments 
+                  ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [7110 7118])
+                    ("dstuid" variable (:type "int") (reparse-symbol arg-sub-list) [7119 7130])
+                    ("value" variable
+                       (:reference 1
+                        :type ("Json::Value" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7131 7150]))                  
+                :type "int")
+                nil [7084 9964])
+            ("update_chat_time" function
+               (:parent "Leveldb"
+                :arguments 
+                  ( ("uid" variable (:type "int") (reparse-symbol arg-sub-list) [9996 10004])
+                    ("dstuid" variable (:type "int") (reparse-symbol arg-sub-list) [10005 10016])
+                    ("time" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [10017 10035]))                  
+                :type "int")
+                nil [9966 11382]))          
+      :file "leveldb.cc"
+      :pointmax 11383
+      :fsize 11416
+      :lastmodtime '(21996 3812 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAX_GET_MSG" . ((number "50" 170 . 172)))
+          )
+))
+  :file "!usr!local!dzapp!chatsvr!src!chatsvr!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

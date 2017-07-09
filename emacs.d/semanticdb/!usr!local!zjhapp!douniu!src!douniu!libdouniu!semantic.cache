@@ -1,0 +1,153 @@
+;; Object libdouniu/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "libdouniu/"
+  :tables
+  (list
+    (semanticdb-table "hole_cards.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("card.h" include nil nil [1 18])
+            ("card_type.h" include nil nil [19 41])
+            ("hole_cards.h" include nil nil [42 65])
+            ("card_type_str" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+	(char *)\"CARD_TYPE_NONNIU\",
+	(char *)\"CARD_TYPE_NIUDING\",
+	(char *)\"CARD_TYPE_NIUER\",
+	(char *)\"CARD_TYPE_NIUSAN\",
+	(char *)\"CARD_TYPE_NIUSI\",
+	(char *)\"CARD_TYPE_NIUWU\",
+	(char *)\"CARD_TYPE_NIULIU\",
+	(char *)\"CARD_TYPE_NIUQI\",
+	(char *)\"CARD_TYPE_NIUBA\",
+	(char *)\"CARD_TYPE_NIUJIU\",
+	(char *)\"CARD_TYPE_NIUNIU\",
+	(char *)\"CARD_TYPE_ZHADAN\",
+    (char *)\"CARD_TYPE_JINNIU\",
+	(char *)\"CARD_TYPE_WUXIAONIU\"
+}"
+                :type "char")
+                nil [67 516])
+            ("HoleCards" function
+               (:constructor-flag t
+                :parent "HoleCards"
+                :type ("HoleCards" type (:type "class") nil nil))
+                nil [518 572])
+            ("add_card" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("card" variable (:type ("Card" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [599 609]))                  
+                :type "void")
+                nil [574 637])
+            ("sort" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [639 699])
+            ("analysis" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [701 4540])
+            ("compare" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("hc" variable
+                       (:reference 1
+                        :type ("HoleCards" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4565 4579]))                  
+                :type "int")
+                nil [4542 4889])
+            ("set_card_type" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("type" variable (:type "int") (reparse-symbol arg-sub-list) [4921 4930]))                  
+                :type "void")
+                nil [4891 4953])
+            ("copy_cards" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("Card" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4982 5003]))                  
+                :type "void")
+                nil [4955 5019])
+            ("copy_cards" function
+               (:parent "HoleCards"
+                :arguments 
+                  ( ("v" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5048 5068]))                  
+                :type "void")
+                nil [5021 5158])
+            ("debug" function
+               (:parent "HoleCards"
+                :type "void")
+                nil [5160 5269]))          
+      :file "hole_cards.cc"
+      :pointmax 5270
+      :fsize 5269
+      :lastmodtime '(21932 47386 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "card.cc"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("card.h" include nil nil [1 18])
+            ("face_symbols" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+	'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'
+}"
+                :type "char")
+                nil [20 118])
+            ("suit_symbols" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{
+	'd', 'c', 'h', 's'
+}"
+                :type "char")
+                nil [120 173])
+            ("Card" function
+               (:constructor-flag t
+                :parent "Card"
+                :type ("Card" type (:type "class") nil nil))
+                nil [175 225])
+            ("Card" function
+               (:constructor-flag t
+                :parent "Card"
+                :arguments 
+                  ( ("val" variable (:type "int") (reparse-symbol arg-sub-list) [238 246]))                  
+                :type ("Card" type (:type "class") nil nil))
+                nil [227 488])
+            ("set_value" function
+               (:parent "Card"
+                :arguments 
+                  ( ("val" variable (:type "int") (reparse-symbol arg-sub-list) [511 519]))                  
+                :type "void")
+                nil [490 695])
+            ("get_card" function
+               (:parent "Card"
+                :type ("string" type (:type "class") nil nil))
+                nil [697 928]))          
+      :file "card.cc"
+      :pointmax 929
+      :fsize 928
+      :lastmodtime '(21932 47386 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!local!zjhapp!douniu!src!douniu!libdouniu!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

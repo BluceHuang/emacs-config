@@ -1,0 +1,289 @@
+;; Object ssl/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ssl/"
+  :tables (list 
+   (semanticdb-table "bio_ssl.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [3191 3209])
+            ("stdlib.h" include (:system-flag t) nil [3210 3229])
+            ("string.h" include (:system-flag t) nil [3230 3249])
+            ("errno.h" include (:system-flag t) nil [3250 3268])
+            ("openssl/crypto.h" include (:system-flag t) nil [3269 3296])
+            ("openssl/bio.h" include (:system-flag t) nil [3297 3321])
+            ("openssl/err.h" include (:system-flag t) nil [3322 3346])
+            ("openssl/ssl.h" include (:system-flag t) nil [3347 3371])
+            ("ssl_write" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("h" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3394 3401])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3402 3418])
+                    ("num" variable (:type "int") (reparse-symbol arg-sub-list) [3419 3427]))                  
+                :type "int")
+                nil [3373 3428])
+            ("ssl_read" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("h" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3449 3456])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3457 3467])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [3468 3477]))                  
+                :type "int")
+                nil [3429 3478])
+            ("ssl_puts" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("h" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3499 3506])
+                    ("str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3507 3523]))                  
+                :type "int")
+                nil [3479 3524])
+            ("ssl_ctrl" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("h" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3546 3553])
+                    ("cmd" variable (:type "int") (reparse-symbol arg-sub-list) [3554 3562])
+                    ("arg1" variable (:type "long") (reparse-symbol arg-sub-list) [3563 3573])
+                    ("arg2" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3574 3585]))                  
+                :type "long")
+                nil [3525 3586])
+            ("ssl_new" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("h" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3606 3613]))                  
+                :type "int")
+                nil [3587 3614])
+            ("ssl_free" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3635 3645]))                  
+                :type "int")
+                nil [3615 3646])
+            ("ssl_callback_ctrl" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("h" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3677 3684])
+                    ("cmd" variable (:type "int") (reparse-symbol arg-sub-list) [3685 3693])
+                    ("fp" variable
+                       (:pointer 1
+                        :type ("bio_info_cb" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3694 3710]))                  
+                :type "long")
+                nil [3647 3711])
+            ("BIO_SSL" type
+               (:typedef ("bio_ssl_st" type (:type "struct") nil nil)
+                :superclasses "bio_ssl_st"
+                :type "typedef")
+                nil [3712 4004])
+            ("bio_ssl_st" type
+               (:members 
+                  ( ("ssl" variable
+                       (:pointer 1
+                        :type ("SSL" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3742 3751])
+                    ("num_renegotiates" variable (:type "int") (reparse-symbol classsubparts) [3848 3869])
+                    ("renegotiate_count" variable (:type "unsigned long") (reparse-symbol classsubparts) [3871 3903])
+                    ("byte_count" variable (:type "unsigned long") (reparse-symbol classsubparts) [3905 3930])
+                    ("renegotiate_timeout" variable (:type "unsigned long") (reparse-symbol classsubparts) [3932 3966])
+                    ("last_time" variable (:type "unsigned long") (reparse-symbol classsubparts) [3968 3992]))                  
+                :type "struct")
+                nil [3712 4004])
+            ("methods_sslp" variable
+               (:typemodifiers ("static")
+                :type ("BIO_METHOD" type (:type "class") nil nil))
+                nil [4006 4174])
+            ("BIO_f_ssl" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4198 4203]))                  
+                :type ("BIO_METHOD" type (:type "class") nil nil))
+                nil [4176 4233])
+            ("ssl_new" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bi" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4254 4262]))                  
+                :type "int")
+                nil [4235 4506])
+            ("ssl_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4528 4535]))                  
+                :type "int")
+                nil [4508 4819])
+            ("ssl_read" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("b" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4842 4849])
+                    ("out" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4850 4860])
+                    ("outl" variable (:type "int") (reparse-symbol arg-sub-list) [4861 4870]))                  
+                :type "int")
+                nil [4822 6405])
+            ("ssl_write" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("b" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6428 6435])
+                    ("out" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6436 6452])
+                    ("outl" variable (:type "int") (reparse-symbol arg-sub-list) [6453 6462]))                  
+                :type "int")
+                nil [6407 7691])
+            ("ssl_ctrl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("b" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7714 7721])
+                    ("cmd" variable (:type "int") (reparse-symbol arg-sub-list) [7722 7730])
+                    ("num" variable (:type "long") (reparse-symbol arg-sub-list) [7731 7740])
+                    ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7741 7751]))                  
+                :type "long")
+                nil [7693 12072])
+            ("ssl_callback_ctrl" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("b" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12104 12111])
+                    ("cmd" variable (:type "int") (reparse-symbol arg-sub-list) [12112 12120])
+                    ("fp" variable
+                       (:pointer 1
+                        :type ("bio_info_cb" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12121 12137]))                  
+                :type "long")
+                nil [12074 12520])
+            ("ssl_puts" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("bp" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12542 12550])
+                    ("str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12551 12567]))                  
+                :type "int")
+                nil [12522 12642])
+            ("BIO_new_buffer_ssl_connect" function
+               (:pointer 1
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("SSL_CTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12676 12689]))                  
+                :type ("BIO" type (:type "class") nil nil))
+                nil [12644 13030])
+            ("BIO_new_ssl_connect" function
+               (:pointer 1
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("SSL_CTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13057 13070]))                  
+                :type ("BIO" type (:type "class") nil nil))
+                nil [13032 13373])
+            ("BIO_new_ssl" function
+               (:pointer 1
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("SSL_CTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13392 13405])
+                    ("client" variable (:type "int") (reparse-symbol arg-sub-list) [13406 13417]))                  
+                :type ("BIO" type (:type "class") nil nil))
+                nil [13375 13705])
+            ("BIO_ssl_copy_session_id" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13735 13742])
+                    ("f" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13743 13750]))                  
+                :type "int")
+                nil [13707 14051])
+            ("BIO_ssl_shutdown" function
+               (:arguments 
+                  ( ("b" variable
+                       (:pointer 1
+                        :type ("BIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14075 14082]))                  
+                :type "void")
+                nil [14053 14252]))          
+    :file "bio_ssl.c"
+    :pointmax 14253
+    :fsize 14252
+    :lastmodtime '(21208 17071 0 0)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!Users!huangyong!Downloads!usr!src!crypto!openssl!ssl!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2"
+  )
